@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 #### [Run Live Preview](https://herolo-accuweather.web.app) - herolo-accuweather.web.app
 
-#### [Display CodeDocs](https://herolo-accuweather.web.app/docs/overview.html) - herolo-accuweather.web.app/docs
+#### [Display CodeDoc](https://herolo-accuweather.web.app/docs/overview.html) - herolo-accuweather.web.app/docs
 
 ## Development server
 
