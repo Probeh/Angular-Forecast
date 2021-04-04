@@ -1,10 +1,10 @@
-# Herolo AccuWeather Assignment
+# Herolo Forecast Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
 
-#### [Run Live Preview](https://herolo-accuweather.web.app) - herolo-accuweather.web.app
+#### [Run Live Preview](https://herolo-forecast.web.app) - herolo-forecast.web.app
 
-#### [Display CodeDoc](https://herolo-accuweather.web.app/docs/overview.html) - herolo-accuweather.web.app/docs
+#### [Display CodeDoc](https://herolo-forecast.web.app/docs/overview.html) - herolo-forecast.web.app/docs
 
 ## Development server
 
