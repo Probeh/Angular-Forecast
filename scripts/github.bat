@@ -1,1 +1,1 @@
-git add . & git commit -m "Application Update" & git push -u origin root
+git add . & git commit -m "Application Update" & git push -u origin master & exit
