@@ -1,0 +1,1 @@
+compodoc -p tsconfig.json -d src/docs -n Herolo-AccuWeather src --hideGenerator --theme readthedocs & exit
