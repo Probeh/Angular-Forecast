@@ -1,4 +1,7 @@
-# Herolo
+# Herolo AccuWeather Assignment
+
+[Live Preview](https://herolo-accuweather.web.app)
+[Documentation](https://herolo-accuweather.web.app/docs/overview.html)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
 

@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "codedoc": "start .\\scripts\\codedoc",
     "snapshot": "start .\\scripts\\snapshot",
-    "publish": "start .\\scripts\\publish"
+    "github": "start .\\scripts\\github",
+    "publish": "npm run github & start .\\scripts\\publish"
   },
   "private": true,
   "dependencies": {

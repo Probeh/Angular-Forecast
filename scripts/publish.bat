@@ -1,1 +1,1 @@
-npm run codedoc && git add . & git commit -m "Application Update" & git push -u origin root & ng build --prod & firebase deploy & npm run save & exit
+npm run codedoc & ng build --prod & firebase deploy & npm run snapshot & exit
