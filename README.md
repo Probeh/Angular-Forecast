@@ -2,9 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
 
-#### [Live Preview](https://herolo-accuweather.web.app)
+#### [Run Live Preview](https://herolo-accuweather.web.app) - herolo-accuweather.web.app
 
-#### [View Docs](https://herolo-accuweather.web.app/docs/overview.html)
+#### [Display CodeDocs](https://herolo-accuweather.web.app/docs/overview.html) - herolo-accuweather.web.app/docs
 
 ## Development server
 
