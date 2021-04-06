@@ -160,16 +160,17 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface IGeolocation {
-  latitude : number;
+  latitude: number;
   longitude: number;
 }
 export class Geolocation {
-  public latitude : number;
+  public latitude: number;
   public longitude: number;
   constructor(args?: IGeolocation) {
     Object.keys(args)?.forEach(key &#x3D;&gt; this[key] &#x3D; args[key] ? this[key] ?? args[key] : this[key]);
   }
-}</code></pre>
+}
+</code></pre>
     </div>
 </div>
 

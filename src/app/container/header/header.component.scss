@@ -21,6 +21,15 @@
       width: calc(#{$navbar-height} * 0.9);
     }
   }
+  .header-date {
+    @media screen and (max-width: 650px) {
+      display: none;
+    }
+    @media screen and (min-width: 650px) {
+      display: flex;
+      align-items: center;
+    }
+  }
   .header-actions {
     display: flex;
     justify-content: center;

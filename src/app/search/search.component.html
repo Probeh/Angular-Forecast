@@ -1,3 +1,16 @@
-<div class="app-search">
-  <router-outlet></router-outlet>
+<div class="app-search container p-5 shadow">
+  <div class="shadow" [formGroup]="this.searchForm" (ngSubmit)="this.onSubmit()">
+    <p-autoComplete formControlName="search" [suggestions]="this.suggestions" (completeMethod)="onSearch($event)"
+      [emptyMessage]="'No results'" [placeholder]="'Search'" [autoHighlight]="true" [completeOnFocus]="false"
+      [forceSelection]="true" [autofocus]="true">
+      <ng-template let-result pTemplate="item">
+        <div class="flex">
+          <img src="https://www.countryflags.io/us/shiny/32.png" />
+          {{result}}
+        </div>
+      </ng-template>
+    </p-autoComplete>
+  </div>
+  <hr>
+  <app-weather></app-weather>
 </div>

@@ -2,9 +2,6 @@
   <div class="container-main">
     <app-header (sidenavStateChange)="this.onSidenavToggle()"></app-header>
     <div class="container-content">
-      <div class="text-center pacifico text-white mb-3">
-        <h2>Forecast {{this.currentRoute | titlecase}}</h2>
-      </div>
       <ng-content></ng-content>
     </div>
   </div>

@@ -5,7 +5,6 @@ export interface IBaseModel {
   id           ?: string;
   localizedName?: string;
   name         ?: string;
-  nativeName   ?: string;
   title        ?: string;
   type         ?: string;
 }

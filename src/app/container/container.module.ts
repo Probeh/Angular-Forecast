@@ -24,7 +24,7 @@ const Modules = [SidenavModule, HeaderModule];
     Modules
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor , multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ResponseInterceptor, multi: true },
     ApplicationService,
     ContextService,

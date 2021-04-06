@@ -16,7 +16,7 @@ export class ContainerComponent implements OnInit {
     this.router.events.subscribe({
       next: event =>
         this.currentRoute = !(event instanceof NavigationEnd) ? this.currentRoute :
-          event.urlAfterRedirects.slice(1).replace('/', ' ')
+          `Weather ${event.urlAfterRedirects.slice(1).replace('/', ' ')}`
     });
 
   }
