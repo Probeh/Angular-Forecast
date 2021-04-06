@@ -1,0 +1,15 @@
+@import "common.scss";
+
+.app-sidenav {
+  display: flex;
+  height: 100vh;
+  @extend .shadow;
+}
+.app-sidenav.show {
+  transition: ease-in-out 300ms;
+  width: 250px;
+}
+.app-sidenav.hide {
+  width: 0px;
+  transition: ease-in-out 300ms;
+}

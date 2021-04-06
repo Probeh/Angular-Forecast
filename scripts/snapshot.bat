@@ -1,1 +1,1 @@
-robocopy /mir /s /e . %onedrive%\\snapshots\\Herolo-AccuWeather\\snapshot-%date:~0,2%-%date:~3,2%-%date:~-4%_%random% /xd "node_modules" /xd ".git" /xd "dist" /xd "docs" /xd "e2e" & exit
+robocopy /mir /s /e . %onedrive%\\snapshots\\Herolo-Forecast\\snapshot-%date:~0,2%-%date:~3,2%-%date:~-4%_%random% /xd "node_modules" /xd ".git" /xd "dist" /xd "docs" /xd "e2e" & exit

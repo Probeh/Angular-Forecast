@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/Herolo",
+    "public": "dist/herolo",
     "ignore": [
       "firebase.json",
       "**/.*",

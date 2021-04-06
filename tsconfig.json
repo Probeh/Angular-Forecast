@@ -15,18 +15,19 @@
     "target"                : "es2015"        ,
     "lib": ["es2018", "dom"],
     "paths": {
-      "@constants/*"  : ["src/common/constants"  ],
-      "@helpers/*"    : ["src/common/helpers"    ],
-      "@injectables/*": ["src/common/injectables"],
-      "@models/*"     : ["src/common/models"     ],
-      "@options/*"    : ["src/common/options"    ],
-      "@assets/*"     : ["src/assets/*"          ],
-      "@client/*"     : ["src/app/*"             ],
-      "@common/*"     : ["src/common/*"          ],
-      "@env/*"        : ["src/environments/*"    ]
+      "@container/*"  : ["src/app/container/*"     ],
+      "@favorites/*"  : ["src/app/favorites/*"     ],
+      "@forecast/*"   : ["src/app/forecast/*"      ],
+      "@search/*"     : ["src/app/search/*"        ],
+      "@weather/*"    : ["src/app/weather/*"       ],
+      "@constants/*"  : ["src/common/constants/*"  ],
+      "@helpers/*"    : ["src/common/helpers/*"    ],
+      "@services/*": ["src/common/services/*"],
+      "@models/*"     : ["src/common/models/*"     ],
+      "@assets/*": ["src/assets/*"      ],
+      "@client/*": ["src/app/*"         ],
+      "@common/*": ["src/common/*"      ],
+      "@env/*"   : ["src/environments/*"]
     }
-  },
-  "angularCompilerOptions": {
-    "enableIvy": false
   }
 }

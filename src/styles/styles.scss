@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import "../../node_modules/primeng/resources/themes/mdc-light-indigo/theme.css";
+@import "themes.scss";
+
+html, body {
+  color: #515c66;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  height: 100vh;
+  margin: 0;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+  padding: 0;
+  width: 100vw;
+}
+.shadow {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+.flex {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: auto;
+  }
+}
+a {
+  color: initial;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.pacifico {
+  font-family: "Pacifico", sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0px;
+}

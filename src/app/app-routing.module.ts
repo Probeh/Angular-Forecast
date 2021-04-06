@@ -1,10 +1,14 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core'
+import { RouterModule, Routes } from '@angular/router'
 
-const routes: Routes = [];
+export const AppRoutes: Routes = [
+  { path: 'search', loadChildren: () => import('./search/search.module').then(m => m.SearchModule) },
+  { path: 'favorites', loadChildren: () => import('./favorites/favorites.module').then(m => m.FavoritesModule) },
+  { path: '**', pathMatch: 'full', redirectTo: 'search' }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(AppRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

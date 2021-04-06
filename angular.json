@@ -20,10 +20,10 @@
           "skipImport": true
         },
         "@schematics/angular:module": {
-          "skipTests": true,
-          "commonModule": true,
           "routing": true,
-          "routingScope": "Child"
+          "routingScope": "Child",
+          "skipTests": true,
+          "commonModule": true
         },
         "@schematics/angular:pipe": {
           "skipTests": true,
@@ -56,6 +56,8 @@
               "node_modules/font-awesome/css/font-awesome.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/ngx-toastr/toastr.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css",
               "src/styles/styles.scss"
             ],
             "scripts": [

@@ -1,0 +1,55 @@
+@import "common.scss";
+
+.app-header {
+  @extend .shadow;
+  * {
+    max-height: $navbar-height;
+    color: white;
+  }
+  padding: 0px 15px;
+  height: $navbar-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, lighten($color: $primary, $amount: 5%), lighten($color: $primary, $amount: 10%), lighten($color: $primary, $amount: 20%));
+
+  .header-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .header-image {
+      width: calc(#{$navbar-height} * 0.9);
+    }
+  }
+  .header-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.btn {
+  .fa {
+    font-size: 15px;
+  }
+  .action-text {
+    @media screen and (max-width: 650px) {
+      display: none;
+    }
+    @media screen and (min-width: 650px) {
+      margin-left: 10px;
+    }
+  }
+  align-items: center;
+  border-color: transparent;
+  border-radius: 10px;
+  display: flex;
+  height: calc(#{$navbar-height}* 0.8);
+  justify-content: center;
+  margin: 0px 0px 0px 15px;
+  min-width: $navbar-height;
+  transition: ease-in-out 200ms;
+}
+.btn:hover {
+  transition: ease-in-out 200ms;
+  @extend .shadow;
+}
