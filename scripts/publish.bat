@@ -1,1 +1,1 @@
-.\\scripts\\codedoc & .\\scripts\\snapshot .\\scripts\\github & exit
+.\\scripts\\codedoc & .\\scripts\\snapshot & .\\scripts\\github & exit
