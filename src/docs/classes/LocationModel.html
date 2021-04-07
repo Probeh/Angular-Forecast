@@ -88,11 +88,27 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#administrativeArea">administrativeArea</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#conditions">conditions</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#favorite">favorite</a>
+                                <a href="#country">country</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#dataSets">dataSets</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#englishName">englishName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#flag">flag</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -100,27 +116,55 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#weather">weather</a>
+                                <a href="#geoPosition">geoPosition</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#alias">alias</a>
+                                <a href="#isAlias">isAlias</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#id">id</a>
+                                <a href="#isFavorite">isFavorite</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#name">name</a>
+                                <a href="#key">key</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#title">title</a>
+                                <a href="#localizedName">localizedName</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#rank">rank</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#region">region</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#timeZone">timeZone</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#type">type</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#created">created</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getFlag">getFlag</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getIcon">getIcon</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#uid">uid</a>
                             </li>
                         </ul>
                     </td>
@@ -141,12 +185,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(args?: <a href="../interfaces/ILocationModel.html">ILocationModel</a>)</code>
+<code>constructor(args?: <a href="../interfaces/ILocation.html">ILocation</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/common/models/location-model.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/common/models/location-model.ts:39</a></div>
                             </td>
                         </tr>
 
@@ -167,7 +211,7 @@
                                                         <td>args</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../interfaces/ILocationModel.html" target="_self" >ILocationModel</a></code>
+                                                                        <code><a href="../interfaces/ILocation.html" target="_self" >ILocation</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -193,6 +237,34 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="administrativeArea"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            administrativeArea</b>
+                            <a href="#administrativeArea"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/IAdministrativeArea.html" target="_self" >IAdministrativeArea</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/common/models/location-model.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="conditions"></a>
                         <span class="name">
                             <b>
@@ -204,13 +276,13 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../classes/WeatherModel.html" target="_self" >WeatherModel</a></code>
+                            <i>Type : </i>        <code><a href="../classes/ConditionsModel.html" target="_self" >ConditionsModel</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/common/models/location-model.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/common/models/location-model.ts:25</a></div>
                             </td>
                         </tr>
 
@@ -221,24 +293,108 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="favorite"></a>
+                        <a name="country"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            favorite</b>
-                            <a href="#favorite"><span class="icon ion-ios-link"></span></a>
+                            country</b>
+                            <a href="#country"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                            <i>Type : </i>        <code><a href="../classes/CountryModel.html" target="_self" >CountryModel</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/common/models/location-model.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/common/models/location-model.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dataSets"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dataSets</b>
+                            <a href="#dataSets"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/common/models/location-model.ts:27</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="englishName"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            englishName</b>
+                            <a href="#englishName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/common/models/location-model.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="flag"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            flag</b>
+                            <a href="#flag"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/common/models/location-model.ts:29</a></div>
                             </td>
                         </tr>
 
@@ -260,13 +416,13 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../classes/ForecastModel.html" target="_self" >ForecastModel[]</a></code>
+                            <i>Type : </i>        <code><a href="../classes/ForecastModel.html" target="_self" >ForecastModel</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/common/models/location-model.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/common/models/location-model.ts:30</a></div>
                             </td>
                         </tr>
 
@@ -277,24 +433,24 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="weather"></a>
+                        <a name="geoPosition"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            weather</b>
-                            <a href="#weather"><span class="icon ion-ios-link"></span></a>
+                            geoPosition</b>
+                            <a href="#geoPosition"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../classes/WeatherModel.html" target="_self" >WeatherModel</a></code>
+                            <i>Type : </i>        <code><a href="../interfaces/IGeoPosition.html" target="_self" >IGeoPosition</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/common/models/location-model.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/common/models/location-model.ts:31</a></div>
                             </td>
                         </tr>
 
@@ -305,31 +461,24 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="alias"></a>
+                        <a name="isAlias"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            alias</b>
-                            <a href="#alias"><span class="icon ion-ios-link"></span></a>
+                            isAlias</b>
+                            <a href="#isAlias"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                         </td>
                     </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/BaseModel.html" target="_self" >BaseModel</a></code>
-</div>
-                                </td>
-                            </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/BaseModel.html#source" target="_self" >BaseModel:12</a></code>
-</div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/common/models/location-model.ts:32</a></div>
                             </td>
                         </tr>
 
@@ -340,31 +489,24 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="id"></a>
+                        <a name="isFavorite"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            id</b>
-                            <a href="#id"><span class="icon ion-ios-link"></span></a>
+                            isFavorite</b>
+                            <a href="#isFavorite"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                         </td>
                     </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/BaseModel.html" target="_self" >BaseModel</a></code>
-</div>
-                                </td>
-                            </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/BaseModel.html#source" target="_self" >BaseModel:13</a></code>
-</div>
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/common/models/location-model.ts:33</a></div>
                             </td>
                         </tr>
 
@@ -375,12 +517,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="name"></a>
+                        <a name="key"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            name</b>
-                            <a href="#name"><span class="icon ion-ios-link"></span></a>
+                            key</b>
+                            <a href="#key"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -390,16 +532,9 @@
 
                         </td>
                     </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/BaseModel.html" target="_self" >BaseModel</a></code>
-</div>
-                                </td>
-                            </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/BaseModel.html#source" target="_self" >BaseModel:14</a></code>
-</div>
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/common/models/location-model.ts:34</a></div>
                             </td>
                         </tr>
 
@@ -410,12 +545,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="title"></a>
+                        <a name="localizedName"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            title</b>
-                            <a href="#title"><span class="icon ion-ios-link"></span></a>
+                            localizedName</b>
+                            <a href="#localizedName"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -425,16 +560,93 @@
 
                         </td>
                     </tr>
-                            <tr>
-                                <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/BaseModel.html" target="_self" >BaseModel</a></code>
-</div>
-                                </td>
-                            </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/BaseModel.html#source" target="_self" >BaseModel:15</a></code>
-</div>
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/common/models/location-model.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rank"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            rank</b>
+                            <a href="#rank"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/common/models/location-model.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="region"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            region</b>
+                            <a href="#region"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/CountryModel.html" target="_self" >CountryModel</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/common/models/location-model.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="timeZone"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            timeZone</b>
+                            <a href="#timeZone"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ITimeZone.html" target="_self" >ITimeZone</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/common/models/location-model.ts:38</a></div>
                             </td>
                         </tr>
 
@@ -460,6 +672,34 @@
 
                         </td>
                     </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/common/models/location-model.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="created"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            created</b>
+                            <a href="#created"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+
+                        </td>
+                    </tr>
                             <tr>
                                 <td class="col-md-4">
                                     <div class="io-line">Inherited from         <code><a href="../classes/BaseModel.html" target="_self" >BaseModel</a></code>
@@ -468,7 +708,110 @@
                             </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/BaseModel.html#source" target="_self" >BaseModel:16</a></code>
+                                    <div class="io-line">Defined in         <code><a href="../classes/BaseModel.html#source" target="_self" >BaseModel:5</a></code>
+</div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getFlag"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getFlag</b>
+                            <a href="#getFlag"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from         <code><a href="../classes/BaseModel.html" target="_self" >BaseModel</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in         <code><a href="../classes/BaseModel.html#source" target="_self" >BaseModel:12</a></code>
+</div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getIcon"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getIcon</b>
+                            <a href="#getIcon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from         <code><a href="../classes/BaseModel.html" target="_self" >BaseModel</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in         <code><a href="../classes/BaseModel.html#source" target="_self" >BaseModel:13</a></code>
+</div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="uid"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            uid</b>
+                            <a href="#uid"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Guid | string</code>
+
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Inherited from         <code><a href="../classes/BaseModel.html" target="_self" >BaseModel</a></code>
+</div>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in         <code><a href="../classes/BaseModel.html#source" target="_self" >BaseModel:6</a></code>
 </div>
                             </td>
                         </tr>
@@ -488,25 +831,48 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BaseModel, IBaseModel } from &#x27;@models/base-model&#x27;
-import { ForecastModel, IForecastModel } from &#x27;@models/forecast-model&#x27;
-import { IWeatherModel, WeatherModel } from &#x27;@models/weather-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { IAdministrativeArea               } from &#x27;@models/administrativeArea-model&#x27;
+import { BaseModel                         } from &#x27;@models/base-model&#x27;
+import { ConditionsModel                   } from &#x27;@models/conditions-model&#x27;
+import { ICountry           , CountryModel } from &#x27;@models/country-model&#x27;
+import { ForecastModel                     } from &#x27;@models/forecast-model&#x27;
+import { IGeoPosition                      } from &#x27;@models/geoPosition-model&#x27;
+import { ITimeZone                         } from &#x27;@models/timeZone-model&#x27;
 
-export interface ILocationModel extends IBaseModel {
-  conditions?: IWeatherModel   ;
-  favorite  ?: boolean         ;
-  forecast  ?: IForecastModel[];
-  weather   ?: IWeatherModel   ;
+export interface ILocation {
+  administrativeArea?: IAdministrativeArea;
+  country           ?: ICountry           ;
+  dataSets          ?: string[]           ;
+  englishName       ?: string             ;
+  geoPosition       ?: IGeoPosition       ;
+  isAlias           ?: boolean            ;
+  key               ?: string             ;
+  localizedName     ?: string             ;
+  rank              ?: number             ;
+  region            ?: ICountry           ;
+  timeZone          ?: ITimeZone          ;
+  type              ?: string             ;
 }
 export class LocationModel extends BaseModel {
-  public conditions: WeatherModel   ;
-  public favorite  : boolean        ;
-  public forecast  : ForecastModel[];
-  public weather   : WeatherModel   ;
-  constructor(args?: ILocationModel) {
+  public administrativeArea: IAdministrativeArea;
+  public conditions        : ConditionsModel    ;
+  public country           : CountryModel       ;
+  public dataSets          : string[]           ;
+  public englishName       : string             ;
+  public flag              : string             ;
+  public forecast          : ForecastModel      ;
+  public geoPosition       : IGeoPosition       ;
+  public isAlias           : boolean            ;
+  public isFavorite        : boolean            ;
+  public key               : string             ;
+  public localizedName     : string             ;
+  public rank              : number             ;
+  public region            : CountryModel       ;
+  public timeZone          : ITimeZone          ;
+  public type              : string             ;
+  constructor(args?: ILocation) {
     super(args);
-    this.forecast &#x3D; this.forecast ?? new Array&lt;ForecastModel&gt;();
-    this.favorite &#x3D; args[&#x27;favorite&#x27;] ?? false;
+    this.dataSets &#x3D; this.dataSets ?? new Array();
   }
 }</code></pre>
     </div>

@@ -81,6 +81,10 @@
                                 <a href="#context">context</a>
                             </li>
                             <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initContext">initContext</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Public</span>
                                     <span class="modifier">Readonly</span>
                                 <a href="#onChange$">onChange$</a>
@@ -89,21 +93,6 @@
                     </td>
                 </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#initContext">initContext</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
 
 
@@ -132,53 +121,7 @@
         </table>
 </section>
 
-            <section>
-    
-    <h3 id="methods">
-        Methods
-    </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="initContext"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            initContext
-                        </b>
-                        <a href="#initContext"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>initContext()</code>
-                </td>
-            </tr>
 
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/common/services/context.service.ts:12</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
             <section>
     
         <h3 id="inputs">
@@ -212,6 +155,33 @@
                         <tr>
                             <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/common/services/context.service.ts:8</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initContext"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            initContext</b>
+                            <a href="#initContext"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/common/services/context.service.ts:11</a></div>
                             </td>
                         </tr>
 
@@ -258,9 +228,9 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Subject } from &#x27;rxjs&#x27;
-import { Injectable } from &#x27;@angular/core&#x27;
-import { DataSets } from &#x27;@constants/data-sets.enum&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Subject     } from &#x27;rxjs&#x27;
+import { Injectable  } from &#x27;@angular/core&#x27;
+import { DataSets    } from &#x27;@constants/data-sets.enum&#x27;
 import { IDictionary } from &#x27;@helpers/dictionary&#x27;
 
 @Injectable()
@@ -268,11 +238,9 @@ export class ContextService {
   private readonly context: IDictionary &#x3D; {};
   public readonly onChange$: Subject&lt;IDictionary&gt; &#x3D; new Subject();
   constructor() { this.initContext(); }
-
-  private initContext() {
+  private initContext &#x3D; () &#x3D;&gt;
     Object.keys(DataSets)
       .forEach(key &#x3D;&gt; this.context[key] &#x3D; new Array());
-  }
 }
 </code></pre>
     </div>

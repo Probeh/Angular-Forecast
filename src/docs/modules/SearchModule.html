@@ -285,7 +285,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CommonModule        } from &#x27;@angular/common&#x27;
 import { NgModule            } from &#x27;@angular/core&#x27;
-import { ReactiveFormsModule } from &#x27;@angular/forms&#x27;
+import { FormsModule         } from &#x27;@angular/forms&#x27;
 import { FeatureModule       } from &#x27;@container/feature.module&#x27;
 import { SearchRoutingModule } from &#x27;@search/search-routing.module&#x27;
 import { SearchComponent     } from &#x27;@search/search.component&#x27;
@@ -295,7 +295,7 @@ const Components &#x3D; [SearchComponent];
 const Modules &#x3D; [];
 
 @NgModule({
-  imports: [CommonModule, FeatureModule, SearchRoutingModule, ReactiveFormsModule, WeatherModule, Modules],
+  imports: [CommonModule, FeatureModule, SearchRoutingModule, FormsModule, WeatherModule, Modules],
   declarations: Components,
   exports: [Components, Modules],
   providers: []

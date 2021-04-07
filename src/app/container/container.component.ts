@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core'
-import { NavigationEnd, Router } from '@angular/router';
-import { ApplicationService } from '@common/services/application.service'
-import { PanelState } from '@constants/panel-state.enum'
+import { Component         , OnInit } from '@angular/core'
+import { NavigationEnd     , Router } from '@angular/router'                     ;
+import { ApplicationService         } from '@common/services/application.service'
+import { PanelState                 } from '@constants/panel-state.enum'
 
 @Component({
   selector: 'app-container',
@@ -9,9 +9,9 @@ import { PanelState } from '@constants/panel-state.enum'
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent implements OnInit {
-  public currentRoute: string;
-  public isLoading: boolean = false;
-  public sidenavState: PanelState;
+  public currentRoute: string         ;
+  public isLoading   : boolean = false;
+  public sidenavState: PanelState     ;
   constructor(private application: ApplicationService, private router: Router) {
     this.sidenavState = this.application.sidenavState;
     this.router.events.subscribe({
@@ -23,10 +23,9 @@ export class ContainerComponent implements OnInit {
       .subscribe({ next: value => this.isLoading = value });
   }
   ngOnInit() { }
-  public onSidenavToggle() {
+  public onSidenavToggle = () =>
     this.sidenavState =
-      this.sidenavState == PanelState.Hide
-        ? PanelState.Show
-        : PanelState.Hide;
-  }
+    this.sidenavState == PanelState.Hide
+      ? PanelState.Show
+      : PanelState.Hide;
 }

@@ -1,1 +1,1 @@
-npm run codedoc & npm run snapshot & npm run github & exit
+.\\scripts\\codedoc & .\\scripts\\snapshot .\\scripts\\github & exit

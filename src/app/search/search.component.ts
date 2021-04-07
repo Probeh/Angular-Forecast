@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core'
-import { FormControl, FormGroup, Validators } from '@angular/forms'
-import { ISearchEvent } from '@helpers/search-event';
+import { Observable        , Subject                         } from 'rxjs'
+import { debounceTime      , distinctUntilChanged, switchMap } from 'rxjs/operators'
+import { Component         , OnInit                          } from '@angular/core'
+import { ISearchEvent                                        } from '@helpers/search-event'
+import { ISearchResult                                       } from '@models/autoComplete-model'
+import { WeatherService                                      } from '@services/weather.service'
 
 @Component({
   selector: 'app-search',
@@ -8,28 +11,19 @@ import { ISearchEvent } from '@helpers/search-event';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  public searchForm: FormGroup;
-  public suggestions: string[];
-  constructor() { }
-  ngOnInit() { this.initForm(); }
-  private initForm() {
-    this.searchForm = new FormGroup({
-      'search': new FormControl('', Validators.pattern('[a-zA-Z ]*'))
-    })
+  private searchText$?: Subject<string>;
+  public suggestions$?: Observable<ISearchResult[]>;
+  constructor(private weather: WeatherService) { }
+  ngOnInit() {
+    this.searchText$ = new Subject<string>();
+    this.suggestions$ = this.searchText$.pipe(
+      debounceTime(500),
+      distinctUntilChanged(),
+      switchMap(text => this.weather.autoComplete(text))
+    );
   }
-  public onSearch(event: ISearchEvent) {
-    console.log(event)
-    this.suggestions = [
-      "Apple",
-      "Intel",
-      "AMD",
-      "IBM",
-      "Microsoft"
-    ].slice().filter(x => x.toLowerCase().includes(event.query.toLowerCase()));
-  }
-  public onSubmit() {
-
-  }
-
+  public onSearch = (event: ISearchEvent) =>
+    this.searchText$.next(event.query);
+  public onSelect = (value: ISearchEvent) => null;
 }
 

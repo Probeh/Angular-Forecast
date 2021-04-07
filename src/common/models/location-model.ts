@@ -1,58 +1,44 @@
-export interface Location {
-  version?:                number;
-  key?:                    string;
-  type?:                   string;
-  rank?:                   number;
-  localizedName?:          string;
-  englishName?:            string;
-  primaryPostalCode?:      string;
-  region?:                 Country;
-  country?:                Country;
-  administrativeArea?:     AdministrativeArea;
-  timeZone?:               TimeZone;
-  geoPosition?:            GeoPosition;
-  isAlias?:                boolean;
-  supplementalAdminAreas?: any[];
-  dataSets?:               string[];
-}
+import { IAdministrativeArea               } from '@models/administrativeArea-model'
+import { BaseModel                         } from '@models/base-model'
+import { ConditionsModel                   } from '@models/conditions-model'
+import { ICountry           , CountryModel } from '@models/country-model'
+import { ForecastModel                     } from '@models/forecast-model'
+import { IGeoPosition                      } from '@models/geoPosition-model'
+import { ITimeZone                         } from '@models/timeZone-model'
 
-export interface AdministrativeArea {
-  id?:            string;
-  localizedName?: string;
-  englishName?:   string;
-  level?:         number;
-  localizedType?: string;
-  englishType?:   string;
-  countryId?:     string;
+export interface ILocation {
+  administrativeArea?: IAdministrativeArea;
+  country           ?: ICountry           ;
+  dataSets          ?: string[]           ;
+  englishName       ?: string             ;
+  geoPosition       ?: IGeoPosition       ;
+  isAlias           ?: boolean            ;
+  key               ?: string             ;
+  localizedName     ?: string             ;
+  rank              ?: number             ;
+  region            ?: ICountry           ;
+  timeZone          ?: ITimeZone          ;
+  type              ?: string             ;
 }
-
-export interface Country {
-  id?:            string;
-  localizedName?: string;
-  englishName?:   string;
-}
-
-export interface GeoPosition {
-  latitude?:  number;
-  longitude?: number;
-  elevation?: Elevation;
-}
-
-export interface Elevation {
-  metric?:   Imperial;
-  imperial?: Imperial;
-}
-
-export interface Imperial {
-  value?:    number;
-  unit?:     string;
-  unitType?: number;
-}
-
-export interface TimeZone {
-  code?:             string;
-  name?:             string;
-  gmtOffset?:        number;
-  isDaylightSaving?: boolean;
-  nextOffsetChange?: Date;
+export class LocationModel extends BaseModel {
+  public administrativeArea: IAdministrativeArea;
+  public conditions        : ConditionsModel    ;
+  public country           : CountryModel       ;
+  public dataSets          : string[]           ;
+  public englishName       : string             ;
+  public flag              : string             ;
+  public forecast          : ForecastModel      ;
+  public geoPosition       : IGeoPosition       ;
+  public isAlias           : boolean            ;
+  public isFavorite        : boolean            ;
+  public key               : string             ;
+  public localizedName     : string             ;
+  public rank              : number             ;
+  public region            : CountryModel       ;
+  public timeZone          : ITimeZone          ;
+  public type              : string             ;
+  constructor(args?: ILocation) {
+    super(args);
+    this.dataSets = this.dataSets ?? new Array();
+  }
 }

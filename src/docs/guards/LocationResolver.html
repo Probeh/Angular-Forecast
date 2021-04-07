@@ -105,7 +105,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/common/resolvers/location.resolver.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/common/resolvers/location.resolver.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -182,8 +182,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/common/resolvers/location.resolver.ts:13</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="11"
+                            class="link-to-prism">src/common/resolvers/location.resolver.ts:11</a></div>
                 </td>
             </tr>
 
@@ -235,14 +235,12 @@
 
 
         <div class="tab-pane fade  tab-source-code" id="c-source">
-            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable, pipe } from &#x27;rxjs&#x27;
-import { map } from &#x27;rxjs/operators&#x27;
-import { Injectable } from &#x27;@angular/core&#x27;
+            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable            , of      } from &#x27;rxjs&#x27;
+import { map                             } from &#x27;rxjs/operators&#x27;
+import { HttpClient                      } from &#x27;@angular/common/http&#x27;
+import { Injectable                      } from &#x27;@angular/core&#x27;
 import { ActivatedRouteSnapshot, Resolve } from &#x27;@angular/router&#x27;
-import { Geolocation } from &#x27;@helpers/geolocation&#x27;
-import { ApplicationService } from &#x27;@services/application.service&#x27;
-import { HttpClient } from &#x27;@angular/common/http&#x27;
-import { provider } from &#x27;@env/environment&#x27;
+import { ApplicationService              } from &#x27;@services/application.service&#x27;
 
 @Injectable()
 export class LocationResolver implements Resolve&lt;Geolocation&gt; {
@@ -255,9 +253,9 @@ export class LocationResolver implements Resolve&lt;Geolocation&gt; {
         .userLocation$
         .pipe(
           map(x &#x3D;&gt; {
-            this.http.get(provider.accuweather.endpoints.)
+            // this.http.get(providers.weather.endpoints.locations)
             return x;
-          }));
+          })) : of(null);
 
   }
 }</code></pre>

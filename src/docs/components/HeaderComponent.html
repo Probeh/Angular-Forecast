@@ -134,6 +134,10 @@
                                     <span class="modifier">Public</span>
                                 <a href="#currentDate">currentDate</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toggleSidenav">toggleSidenav</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -149,10 +153,6 @@
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#toggleSidenav">toggleSidenav</a>
-                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -167,7 +167,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#sidenavStateChange">sidenavStateChange</a>
+                                <a href="#onChange">onChange</a>
                             </li>
                         </ul>
                     </td>
@@ -205,8 +205,8 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="sidenavStateChange"></a>
-                        <b>sidenavStateChange</b>
+                        <a name="onChange"></a>
+                        <b>onChange</b>
                     </td>
                 </tr>
                 <tr>
@@ -269,47 +269,6 @@
             </tr>
         </tbody>
     </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="toggleSidenav"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            toggleSidenav
-                        </b>
-                        <a href="#toggleSidenav"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>toggleSidenav()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/app/container/header/header.component.ts:13</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
 </section>
     <section>
     
@@ -349,6 +308,33 @@
 
             </tbody>
         </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toggleSidenav"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            toggleSidenav</b>
+                            <a href="#toggleSidenav"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/container/header/header.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
 </section>
 
 </div>
@@ -363,13 +349,11 @@
   styleUrls: [&#x27;./header.component.scss&#x27;]
 })
 export class HeaderComponent implements OnInit {
-  @Output() public sidenavStateChange: EventEmitter&lt;void&gt; &#x3D; new EventEmitter();
+  @Output() public onChange: EventEmitter&lt;void&gt; &#x3D; new EventEmitter();
   public currentDate: Date &#x3D; new Date();
   constructor() { }
   ngOnInit() { }
-  public toggleSidenav() {
-    this.sidenavStateChange.emit()
-  }
+  public toggleSidenav &#x3D; () &#x3D;&gt; this.onChange.emit();
 }
 </code></pre>
     </div>

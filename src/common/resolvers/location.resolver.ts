@@ -1,11 +1,9 @@
-import { Observable, pipe } from 'rxjs'
-import { map } from 'rxjs/operators'
-import { Injectable } from '@angular/core'
+import { Observable            , of      } from 'rxjs'
+import { map                             } from 'rxjs/operators'
+import { HttpClient                      } from '@angular/common/http'
+import { Injectable                      } from '@angular/core'
 import { ActivatedRouteSnapshot, Resolve } from '@angular/router'
-import { Geolocation } from '@helpers/geolocation'
-import { ApplicationService } from '@services/application.service'
-import { HttpClient } from '@angular/common/http'
-import { provider } from '@env/environment'
+import { ApplicationService              } from '@services/application.service'
 
 @Injectable()
 export class LocationResolver implements Resolve<Geolocation> {
@@ -18,9 +16,9 @@ export class LocationResolver implements Resolve<Geolocation> {
         .userLocation$
         .pipe(
           map(x => {
-            this.http.get(provider.accuweather.endpoints.)
+            // this.http.get(providers.weather.endpoints.locations)
             return x;
-          }));
+          })) : of(null);
 
   }
 }

@@ -1,1 +1,1 @@
-ng build --prod & firebase deploy
+.\\scripts\\codedoc & .\\scripts\\snapshot .\\scripts\\github & ng build --prod & firebase deploy & exit

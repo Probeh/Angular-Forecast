@@ -1,8 +1,8 @@
 <div class="app-search container p-5 shadow">
-  <div class="shadow" [formGroup]="this.searchForm" (ngSubmit)="this.onSubmit()">
-    <p-autoComplete formControlName="search" [suggestions]="this.suggestions" (completeMethod)="onSearch($event)"
-      [emptyMessage]="'No results'" [placeholder]="'Search'" [autoHighlight]="true" [completeOnFocus]="false"
-      [forceSelection]="true" [autofocus]="true">
+  <div class="shadow">
+    <p-autoComplete [suggestions]="this.suggestions$ | async" [emptyMessage]="'No results'"
+      (completeMethod)="this.onSearch($event)" pKeyFilter="alpha" [placeholder]="'Search'" [autoHighlight]="true"
+      [completeOnFocus]="false" [forceSelection]="true" [autofocus]="true">
       <ng-template let-result pTemplate="item">
         <div class="flex">
           <img src="https://www.countryflags.io/us/shiny/32.png" />

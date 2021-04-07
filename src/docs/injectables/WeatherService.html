@@ -67,10 +67,9 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-
                 <tr>
                     <td class="col-md-4">
-                        <h6><b>Methods</b></h6>
+                        <h6><b>Properties</b></h6>
                     </td>
                 </tr>
                 <tr>
@@ -88,6 +87,7 @@
 
 
 
+
         </tbody>
     </table>
 </section>
@@ -98,12 +98,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(args?: <a href="../classes/AppSettings.html">AppSettings</a>, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, args?: <a href="../classes/AppSettings.html">AppSettings</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/common/services/weather.service.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/common/services/weather.service.ts:9</a></div>
                             </td>
                         </tr>
 
@@ -121,18 +121,6 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>args</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../classes/AppSettings.html" target="_self" >AppSettings</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            Yes
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
                                                         <td>http</td>
                                                   
                                                         <td>
@@ -141,6 +129,18 @@
                                                   
                                                     <td>
                                                             No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>args</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/AppSettings.html" target="_self" >AppSettings</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            Yes
                                                     </td>
                                                     
                                                 </tr>
@@ -153,102 +153,58 @@
         </table>
 </section>
 
+
             <section>
     
-    <h3 id="methods">
-        Methods
-    </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="autoComplete"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            autoComplete
-                        </b>
-                        <a href="#autoComplete"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>autoComplete(search: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
-                </td>
-            </tr>
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="autoComplete"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            autoComplete</b>
+                            <a href="#autoComplete"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/common/services/weather.service.ts:11</a></div>
+                            </td>
+                        </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="10"
-                            class="link-to-prism">src/common/services/weather.service.ts:10</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>search</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
 </section>
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpClient } from &#x27;@angular/common/http&#x27;;
-import { Injectable } from &#x27;@angular/core&#x27;
-import { provider } from &#x27;@env/environment&#x27;;
-import { AppSettings } from &#x27;@helpers/app-settings&#x27;;
-import { Observable } from &#x27;rxjs&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable    } from &#x27;rxjs&#x27;
+import { HttpClient    } from &#x27;@angular/common/http&#x27;
+import { Injectable    } from &#x27;@angular/core&#x27;
+import { providers     } from &#x27;@env/environment&#x27;
+import { AppSettings   } from &#x27;@helpers/app-settings&#x27;
+import { ISearchResult } from &#x27;@models/autoComplete-model&#x27;
 
 @Injectable()
 export class WeatherService {
-  constructor(private args?: AppSettings, private http: HttpClient) { }
-  public autoComplete(search: string):Promise&lt;any&gt; {
-    return this.http.get(provider.accuweather.endpoints.locations)
-  }
-</code></pre>
+  constructor(private http: HttpClient, private args?: AppSettings) { }
+  public autoComplete &#x3D; (search: string): Observable&lt;ISearchResult[]&gt; &#x3D;&gt;
+    this.http.get&lt;ISearchResult[]&gt;(providers.weather.autocomplete, { params: { q: search } });
+}</code></pre>
     </div>
 
 </div>

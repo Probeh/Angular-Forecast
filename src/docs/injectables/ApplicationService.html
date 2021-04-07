@@ -77,11 +77,11 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#clientSecret">clientSecret</a>
+                                <a href="#colorTheme">colorTheme</a>
                             </li>
                             <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#colorTheme">colorTheme</a>
+                                    <span class="modifier">Private</span>
+                                <a href="#getUserLocation">getUserLocation</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -119,10 +119,6 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#getUserLocation">getUserLocation</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
                                 <a href="#setUserLocation">setUserLocation</a>
                             </li>
                         </ul>
@@ -143,7 +139,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(args?: <a href="../classes/AppSettings.html">AppSettings</a>)</code>
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, args?: <a href="../classes/AppSettings.html">AppSettings</a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -165,6 +161,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                                 <tr>
                                                         <td>args</td>
                                                   
@@ -195,47 +203,6 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getUserLocation"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Private</span>
-                            getUserLocation
-                        </b>
-                        <a href="#getUserLocation"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>getUserLocation()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/common/services/application.service.ts:26</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
                     <a name="setUserLocation"></a>
                     <span class="name">
                         <b>
@@ -249,15 +216,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>setUserLocation(location: Geolocation)</code>
+                    <code>setUserLocation(location: <a href="../interfaces/IGeoPosition.html">IGeoPosition</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/common/services/application.service.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/common/services/application.service.ts:30</a></div>
                 </td>
             </tr>
 
@@ -279,7 +246,7 @@
                                 <tr>
                                     <td>location</td>
                                     <td>
-                                            <code>Geolocation</code>
+                                                <code><a href="../interfaces/IGeoPosition.html" target="_self" >IGeoPosition</a></code>
                                     </td>
 
                                     <td>
@@ -314,34 +281,6 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="clientSecret"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            clientSecret</b>
-                            <a href="#clientSecret"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/common/services/application.service.ts:14</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
                         <a name="colorTheme"></a>
                         <span class="name">
                             <b>
@@ -353,13 +292,40 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#ColorTheme" target="_self" >ColorTheme</a></code>
+                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#ColorScheme" target="_self" >ColorScheme</a></code>
 
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/common/services/application.service.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getUserLocation"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            getUserLocation</b>
+                            <a href="#getUserLocation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/common/services/application.service.ts:25</a></div>
                             </td>
                         </tr>
 
@@ -393,7 +359,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/common/services/application.service.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/common/services/application.service.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -471,7 +437,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Geolocation</code>
+                            <i>Type : </i>        <code><a href="../interfaces/IGeoPosition.html" target="_self" >IGeoPosition</a></code>
 
                         </td>
                     </tr>
@@ -500,7 +466,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code>Subject&lt;Geolocation&gt;</code>
+                            <i>Type : </i>        <code><a href="../interfaces/IGeoPosition.html" target="_self" >Subject&lt;IGeoPosition&gt;</a></code>
 
                         </td>
                     </tr>
@@ -511,7 +477,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/common/services/application.service.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/common/services/application.service.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -524,39 +490,36 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Subject                       } from &#x27;rxjs&#x27;
-import { Injectable                    } from &#x27;@angular/core&#x27;
-import { ColorTheme                    } from &#x27;@constants/color-theme.enum&#x27;
-import { PanelMode                     } from &#x27;@constants/panel-mode.enum&#x27;
-import { PanelState                    } from &#x27;@constants/panel-state.enum&#x27;
-import { CLIENT_ID  , DEFAULT_LOCATION } from &#x27;@env/environment&#x27;
-import { AppSettings                   } from &#x27;@helpers/app-settings&#x27;
-import { Geolocation                   } from &#x27;@helpers/geolocation&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Subject          } from &#x27;rxjs&#x27;
+import { HttpClient       } from &#x27;@angular/common/http&#x27;
+import { Injectable       } from &#x27;@angular/core&#x27;
+import { ColorScheme       } from &#x27;@constants/color-scheme.enum&#x27;
+import { PanelMode        } from &#x27;@constants/panel-mode.enum&#x27;
+import { PanelState       } from &#x27;@constants/panel-state.enum&#x27;
+import { DEFAULT_LOCATION } from &#x27;@env/environment&#x27;
+import { AppSettings      } from &#x27;@helpers/app-settings&#x27;
+import { IGeoPosition      } from &#x27;@models/geoPosition-model&#x27;
 
 @Injectable()
 export class ApplicationService {
-  public readonly userLocation$: Subject&lt;Geolocation&gt; &#x3D; new Subject();
+  public readonly userLocation$: Subject&lt;IGeoPosition&gt; &#x3D; new Subject();
   public readonly isLoading$: Subject&lt;boolean&gt; &#x3D; new Subject();
-  public clientSecret: string     ;
-  public colorTheme  : ColorTheme ;
+  public colorTheme  : ColorScheme ;
   public sidenavMode : PanelMode  ;
   public sidenavState: PanelState ;
-  public userLocation: Geolocation;
-  constructor(private args?: AppSettings) {
-    this.clientSecret &#x3D; CLIENT_ID       ;
-    this.colorTheme   &#x3D; ColorTheme.Light;
-    this.sidenavMode  &#x3D; PanelMode .Push ;
+  public userLocation: IGeoPosition;
+  constructor(private http: HttpClient, private args?: AppSettings) {
+    this.colorTheme &#x3D; ColorScheme.Light;
+    this.sidenavMode &#x3D; PanelMode.Push;
     this.sidenavState &#x3D; this.args.sidenavState;
     this.getUserLocation();
   }
-  private getUserLocation() {
-    navigator.geolocation
-      .getCurrentPosition(
-        (success) &#x3D;&gt; this.setUserLocation({ latitude: success.coords.latitude, longitude: success.coords.longitude }),
-        (failure) &#x3D;&gt; this.setUserLocation(DEFAULT_LOCATION)
-      );
-  }
-  private setUserLocation(location: Geolocation) {
+  private getUserLocation &#x3D; () &#x3D;&gt; navigator.geolocation
+    .getCurrentPosition(
+      (success) &#x3D;&gt; this.setUserLocation({ latitude: success.coords.latitude, longitude: success.coords.longitude }),
+      (failure) &#x3D;&gt; this.setUserLocation(DEFAULT_LOCATION)
+    );
+  private setUserLocation(location: IGeoPosition) {
     this.userLocation &#x3D; location;
     this.userLocation$.next(location);
   }

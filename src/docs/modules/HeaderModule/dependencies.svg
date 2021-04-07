@@ -24,113 +24,113 @@
 <title>cluster_HeaderModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 587,-268 587,-70 8,-70"/>
 </g>
+<g id="clust2" class="cluster">
+<title>cluster_HeaderModule_declarations</title>
+<polygon fill="none" stroke="black" points="427,-78 427,-130 579,-130 579,-78 427,-78"/>
+</g>
 <g id="clust5" class="cluster">
 <title>cluster_HeaderModule_exports</title>
-<polygon fill="none" stroke="black" points="112,-208 112,-260 516,-260 516,-208 112,-208"/>
+<polygon fill="none" stroke="black" points="95,-208 95,-260 499,-260 499,-208 95,-208"/>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_HeaderModule_imports</title>
-<polygon fill="none" stroke="black" points="176,-78 176,-195 579,-195 579,-78 176,-78"/>
-</g>
-<g id="clust2" class="cluster">
-<title>cluster_HeaderModule_declarations</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 168,-130 168,-78 16,-78"/>
+<polygon fill="none" stroke="black" points="16,-78 16,-195 419,-195 419,-78 16,-78"/>
 </g>
 <!-- ContainerComponent -->
 <g id="node1" class="node">
 <title>ContainerComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="160.04,-122 23.96,-122 23.96,-86 160.04,-86 160.04,-122"/>
-<text text-anchor="middle" x="92" y="-99.8" font-family="Times,serif" font-size="14.00">ContainerComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="571.04,-122 434.96,-122 434.96,-86 571.04,-86 571.04,-122"/>
+<text text-anchor="middle" x="503" y="-99.8" font-family="Times,serif" font-size="14.00">ContainerComponent</text>
 </g>
 <!-- HeaderModule -->
 <g id="node2" class="node">
 <title>HeaderModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="347.96,-187 344.96,-191 323.96,-191 320.96,-187 248.04,-187 248.04,-151 347.96,-151 347.96,-187"/>
-<text text-anchor="middle" x="298" y="-164.8" font-family="Times,serif" font-size="14.00">HeaderModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="330.96,-187 327.96,-191 306.96,-191 303.96,-187 231.04,-187 231.04,-151 330.96,-151 330.96,-187"/>
+<text text-anchor="middle" x="281" y="-164.8" font-family="Times,serif" font-size="14.00">HeaderModule</text>
 </g>
 <!-- ContainerComponent&#45;&gt;HeaderModule -->
 <g id="edge1" class="edge">
 <title>ContainerComponent&#45;&gt;HeaderModule</title>
-<path fill="none" stroke="black" d="M140.1,-122.02C140.1,-139.37 140.1,-163 140.1,-163 140.1,-163 238.04,-163 238.04,-163"/>
-<polygon fill="black" stroke="black" points="238.04,-166.5 248.04,-163 238.04,-159.5 238.04,-166.5"/>
+<path fill="none" stroke="black" d="M462.88,-122.02C462.88,-139.37 462.88,-163 462.88,-163 462.88,-163 341.18,-163 341.18,-163"/>
+<polygon fill="black" stroke="black" points="341.18,-159.5 331.18,-163 341.18,-166.5 341.18,-159.5"/>
 </g>
 <!-- HeaderModule&#45;&gt;HeaderModule -->
 <g id="edge3" class="edge">
 <title>HeaderModule&#45;&gt;HeaderModule</title>
-<path fill="none" stroke="black" d="M261.46,-150.76C261.46,-143.57 261.46,-137 261.46,-137 261.46,-137 237.17,-137 237.17,-137 237.17,-137 237.17,-202 237.17,-202 237.17,-202 281.34,-202 281.34,-202 281.34,-202 281.34,-197.04 281.34,-197.04"/>
-<polygon fill="black" stroke="black" points="284.84,-197.04 281.34,-187.04 277.84,-197.04 284.84,-197.04"/>
+<path fill="none" stroke="black" d="M323.73,-150.76C323.73,-143.57 323.73,-137 323.73,-137 323.73,-137 341.86,-137 341.86,-137 341.86,-137 341.86,-202 341.86,-202 341.86,-202 297.66,-202 297.66,-202 297.66,-202 297.66,-197.04 297.66,-197.04"/>
+<polygon fill="black" stroke="black" points="301.16,-197.04 297.66,-187.04 294.16,-197.04 301.16,-197.04"/>
 </g>
 <!-- ContainerComponent  -->
 <g id="node6" class="node">
 <title>ContainerComponent </title>
-<polygon fill="#fb8072" stroke="black" points="508.04,-252 367.96,-252 367.96,-216 508.04,-216 508.04,-252"/>
-<text text-anchor="middle" x="438" y="-229.8" font-family="Times,serif" font-size="14.00">ContainerComponent </text>
+<polygon fill="#fb8072" stroke="black" points="491.04,-252 350.96,-252 350.96,-216 491.04,-216 491.04,-252"/>
+<text text-anchor="middle" x="421" y="-229.8" font-family="Times,serif" font-size="14.00">ContainerComponent </text>
 </g>
 <!-- HeaderModule&#45;&gt;ContainerComponent  -->
 <g id="edge6" class="edge">
 <title>HeaderModule&#45;&gt;ContainerComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M348,-175C377.75,-175 409.76,-175 409.76,-175 409.76,-175 409.76,-205.98 409.76,-205.98"/>
-<polygon fill="black" stroke="black" points="406.26,-205.98 409.76,-215.98 413.26,-205.98 406.26,-205.98"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M331.23,-175C356.1,-175 380.87,-175 380.87,-175 380.87,-175 380.87,-205.98 380.87,-205.98"/>
+<polygon fill="black" stroke="black" points="377.37,-205.98 380.87,-215.98 384.37,-205.98 377.37,-205.98"/>
 </g>
 <!-- HeaderModule  -->
 <g id="node7" class="node">
 <title>HeaderModule </title>
-<polygon fill="#fb8072" stroke="black" points="349.96,-252 246.04,-252 246.04,-216 349.96,-216 349.96,-252"/>
-<text text-anchor="middle" x="298" y="-229.8" font-family="Times,serif" font-size="14.00">HeaderModule </text>
+<polygon fill="#fb8072" stroke="black" points="332.96,-252 229.04,-252 229.04,-216 332.96,-216 332.96,-252"/>
+<text text-anchor="middle" x="281" y="-229.8" font-family="Times,serif" font-size="14.00">HeaderModule </text>
 </g>
 <!-- HeaderModule&#45;&gt;HeaderModule  -->
 <g id="edge7" class="edge">
 <title>HeaderModule&#45;&gt;HeaderModule </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M314.66,-187.11C314.66,-187.11 314.66,-205.99 314.66,-205.99"/>
-<polygon fill="black" stroke="black" points="311.16,-205.99 314.66,-215.99 318.16,-205.99 311.16,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M264.34,-187.11C264.34,-187.11 264.34,-205.99 264.34,-205.99"/>
+<polygon fill="black" stroke="black" points="260.84,-205.99 264.34,-215.99 267.84,-205.99 260.84,-205.99"/>
 </g>
 <!-- SidenavModule  -->
 <g id="node8" class="node">
 <title>SidenavModule </title>
-<polygon fill="#fb8072" stroke="black" points="228.15,-252 119.85,-252 119.85,-216 228.15,-216 228.15,-252"/>
-<text text-anchor="middle" x="174" y="-229.8" font-family="Times,serif" font-size="14.00">SidenavModule </text>
+<polygon fill="#fb8072" stroke="black" points="211.15,-252 102.85,-252 102.85,-216 211.15,-216 211.15,-252"/>
+<text text-anchor="middle" x="157" y="-229.8" font-family="Times,serif" font-size="14.00">SidenavModule </text>
 </g>
 <!-- HeaderModule&#45;&gt;SidenavModule  -->
 <g id="edge8" class="edge">
 <title>HeaderModule&#45;&gt;SidenavModule </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M247.89,-175C226.29,-175 205.88,-175 205.88,-175 205.88,-175 205.88,-205.98 205.88,-205.98"/>
-<polygon fill="black" stroke="black" points="202.38,-205.98 205.88,-215.98 209.38,-205.98 202.38,-205.98"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M230.78,-175C204.93,-175 178.77,-175 178.77,-175 178.77,-175 178.77,-205.98 178.77,-205.98"/>
+<polygon fill="black" stroke="black" points="175.27,-205.98 178.77,-215.98 182.27,-205.98 175.27,-205.98"/>
 </g>
 <!-- FeatureModule -->
 <g id="node3" class="node">
 <title>FeatureModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="570.53,-122 567.53,-126 546.53,-126 543.53,-122 469.47,-122 469.47,-86 570.53,-86 570.53,-122"/>
-<text text-anchor="middle" x="520" y="-99.8" font-family="Times,serif" font-size="14.00">FeatureModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="410.53,-122 407.53,-126 386.53,-126 383.53,-122 309.47,-122 309.47,-86 410.53,-86 410.53,-122"/>
+<text text-anchor="middle" x="360" y="-99.8" font-family="Times,serif" font-size="14.00">FeatureModule</text>
 </g>
 <!-- FeatureModule&#45;&gt;HeaderModule -->
 <g id="edge2" class="edge">
 <title>FeatureModule&#45;&gt;HeaderModule</title>
-<path fill="none" stroke="black" d="M488.63,-122.02C488.63,-139.37 488.63,-163 488.63,-163 488.63,-163 358.09,-163 358.09,-163"/>
-<polygon fill="black" stroke="black" points="358.09,-159.5 348.09,-163 358.09,-166.5 358.09,-159.5"/>
+<path fill="none" stroke="black" d="M316.48,-122.11C316.48,-122.11 316.48,-140.99 316.48,-140.99"/>
+<polygon fill="black" stroke="black" points="312.98,-140.99 316.48,-150.99 319.98,-140.99 312.98,-140.99"/>
 </g>
 <!-- HeaderRoutingModule -->
 <g id="node4" class="node">
 <title>HeaderRoutingModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="451.58,-122 448.58,-126 427.58,-126 424.58,-122 306.42,-122 306.42,-86 451.58,-86 451.58,-122"/>
-<text text-anchor="middle" x="379" y="-99.8" font-family="Times,serif" font-size="14.00">HeaderRoutingModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="291.58,-122 288.58,-126 267.58,-126 264.58,-122 146.42,-122 146.42,-86 291.58,-86 291.58,-122"/>
+<text text-anchor="middle" x="219" y="-99.8" font-family="Times,serif" font-size="14.00">HeaderRoutingModule</text>
 </g>
 <!-- HeaderRoutingModule&#45;&gt;HeaderModule -->
 <g id="edge4" class="edge">
 <title>HeaderRoutingModule&#45;&gt;HeaderModule</title>
-<path fill="none" stroke="black" d="M327.22,-122.11C327.22,-122.11 327.22,-140.99 327.22,-140.99"/>
-<polygon fill="black" stroke="black" points="323.72,-140.99 327.22,-150.99 330.72,-140.99 323.72,-140.99"/>
+<path fill="none" stroke="black" d="M261.28,-122.11C261.28,-122.11 261.28,-140.99 261.28,-140.99"/>
+<polygon fill="black" stroke="black" points="257.78,-140.99 261.28,-150.99 264.78,-140.99 257.78,-140.99"/>
 </g>
 <!-- SidenavModule -->
 <g id="node5" class="node">
 <title>SidenavModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="288.15,-122 285.15,-126 264.15,-126 261.15,-122 183.85,-122 183.85,-86 288.15,-86 288.15,-122"/>
-<text text-anchor="middle" x="236" y="-99.8" font-family="Times,serif" font-size="14.00">SidenavModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="128.15,-122 125.15,-126 104.15,-126 101.15,-122 23.85,-122 23.85,-86 128.15,-86 128.15,-122"/>
+<text text-anchor="middle" x="76" y="-99.8" font-family="Times,serif" font-size="14.00">SidenavModule</text>
 </g>
 <!-- SidenavModule&#45;&gt;HeaderModule -->
 <g id="edge5" class="edge">
 <title>SidenavModule&#45;&gt;HeaderModule</title>
-<path fill="none" stroke="black" d="M274.89,-122.11C274.89,-122.11 274.89,-140.99 274.89,-140.99"/>
-<polygon fill="black" stroke="black" points="271.39,-140.99 274.89,-150.99 278.39,-140.99 271.39,-140.99"/>
+<path fill="none" stroke="black" d="M115.62,-122.02C115.62,-139.37 115.62,-163 115.62,-163 115.62,-163 220.93,-163 220.93,-163"/>
+<polygon fill="black" stroke="black" points="220.93,-166.5 230.93,-163 220.93,-159.5 220.93,-166.5"/>
 </g>
 </g>
 </svg>

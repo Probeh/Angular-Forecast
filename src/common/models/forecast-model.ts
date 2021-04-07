@@ -1,49 +1,16 @@
-export interface AutoComplete {
-  headline?:       Headline;
-  dailyForecasts?: DailyForecast[];
-}
+import { BaseModel } from '@models/base-model'
+import { IHeadline } from '@models/headline-model'
+import { IWeather  } from '@models/weather-model'
 
-export interface DailyForecast {
-  date?:        Date;
-  epochDate?:   number;
-  temperature?: Temperature;
-  day?:         Day;
-  night?:       Day;
-  sources?:     string[];
-  mobileLink?:  string;
-  link?:        string;
+export interface IForecast {
+  dailyForecasts?: IWeather [];
+  headline      ?: IHeadline  ;
 }
-
-export interface Day {
-  icon?:             number;
-  iconPhrase?:       string;
-  hasPrecipitation?: boolean;
-}
-
-export interface Temperature {
-  minimum?: TemperatureData;
-  maximum?: TemperatureData;
-}
-
-export interface TemperatureData {
-  value?:    number;
-  unit?:     Unit;
-  unitType?: number;
-}
-
-export enum Unit {
-  F = "F",
-  C = "C",
-}
-
-export interface Headline {
-  effectiveDate?:      Date;
-  effectiveEpochDate?: number;
-  severity?:           number;
-  text?:               string;
-  category?:           string;
-  endDate?:            Date;
-  endEpochDate?:       number;
-  mobileLink?:         string;
-  link?:               string;
+export class ForecastModel extends BaseModel {
+  public dailyForecasts: IWeather [];
+  public headline      : IHeadline  ;
+  constructor(args?: IForecast) {
+    super(args);
+    this.dailyForecasts = this.dailyForecasts ?? new Array();
+  }
 }

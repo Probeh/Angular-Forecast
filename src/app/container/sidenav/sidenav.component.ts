@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core'
-import { PanelState } from '@constants/panel-state.enum';
-import { ApplicationService } from '@services/application.service';
+import { PanelState } from '@constants/panel-state.enum'
+import { ApplicationService } from '@services/application.service'
 
 @Component({
   selector: 'app-sidenav',

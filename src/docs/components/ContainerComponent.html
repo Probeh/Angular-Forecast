@@ -140,6 +140,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#onSidenavToggle">onSidenavToggle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#sidenavState">sidenavState</a>
                             </li>
                         </ul>
@@ -156,10 +160,6 @@
                         <ul class="index-list">
                             <li>
                                 <a href="#ngOnInit">ngOnInit</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#onSidenavToggle">onSidenavToggle</a>
                             </li>
                         </ul>
                     </td>
@@ -282,47 +282,6 @@
             </tr>
         </tbody>
     </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="onSidenavToggle"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Public</span>
-                            onSidenavToggle
-                        </b>
-                        <a href="#onSidenavToggle"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>onSidenavToggle()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="26"
-                            class="link-to-prism">src/app/container/container.component.ts:26</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
 </section>
     <section>
     
@@ -394,6 +353,33 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="onSidenavToggle"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            onSidenavToggle</b>
+                            <a href="#onSidenavToggle"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/container/container.component.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="sidenavState"></a>
                         <span class="name">
                             <b>
@@ -424,10 +410,10 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;
-import { NavigationEnd, Router } from &#x27;@angular/router&#x27;;
-import { ApplicationService } from &#x27;@common/services/application.service&#x27;
-import { PanelState } from &#x27;@constants/panel-state.enum&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component         , OnInit } from &#x27;@angular/core&#x27;
+import { NavigationEnd     , Router } from &#x27;@angular/router&#x27;                     ;
+import { ApplicationService         } from &#x27;@common/services/application.service&#x27;
+import { PanelState                 } from &#x27;@constants/panel-state.enum&#x27;
 
 @Component({
   selector: &#x27;app-container&#x27;,
@@ -435,9 +421,9 @@ import { PanelState } from &#x27;@constants/panel-state.enum&#x27;
   styleUrls: [&#x27;./container.component.scss&#x27;]
 })
 export class ContainerComponent implements OnInit {
-  public currentRoute: string;
-  public isLoading: boolean &#x3D; false;
-  public sidenavState: PanelState;
+  public currentRoute: string         ;
+  public isLoading   : boolean &#x3D; false;
+  public sidenavState: PanelState     ;
   constructor(private application: ApplicationService, private router: Router) {
     this.sidenavState &#x3D; this.application.sidenavState;
     this.router.events.subscribe({
@@ -449,12 +435,11 @@ export class ContainerComponent implements OnInit {
       .subscribe({ next: value &#x3D;&gt; this.isLoading &#x3D; value });
   }
   ngOnInit() { }
-  public onSidenavToggle() {
+  public onSidenavToggle &#x3D; () &#x3D;&gt;
     this.sidenavState &#x3D;
-      this.sidenavState &#x3D;&#x3D; PanelState.Hide
-        ? PanelState.Show
-        : PanelState.Hide;
-  }
+    this.sidenavState &#x3D;&#x3D; PanelState.Hide
+      ? PanelState.Show
+      : PanelState.Hide;
 }
 </code></pre>
     </div>
