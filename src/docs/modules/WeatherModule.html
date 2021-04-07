@@ -64,45 +64,97 @@
 <text text-anchor="start" x="429.73" y="-15.4" font-family="sans-serif" font-size="14.00"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_WeatherModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="166,-70 166,-268 330,-268 330,-70 166,-70"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="38,-70 38,-268 458,-268 458,-70 38,-70"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_WeatherModule_declarations</title>
-<polygon fill="none" stroke="black" points="176,-78 176,-130 320,-130 320,-78 176,-78"/>
+<polygon fill="none" stroke="black" points="298,-78 298,-130 450,-130 450,-78 298,-78"/>
 </g>
 <g id="clust5" class="cluster">
 <title>cluster_WeatherModule_exports</title>
-<polygon fill="none" stroke="black" points="174,-208 174,-260 322,-260 322,-208 174,-208"/>
+<polygon fill="none" stroke="black" points="46,-208 46,-260 450,-260 450,-208 46,-208"/>
 </g>
-<!-- ForecastComponent -->
+<g id="clust4" class="cluster">
+<title>cluster_WeatherModule_imports</title>
+<polygon fill="none" stroke="black" points="52,-78 52,-130 290,-130 290,-78 52,-78"/>
+</g>
+<!-- ContainerComponent -->
 <g id="node1" class="node">
-<title>ForecastComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="312.25,-122 183.75,-122 183.75,-86 312.25,-86 312.25,-122"/>
-<text text-anchor="middle" x="248" y="-99.8" font-family="Times,serif" font-size="14.00">ForecastComponent</text>
+<title>ContainerComponent</title>
+<polygon fill="#ffffb3" stroke="black" points="442.04,-122 305.96,-122 305.96,-86 442.04,-86 442.04,-122"/>
+<text text-anchor="middle" x="374" y="-99.8" font-family="Times,serif" font-size="14.00">ContainerComponent</text>
 </g>
 <!-- WeatherModule -->
 <g id="node2" class="node">
 <title>WeatherModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="301.46,-187 298.46,-191 277.46,-191 274.46,-187 194.54,-187 194.54,-151 301.46,-151 301.46,-187"/>
-<text text-anchor="middle" x="248" y="-164.8" font-family="Times,serif" font-size="14.00">WeatherModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="285.46,-187 282.46,-191 261.46,-191 258.46,-187 178.54,-187 178.54,-151 285.46,-151 285.46,-187"/>
+<text text-anchor="middle" x="232" y="-164.8" font-family="Times,serif" font-size="14.00">WeatherModule</text>
 </g>
-<!-- ForecastComponent&#45;&gt;WeatherModule -->
+<!-- ContainerComponent&#45;&gt;WeatherModule -->
 <g id="edge1" class="edge">
-<title>ForecastComponent&#45;&gt;WeatherModule</title>
-<path fill="none" stroke="black" d="M248,-122.11C248,-122.11 248,-140.99 248,-140.99"/>
-<polygon fill="black" stroke="black" points="244.5,-140.99 248,-150.99 251.5,-140.99 244.5,-140.99"/>
+<title>ContainerComponent&#45;&gt;WeatherModule</title>
+<path fill="none" stroke="black" d="M351.16,-122.02C351.16,-139.37 351.16,-163 351.16,-163 351.16,-163 295.65,-163 295.65,-163"/>
+<polygon fill="black" stroke="black" points="295.65,-159.5 285.65,-163 295.65,-166.5 295.65,-159.5"/>
 </g>
-<!-- ForecastComponent  -->
+<!-- ContainerComponent  -->
+<g id="node5" class="node">
+<title>ContainerComponent </title>
+<polygon fill="#fb8072" stroke="black" points="442.04,-252 301.96,-252 301.96,-216 442.04,-216 442.04,-252"/>
+<text text-anchor="middle" x="372" y="-229.8" font-family="Times,serif" font-size="14.00">ContainerComponent </text>
+</g>
+<!-- WeatherModule&#45;&gt;ContainerComponent  -->
+<g id="edge4" class="edge">
+<title>WeatherModule&#45;&gt;ContainerComponent </title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M285.89,-175C333.89,-175 396.59,-175 396.59,-175 396.59,-175 396.59,-205.98 396.59,-205.98"/>
+<polygon fill="black" stroke="black" points="393.09,-205.98 396.59,-215.98 400.09,-205.98 393.09,-205.98"/>
+</g>
+<!-- HeaderModule  -->
+<g id="node6" class="node">
+<title>HeaderModule </title>
+<polygon fill="#fb8072" stroke="black" points="283.96,-252 180.04,-252 180.04,-216 283.96,-216 283.96,-252"/>
+<text text-anchor="middle" x="232" y="-229.8" font-family="Times,serif" font-size="14.00">HeaderModule </text>
+</g>
+<!-- WeatherModule&#45;&gt;HeaderModule  -->
+<g id="edge5" class="edge">
+<title>WeatherModule&#45;&gt;HeaderModule </title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M232,-187.11C232,-187.11 232,-205.99 232,-205.99"/>
+<polygon fill="black" stroke="black" points="228.5,-205.99 232,-215.99 235.5,-205.99 228.5,-205.99"/>
+</g>
+<!-- SidenavModule  -->
+<g id="node7" class="node">
+<title>SidenavModule </title>
+<polygon fill="#fb8072" stroke="black" points="162.15,-252 53.85,-252 53.85,-216 162.15,-216 162.15,-252"/>
+<text text-anchor="middle" x="108" y="-229.8" font-family="Times,serif" font-size="14.00">SidenavModule </text>
+</g>
+<!-- WeatherModule&#45;&gt;SidenavModule  -->
+<g id="edge6" class="edge">
+<title>WeatherModule&#45;&gt;SidenavModule </title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M178.18,-175C139.37,-175 93.81,-175 93.81,-175 93.81,-175 93.81,-205.98 93.81,-205.98"/>
+<polygon fill="black" stroke="black" points="90.31,-205.98 93.81,-215.98 97.31,-205.98 90.31,-205.98"/>
+</g>
+<!-- HeaderModule -->
 <g id="node3" class="node">
-<title>ForecastComponent </title>
-<polygon fill="#fb8072" stroke="black" points="314.25,-252 181.75,-252 181.75,-216 314.25,-216 314.25,-252"/>
-<text text-anchor="middle" x="248" y="-229.8" font-family="Times,serif" font-size="14.00">ForecastComponent </text>
+<title>HeaderModule</title>
+<polygon fill="#8dd3c7" stroke="black" points="281.96,-122 278.96,-126 257.96,-126 254.96,-122 182.04,-122 182.04,-86 281.96,-86 281.96,-122"/>
+<text text-anchor="middle" x="232" y="-99.8" font-family="Times,serif" font-size="14.00">HeaderModule</text>
 </g>
-<!-- WeatherModule&#45;&gt;ForecastComponent  -->
+<!-- HeaderModule&#45;&gt;WeatherModule -->
 <g id="edge2" class="edge">
-<title>WeatherModule&#45;&gt;ForecastComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M248,-187.11C248,-187.11 248,-205.99 248,-205.99"/>
-<polygon fill="black" stroke="black" points="244.5,-205.99 248,-215.99 251.5,-205.99 244.5,-205.99"/>
+<title>HeaderModule&#45;&gt;WeatherModule</title>
+<path fill="none" stroke="black" d="M232,-122.11C232,-122.11 232,-140.99 232,-140.99"/>
+<polygon fill="black" stroke="black" points="228.5,-140.99 232,-150.99 235.5,-140.99 228.5,-140.99"/>
+</g>
+<!-- SidenavModule -->
+<g id="node4" class="node">
+<title>SidenavModule</title>
+<polygon fill="#8dd3c7" stroke="black" points="164.15,-122 161.15,-126 140.15,-126 137.15,-122 59.85,-122 59.85,-86 164.15,-86 164.15,-122"/>
+<text text-anchor="middle" x="112" y="-99.8" font-family="Times,serif" font-size="14.00">SidenavModule</text>
+</g>
+<!-- SidenavModule&#45;&gt;WeatherModule -->
+<g id="edge3" class="edge">
+<title>SidenavModule&#45;&gt;WeatherModule</title>
+<path fill="none" stroke="black" d="M127.94,-122.02C127.94,-139.37 127.94,-163 127.94,-163 127.94,-163 168.45,-163 168.45,-163"/>
+<polygon fill="black" stroke="black" points="168.45,-166.5 178.45,-163 168.45,-159.5 168.45,-166.5"/>
 </g>
 </g>
 </svg>
@@ -147,7 +199,19 @@
                             title="Official documentation about module declarations"><span class="icon ion-ios-information-circle-outline"></span></a></h3>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="../components/ForecastComponent.html">ForecastComponent</a>
+                            <a href="../components/ContainerComponent.html">ContainerComponent</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h3>Imports<a href="https://angular.io/api/core/NgModule#imports" target="_blank" title="Official documentation about module imports"><span
+                                class="icon ion-ios-information-circle-outline"></a></h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="../modules/HeaderModule.html">HeaderModule</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../modules/SidenavModule.html">SidenavModule</a>
                         </li>
                     </ul>
                 </div>
@@ -156,7 +220,13 @@
                                 class="icon ion-ios-information-circle-outline"></a></h3>
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="../components/ForecastComponent.html">ForecastComponent</a>
+                            <a href="../components/ContainerComponent.html">ContainerComponent</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../modules/HeaderModule.html">HeaderModule</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="../modules/SidenavModule.html">SidenavModule</a>
                         </li>
                     </ul>
                 </div>
