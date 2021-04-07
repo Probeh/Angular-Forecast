@@ -509,8 +509,8 @@ export class ApplicationService {
   public sidenavState: PanelState  ;
   public userLocation: IGeoPosition;
   constructor(private http: HttpClient, private args?: AppSettings) {
-    this.colorScheme &#x3D; args.colorScheme;
-    this.sidenavMode &#x3D; args.sidenavMode;
+    this.colorScheme  &#x3D; this.args.colorScheme ;
+    this.sidenavMode  &#x3D; this.args.sidenavMode ;
     this.sidenavState &#x3D; this.args.sidenavState;
     this.getUserLocation();
   }

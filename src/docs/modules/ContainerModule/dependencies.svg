@@ -24,17 +24,17 @@
 <title>cluster_ContainerModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 1504,-268 1504,-70 8,-70"/>
 </g>
+<g id="clust7" class="cluster">
+<title>cluster_ContainerModule_providers</title>
+<polygon fill="none" stroke="black" points="600,-78 600,-130 1496,-130 1496,-78 600,-78"/>
+</g>
 <g id="clust2" class="cluster">
 <title>cluster_ContainerModule_declarations</title>
-<polygon fill="none" stroke="black" points="1344,-78 1344,-130 1496,-130 1496,-78 1344,-78"/>
+<polygon fill="none" stroke="black" points="440,-78 440,-130 592,-130 592,-78 440,-78"/>
 </g>
 <g id="clust5" class="cluster">
 <title>cluster_ContainerModule_exports</title>
-<polygon fill="none" stroke="black" points="516,-208 516,-260 920,-260 920,-208 516,-208"/>
-</g>
-<g id="clust7" class="cluster">
-<title>cluster_ContainerModule_providers</title>
-<polygon fill="none" stroke="black" points="440,-78 440,-130 1336,-130 1336,-78 440,-78"/>
+<polygon fill="none" stroke="black" points="495,-208 495,-260 899,-260 899,-208 495,-208"/>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_ContainerModule_imports</title>
@@ -43,56 +43,56 @@
 <!-- ContainerComponent -->
 <g id="node1" class="node">
 <title>ContainerComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="1488.04,-122 1351.96,-122 1351.96,-86 1488.04,-86 1488.04,-122"/>
-<text text-anchor="middle" x="1420" y="-99.8" font-family="Times,serif" font-size="14.00">ContainerComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="584.04,-122 447.96,-122 447.96,-86 584.04,-86 584.04,-122"/>
+<text text-anchor="middle" x="516" y="-99.8" font-family="Times,serif" font-size="14.00">ContainerComponent</text>
 </g>
 <!-- ContainerModule -->
 <g id="node2" class="node">
 <title>ContainerModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="759.26,-187 756.26,-191 735.26,-191 732.26,-187 644.74,-187 644.74,-151 759.26,-151 759.26,-187"/>
-<text text-anchor="middle" x="702" y="-164.8" font-family="Times,serif" font-size="14.00">ContainerModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="738.26,-187 735.26,-191 714.26,-191 711.26,-187 623.74,-187 623.74,-151 738.26,-151 738.26,-187"/>
+<text text-anchor="middle" x="681" y="-164.8" font-family="Times,serif" font-size="14.00">ContainerModule</text>
 </g>
 <!-- ContainerComponent&#45;&gt;ContainerModule -->
 <g id="edge1" class="edge">
 <title>ContainerComponent&#45;&gt;ContainerModule</title>
-<path fill="none" stroke="black" d="M1420,-122.28C1420,-143.32 1420,-175 1420,-175 1420,-175 769.54,-175 769.54,-175"/>
-<polygon fill="black" stroke="black" points="769.54,-171.5 759.54,-175 769.54,-178.5 769.54,-171.5"/>
+<path fill="none" stroke="black" d="M543.6,-122.24C543.6,-137.57 543.6,-157 543.6,-157 543.6,-157 613.52,-157 613.52,-157"/>
+<polygon fill="black" stroke="black" points="613.52,-160.5 623.52,-157 613.52,-153.5 613.52,-160.5"/>
 </g>
 <!-- ContainerComponent  -->
 <g id="node6" class="node">
 <title>ContainerComponent </title>
-<polygon fill="#fb8072" stroke="black" points="912.04,-252 771.96,-252 771.96,-216 912.04,-216 912.04,-252"/>
-<text text-anchor="middle" x="842" y="-229.8" font-family="Times,serif" font-size="14.00">ContainerComponent </text>
+<polygon fill="#fb8072" stroke="black" points="891.04,-252 750.96,-252 750.96,-216 891.04,-216 891.04,-252"/>
+<text text-anchor="middle" x="821" y="-229.8" font-family="Times,serif" font-size="14.00">ContainerComponent </text>
 </g>
 <!-- ContainerModule&#45;&gt;ContainerComponent  -->
 <g id="edge5" class="edge">
 <title>ContainerModule&#45;&gt;ContainerComponent </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M759.43,-181C772.28,-181 782.19,-181 782.19,-181 782.19,-181 782.19,-205.76 782.19,-205.76"/>
-<polygon fill="black" stroke="black" points="778.69,-205.76 782.19,-215.76 785.69,-205.76 778.69,-205.76"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M738.59,-181C752.1,-181 762.65,-181 762.65,-181 762.65,-181 762.65,-205.76 762.65,-205.76"/>
+<polygon fill="black" stroke="black" points="759.15,-205.76 762.65,-215.76 766.15,-205.76 759.15,-205.76"/>
 </g>
 <!-- HeaderModule  -->
 <g id="node7" class="node">
 <title>HeaderModule </title>
-<polygon fill="#fb8072" stroke="black" points="753.96,-252 650.04,-252 650.04,-216 753.96,-216 753.96,-252"/>
-<text text-anchor="middle" x="702" y="-229.8" font-family="Times,serif" font-size="14.00">HeaderModule </text>
+<polygon fill="#fb8072" stroke="black" points="732.96,-252 629.04,-252 629.04,-216 732.96,-216 732.96,-252"/>
+<text text-anchor="middle" x="681" y="-229.8" font-family="Times,serif" font-size="14.00">HeaderModule </text>
 </g>
 <!-- ContainerModule&#45;&gt;HeaderModule  -->
 <g id="edge6" class="edge">
 <title>ContainerModule&#45;&gt;HeaderModule </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M702,-187.11C702,-187.11 702,-205.99 702,-205.99"/>
-<polygon fill="black" stroke="black" points="698.5,-205.99 702,-215.99 705.5,-205.99 698.5,-205.99"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M681,-187.11C681,-187.11 681,-205.99 681,-205.99"/>
+<polygon fill="black" stroke="black" points="677.5,-205.99 681,-215.99 684.5,-205.99 677.5,-205.99"/>
 </g>
 <!-- SidenavModule  -->
 <g id="node8" class="node">
 <title>SidenavModule </title>
-<polygon fill="#fb8072" stroke="black" points="632.15,-252 523.85,-252 523.85,-216 632.15,-216 632.15,-252"/>
-<text text-anchor="middle" x="578" y="-229.8" font-family="Times,serif" font-size="14.00">SidenavModule </text>
+<polygon fill="#fb8072" stroke="black" points="611.15,-252 502.85,-252 502.85,-216 611.15,-216 611.15,-252"/>
+<text text-anchor="middle" x="557" y="-229.8" font-family="Times,serif" font-size="14.00">SidenavModule </text>
 </g>
 <!-- ContainerModule&#45;&gt;SidenavModule  -->
 <g id="edge7" class="edge">
 <title>ContainerModule&#45;&gt;SidenavModule </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M644.59,-181C631.74,-181 621.84,-181 621.84,-181 621.84,-181 621.84,-205.76 621.84,-205.76"/>
-<polygon fill="black" stroke="black" points="618.34,-205.76 621.84,-215.76 625.34,-205.76 618.34,-205.76"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M623.56,-181C608.45,-181 596.29,-181 596.29,-181 596.29,-181 596.29,-205.76 596.29,-205.76"/>
+<polygon fill="black" stroke="black" points="592.79,-205.76 596.29,-215.76 599.79,-205.76 592.79,-205.76"/>
 </g>
 <!-- ContainerRoutingModule -->
 <g id="node3" class="node">
@@ -103,8 +103,8 @@
 <!-- ContainerRoutingModule&#45;&gt;ContainerModule -->
 <g id="edge2" class="edge">
 <title>ContainerRoutingModule&#45;&gt;ContainerModule</title>
-<path fill="none" stroke="black" d="M344,-122.02C344,-139.37 344,-163 344,-163 344,-163 634.48,-163 634.48,-163"/>
-<polygon fill="black" stroke="black" points="634.48,-166.5 644.48,-163 634.48,-159.5 634.48,-166.5"/>
+<path fill="none" stroke="black" d="M344,-122.02C344,-139.37 344,-163 344,-163 344,-163 613.45,-163 613.45,-163"/>
+<polygon fill="black" stroke="black" points="613.45,-166.5 623.45,-163 613.45,-159.5 613.45,-166.5"/>
 </g>
 <!-- HeaderModule -->
 <g id="node4" class="node">
@@ -115,8 +115,8 @@
 <!-- HeaderModule&#45;&gt;ContainerModule -->
 <g id="edge3" class="edge">
 <title>HeaderModule&#45;&gt;ContainerModule</title>
-<path fill="none" stroke="black" d="M196,-122.11C196,-141.34 196,-169 196,-169 196,-169 634.45,-169 634.45,-169"/>
-<polygon fill="black" stroke="black" points="634.45,-172.5 644.45,-169 634.45,-165.5 634.45,-172.5"/>
+<path fill="none" stroke="black" d="M196,-122.11C196,-141.34 196,-169 196,-169 196,-169 613.46,-169 613.46,-169"/>
+<polygon fill="black" stroke="black" points="613.46,-172.5 623.46,-169 613.46,-165.5 613.46,-172.5"/>
 </g>
 <!-- SidenavModule -->
 <g id="node5" class="node">
@@ -127,68 +127,68 @@
 <!-- SidenavModule&#45;&gt;ContainerModule -->
 <g id="edge4" class="edge">
 <title>SidenavModule&#45;&gt;ContainerModule</title>
-<path fill="none" stroke="black" d="M76,-122.28C76,-143.32 76,-175 76,-175 76,-175 634.51,-175 634.51,-175"/>
-<polygon fill="black" stroke="black" points="634.51,-178.5 644.51,-175 634.51,-171.5 634.51,-178.5"/>
+<path fill="none" stroke="black" d="M76,-122.28C76,-143.32 76,-175 76,-175 76,-175 613.54,-175 613.54,-175"/>
+<polygon fill="black" stroke="black" points="613.54,-178.5 623.54,-175 613.54,-171.5 613.54,-178.5"/>
 </g>
 <!-- ApplicationService -->
 <g id="node9" class="node">
 <title>ApplicationService</title>
-<ellipse fill="#fdb462" stroke="black" cx="1242" cy="-104" rx="85.67" ry="18"/>
-<text text-anchor="middle" x="1242" y="-99.8" font-family="Times,serif" font-size="14.00">ApplicationService</text>
+<ellipse fill="#fdb462" stroke="black" cx="1402" cy="-104" rx="85.67" ry="18"/>
+<text text-anchor="middle" x="1402" y="-99.8" font-family="Times,serif" font-size="14.00">ApplicationService</text>
 </g>
 <!-- ApplicationService&#45;&gt;ContainerModule -->
 <g id="edge8" class="edge">
 <title>ApplicationService&#45;&gt;ContainerModule</title>
-<path fill="none" stroke="black" d="M1242,-122.11C1242,-141.34 1242,-169 1242,-169 1242,-169 769.28,-169 769.28,-169"/>
-<polygon fill="black" stroke="black" points="769.28,-165.5 759.28,-169 769.28,-172.5 769.28,-165.5"/>
+<path fill="none" stroke="black" d="M1402,-122.28C1402,-143.32 1402,-175 1402,-175 1402,-175 748.48,-175 748.48,-175"/>
+<polygon fill="black" stroke="black" points="748.48,-171.5 738.48,-175 748.48,-178.5 748.48,-171.5"/>
 </g>
 <!-- ContextService -->
 <g id="node10" class="node">
 <title>ContextService</title>
-<ellipse fill="#fdb462" stroke="black" cx="1068" cy="-104" rx="70.64" ry="18"/>
-<text text-anchor="middle" x="1068" y="-99.8" font-family="Times,serif" font-size="14.00">ContextService</text>
+<ellipse fill="#fdb462" stroke="black" cx="1228" cy="-104" rx="70.64" ry="18"/>
+<text text-anchor="middle" x="1228" y="-99.8" font-family="Times,serif" font-size="14.00">ContextService</text>
 </g>
 <!-- ContextService&#45;&gt;ContainerModule -->
 <g id="edge9" class="edge">
 <title>ContextService&#45;&gt;ContainerModule</title>
-<path fill="none" stroke="black" d="M1068,-122.02C1068,-139.37 1068,-163 1068,-163 1068,-163 769.59,-163 769.59,-163"/>
-<polygon fill="black" stroke="black" points="769.59,-159.5 759.59,-163 769.59,-166.5 769.59,-159.5"/>
+<path fill="none" stroke="black" d="M1228,-122.11C1228,-141.34 1228,-169 1228,-169 1228,-169 748.5,-169 748.5,-169"/>
+<polygon fill="black" stroke="black" points="748.5,-165.5 738.5,-169 748.5,-172.5 748.5,-165.5"/>
 </g>
 <!-- RequestInterceptor -->
 <g id="node11" class="node">
 <title>RequestInterceptor</title>
-<ellipse fill="#fdb462" stroke="black" cx="895" cy="-104" rx="84.51" ry="18"/>
-<text text-anchor="middle" x="895" y="-99.8" font-family="Times,serif" font-size="14.00">RequestInterceptor</text>
+<ellipse fill="#fdb462" stroke="black" cx="1055" cy="-104" rx="84.51" ry="18"/>
+<text text-anchor="middle" x="1055" y="-99.8" font-family="Times,serif" font-size="14.00">RequestInterceptor</text>
 </g>
 <!-- RequestInterceptor&#45;&gt;ContainerModule -->
 <g id="edge10" class="edge">
 <title>RequestInterceptor&#45;&gt;ContainerModule</title>
-<path fill="none" stroke="black" d="M861.26,-120.77C861.26,-136.3 861.26,-157 861.26,-157 861.26,-157 769.5,-157 769.5,-157"/>
-<polygon fill="black" stroke="black" points="769.5,-153.5 759.5,-157 769.5,-160.5 769.5,-153.5"/>
+<path fill="none" stroke="black" d="M1055,-122.02C1055,-139.37 1055,-163 1055,-163 1055,-163 748.62,-163 748.62,-163"/>
+<polygon fill="black" stroke="black" points="748.62,-159.5 738.62,-163 748.62,-166.5 748.62,-159.5"/>
 </g>
 <!-- ResponseInterceptor -->
 <g id="node12" class="node">
 <title>ResponseInterceptor</title>
-<ellipse fill="#fdb462" stroke="black" cx="702" cy="-104" rx="90.31" ry="18"/>
-<text text-anchor="middle" x="702" y="-99.8" font-family="Times,serif" font-size="14.00">ResponseInterceptor</text>
+<ellipse fill="#fdb462" stroke="black" cx="862" cy="-104" rx="90.31" ry="18"/>
+<text text-anchor="middle" x="862" y="-99.8" font-family="Times,serif" font-size="14.00">ResponseInterceptor</text>
 </g>
 <!-- ResponseInterceptor&#45;&gt;ContainerModule -->
 <g id="edge11" class="edge">
 <title>ResponseInterceptor&#45;&gt;ContainerModule</title>
-<path fill="none" stroke="black" d="M702,-122.11C702,-122.11 702,-140.99 702,-140.99"/>
-<polygon fill="black" stroke="black" points="698.5,-140.99 702,-150.99 705.5,-140.99 698.5,-140.99"/>
+<path fill="none" stroke="black" d="M831.31,-121.06C831.31,-136.55 831.31,-157 831.31,-157 831.31,-157 748.68,-157 748.68,-157"/>
+<polygon fill="black" stroke="black" points="748.68,-153.5 738.68,-157 748.68,-160.5 748.68,-153.5"/>
 </g>
 <!-- WeatherService -->
 <g id="node13" class="node">
 <title>WeatherService</title>
-<ellipse fill="#fdb462" stroke="black" cx="521" cy="-104" rx="72.89" ry="18"/>
-<text text-anchor="middle" x="521" y="-99.8" font-family="Times,serif" font-size="14.00">WeatherService</text>
+<ellipse fill="#fdb462" stroke="black" cx="681" cy="-104" rx="72.89" ry="18"/>
+<text text-anchor="middle" x="681" y="-99.8" font-family="Times,serif" font-size="14.00">WeatherService</text>
 </g>
 <!-- WeatherService&#45;&gt;ContainerModule -->
 <g id="edge12" class="edge">
 <title>WeatherService&#45;&gt;ContainerModule</title>
-<path fill="none" stroke="black" d="M558.81,-119.62C558.81,-135.25 558.81,-157 558.81,-157 558.81,-157 634.58,-157 634.58,-157"/>
-<polygon fill="black" stroke="black" points="634.58,-160.5 644.58,-157 634.58,-153.5 634.58,-160.5"/>
+<path fill="none" stroke="black" d="M681,-122.11C681,-122.11 681,-140.99 681,-140.99"/>
+<polygon fill="black" stroke="black" points="677.5,-140.99 681,-150.99 684.5,-140.99 677.5,-140.99"/>
 </g>
 </g>
 </svg>

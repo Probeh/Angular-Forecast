@@ -17,8 +17,8 @@ export class ApplicationService {
   public sidenavState: PanelState  ;
   public userLocation: IGeoPosition;
   constructor(private http: HttpClient, private args?: AppSettings) {
-    this.colorScheme = args.colorScheme;
-    this.sidenavMode = args.sidenavMode;
+    this.colorScheme  = this.args.colorScheme ;
+    this.sidenavMode  = this.args.sidenavMode ;
     this.sidenavState = this.args.sidenavState;
     this.getUserLocation();
   }
