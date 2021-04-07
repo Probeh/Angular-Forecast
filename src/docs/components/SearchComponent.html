@@ -122,6 +122,25 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#searchForm">searchForm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#suggestions">suggestions</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -132,7 +151,19 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initForm">initForm</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onSearch">onSearch</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#onSubmit">onSubmit</a>
                             </li>
                         </ul>
                     </td>
@@ -157,7 +188,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/search/search.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/search/search.component.ts:12</a></div>
                             </td>
                         </tr>
 
@@ -174,6 +205,47 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initForm"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            initForm
+                        </b>
+                        <a href="#initForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initForm()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="15"
+                            class="link-to-prism">src/app/search/search.component.ts:15</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -196,8 +268,121 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="10"
-                            class="link-to-prism">src/app/search/search.component.ts:10</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/app/search/search.component.ts:14</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSearch"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onSearch
+                        </b>
+                        <a href="#onSearch"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onSearch(event: <a href="../interfaces/ISearchEvent.html">ISearchEvent</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/search/search.component.ts:20</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="../interfaces/ISearchEvent.html" target="_self" >ISearchEvent</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Public</span>
+                            onSubmit
+                        </b>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/search/search.component.ts:30</a></div>
                 </td>
             </tr>
 
@@ -214,12 +399,76 @@
         </tbody>
     </table>
 </section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="searchForm"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            searchForm</b>
+                            <a href="#searchForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/search/search.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="suggestions"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            suggestions</b>
+                            <a href="#suggestions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/search/search.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;
+import { FormControl, FormGroup, Validators } from &#x27;@angular/forms&#x27;
+import { ISearchEvent } from &#x27;@helpers/search-event&#x27;;
 
 @Component({
   selector: &#x27;app-search&#x27;,
@@ -227,15 +476,50 @@
   styleUrls: [&#x27;./search.component.scss&#x27;]
 })
 export class SearchComponent implements OnInit {
+  public searchForm: FormGroup;
+  public suggestions: string[];
   constructor() { }
-  ngOnInit() { }
+  ngOnInit() { this.initForm(); }
+  private initForm() {
+    this.searchForm &#x3D; new FormGroup({
+      &#x27;search&#x27;: new FormControl(&#x27;&#x27;, Validators.pattern(&#x27;[a-zA-Z ]*&#x27;))
+    })
+  }
+  public onSearch(event: ISearchEvent) {
+    console.log(event)
+    this.suggestions &#x3D; [
+      &quot;Apple&quot;,
+      &quot;Intel&quot;,
+      &quot;AMD&quot;,
+      &quot;IBM&quot;,
+      &quot;Microsoft&quot;
+    ].slice().filter(x &#x3D;&gt; x.toLowerCase().includes(event.query.toLowerCase()));
+  }
+  public onSubmit() {
+
+  }
+
 }
+
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-search&quot;&gt;
-  &lt;router-outlet&gt;&lt;/router-outlet&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-search container p-5 shadow&quot;&gt;
+  &lt;div class&#x3D;&quot;shadow&quot; [formGroup]&#x3D;&quot;this.searchForm&quot; (ngSubmit)&#x3D;&quot;this.onSubmit()&quot;&gt;
+    &lt;p-autoComplete formControlName&#x3D;&quot;search&quot; [suggestions]&#x3D;&quot;this.suggestions&quot; (completeMethod)&#x3D;&quot;onSearch($event)&quot;
+      [emptyMessage]&#x3D;&quot;&#x27;No results&#x27;&quot; [placeholder]&#x3D;&quot;&#x27;Search&#x27;&quot; [autoHighlight]&#x3D;&quot;true&quot; [completeOnFocus]&#x3D;&quot;false&quot;
+      [forceSelection]&#x3D;&quot;true&quot; [autofocus]&#x3D;&quot;true&quot;&gt;
+      &lt;ng-template let-result pTemplate&#x3D;&quot;item&quot;&gt;
+        &lt;div class&#x3D;&quot;flex&quot;&gt;
+          &lt;img src&#x3D;&quot;https://www.countryflags.io/us/shiny/32.png&quot; /&gt;
+          {{result}}
+        &lt;/div&gt;
+      &lt;/ng-template&gt;
+    &lt;/p-autoComplete&gt;
+  &lt;/div&gt;
+  &lt;hr&gt;
+  &lt;app-weather&gt;&lt;/app-weather&gt;
 &lt;/div&gt;</code></pre>
     </div>
 
@@ -272,7 +556,7 @@ export class SearchComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-search">  <router-outlet></router-outlet></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-search container p-5 shadow">  <div class="shadow" [formGroup]="this.searchForm" (ngSubmit)="this.onSubmit()">    <p-autoComplete formControlName="search" [suggestions]="this.suggestions" (completeMethod)="onSearch($event)"      [emptyMessage]="\'No results\'" [placeholder]="\'Search\'" [autoHighlight]="true" [completeOnFocus]="false"      [forceSelection]="true" [autofocus]="true">      <ng-template let-result pTemplate="item">        <div class="flex">          <img src="https://www.countryflags.io/us/shiny/32.png" />          {{result}}        </div>      </ng-template>    </p-autoComplete>  </div>  <hr>  <app-weather></app-weather></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'ForecastComponent', 'selector': 'app-forecast'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SearchComponent'};

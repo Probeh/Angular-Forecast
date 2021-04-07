@@ -1,1 +1,1 @@
-npm run codedoc & ng build --prod & firebase deploy & npm run snapshot & exit
+npm run codedoc & npm run snapshot & npm run github & exit

@@ -83,11 +83,15 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Static</span>
+                                <a href="#decodeBase64">decodeBase64</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
                                 <a href="#decryptAES">decryptAES</a>
                             </li>
                             <li>
                                     <span class="modifier">Static</span>
-                                <a href="#decryptBase64">decryptBase64</a>
+                                <a href="#encodeBase64">encodeBase64</a>
                             </li>
                             <li>
                                     <span class="modifier">Static</span>
@@ -95,7 +99,11 @@
                             </li>
                             <li>
                                     <span class="modifier">Static</span>
-                                <a href="#encryptBase64">encryptBase64</a>
+                                <a href="#fromStorage">fromStorage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#toStorage">toStorage</a>
                             </li>
                         </ul>
                     </td>
@@ -116,6 +124,78 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="decodeBase64"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Static</span>
+                            decodeBase64
+                        </b>
+                        <a href="#decodeBase64"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>decodeBase64(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="11"
+                            class="link-to-prism">src/common/helpers/encoding.ts:11</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -210,28 +290,28 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="decryptBase64"></a>
+                    <a name="encodeBase64"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Static</span>
-                            decryptBase64
+                            encodeBase64
                         </b>
-                        <a href="#decryptBase64"><span class="icon ion-ios-link"></span></a>
+                        <a href="#encodeBase64"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>decryptBase64(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>encodeBase64(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/common/helpers/encoding.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="5"
+                            class="link-to-prism">src/common/helpers/encoding.ts:5</a></div>
                 </td>
             </tr>
 
@@ -372,31 +452,39 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="encryptBase64"></a>
+                    <a name="fromStorage"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Static</span>
-                            encryptBase64
+                            fromStorage
                         </b>
-                        <a href="#encryptBase64"><span class="icon ion-ios-link"></span></a>
+                        <a href="#fromStorage"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>encryptBase64(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>fromStorage(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, type?)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="5"
-                            class="link-to-prism">src/common/helpers/encoding.ts:5</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/common/helpers/encoding.ts:17</a></div>
                 </td>
             </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
 
             <tr>
                 <td class="col-md-4">
@@ -413,9 +501,112 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>value</td>
+                                    <td>key</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>type</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>T</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toStorage"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Static</span>
+                            toStorage
+                        </b>
+                        <a href="#toStorage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>toStorage(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, value: T)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/common/helpers/encoding.ts:26</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>value</td>
+                                    <td>
+                                            <code>T</code>
                                     </td>
 
                                     <td>
@@ -430,7 +621,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
                     <div class="io-description">
@@ -454,17 +645,34 @@
 import { AES, enc } from &#x27;crypto-js&#x27;;
 
 export class Encoding {
-  public static encryptBase64(value: string): string {
+  public static encodeBase64(value: string): string {
     return btoa(value);
   }
   public static encryptAES(value: string, key: string &#x3D; secret): string {
     return AES.encrypt(value, key).toString();
   }
-  public static decryptBase64(value: string): string {
+  public static decodeBase64(value: string): string {
     return atob(value);
   }
   public static decryptAES(ciphertext: string, key: string &#x3D; secret): string {
     return AES.decrypt(ciphertext, key).toString(enc.Utf8);
+  }
+  public static fromStorage&lt;T&gt;(key: string, type?: new () &#x3D;&gt; T): T {
+    const encrypted: string &#x3D; localStorage.getItem(key);
+    if (encrypted) {
+      const encoded: string &#x3D; this.decryptAES(encrypted);
+      const decoded: string &#x3D; this.decodeBase64(encoded);
+      return typeof (type) &#x3D;&#x3D; &#x27;string&#x27; ? decoded : JSON.parse(decoded);
+    }
+    return null;
+  }
+  public static toStorage&lt;T&gt;(key: string, value: T) {
+    localStorage.setItem(key,
+      this.encryptAES(
+        this.encodeBase64(
+          typeof (value) &#x3D;&#x3D; &#x27;string&#x27;
+            ? value
+            : JSON.stringify(value))));
   }
 }
 </code></pre>

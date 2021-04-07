@@ -1,14 +1,19 @@
-import { BaseModel, IBaseModel } from '@models/base-model'
-
-export interface ISearchModel extends IBaseModel {
-  administrativeArea: IBaseModel;
-  country           : IBaseModel;
-  key               : number       ;
-  rank              : number       ;
-  type              : string       ;
+export interface AutoComplete {
+  version?:            number;
+  key?:                string;
+  type?:               SearchType;
+  rank?:               number;
+  localizedName?:      string;
+  country?:            AdministrativeArea;
+  administrativeArea?: AdministrativeArea;
 }
-export class SearchModel extends BaseModel {
-  constructor(args?: ISearchModel) {
-    super(args);
-  }
+
+export interface AdministrativeArea {
+  id?:            string;
+  localizedName?: string;
+}
+
+export enum SearchType {
+  City = "City",
+  Country = "Country",
 }

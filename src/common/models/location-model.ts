@@ -1,19 +1,58 @@
-import { BaseModel    , IBaseModel     } from '@models/base-model'
-import { ForecastModel, IForecastModel } from '@models/forecast-model'
-import { IWeatherModel, WeatherModel   } from '@models/weather-model'
-
-export interface ILocationModel extends IBaseModel {
-  conditions?: IWeatherModel   ;
-  favorite  ?: boolean         ;
-  forecast  ?: IForecastModel[];
+export interface Location {
+  version?:                number;
+  key?:                    string;
+  type?:                   string;
+  rank?:                   number;
+  localizedName?:          string;
+  englishName?:            string;
+  primaryPostalCode?:      string;
+  region?:                 Country;
+  country?:                Country;
+  administrativeArea?:     AdministrativeArea;
+  timeZone?:               TimeZone;
+  geoPosition?:            GeoPosition;
+  isAlias?:                boolean;
+  supplementalAdminAreas?: any[];
+  dataSets?:               string[];
 }
-export class LocationModel extends BaseModel {
-  public conditions: WeatherModel   ;
-  public favorite  : boolean        ;
-  public forecast  : ForecastModel[];
-  constructor(args?: ILocationModel) {
-    super(args);
-    this.forecast = this.forecast ?? new Array<ForecastModel>();
-    this.favorite = args['favorite'] ?? false;
-  }
+
+export interface AdministrativeArea {
+  id?:            string;
+  localizedName?: string;
+  englishName?:   string;
+  level?:         number;
+  localizedType?: string;
+  englishType?:   string;
+  countryId?:     string;
+}
+
+export interface Country {
+  id?:            string;
+  localizedName?: string;
+  englishName?:   string;
+}
+
+export interface GeoPosition {
+  latitude?:  number;
+  longitude?: number;
+  elevation?: Elevation;
+}
+
+export interface Elevation {
+  metric?:   Imperial;
+  imperial?: Imperial;
+}
+
+export interface Imperial {
+  value?:    number;
+  unit?:     string;
+  unitType?: number;
+}
+
+export interface TimeZone {
+  code?:             string;
+  name?:             string;
+  gmtOffset?:        number;
+  isDaylightSaving?: boolean;
+  nextOffsetChange?: Date;
 }

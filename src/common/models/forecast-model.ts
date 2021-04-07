@@ -1,19 +1,49 @@
-import { TimeSpan } from '@helpers/timespan';
-import { BaseModel, IBaseModel } from '@models/base-model'
-import { ILocationModel, LocationModel } from '@models/location-model';
-import { IWeatherModel, WeatherModel } from '@models/weather-model';
-
-export interface IForecastModel extends IBaseModel {
-  location?: ILocationModel  ;
-  period  ?: TimeSpan        ;
-  weather ?: IWeatherModel [];
+export interface AutoComplete {
+  headline?:       Headline;
+  dailyForecasts?: DailyForecast[];
 }
-export class ForecastModel extends BaseModel {
-  public location: LocationModel  ;
-  public period  : TimeSpan       ;
-  public weather : WeatherModel [];
-  constructor(args?: IForecastModel) {
-    super(args);
-    this.weather = this.weather ?? new Array<WeatherModel>();
-  }
+
+export interface DailyForecast {
+  date?:        Date;
+  epochDate?:   number;
+  temperature?: Temperature;
+  day?:         Day;
+  night?:       Day;
+  sources?:     string[];
+  mobileLink?:  string;
+  link?:        string;
+}
+
+export interface Day {
+  icon?:             number;
+  iconPhrase?:       string;
+  hasPrecipitation?: boolean;
+}
+
+export interface Temperature {
+  minimum?: TemperatureData;
+  maximum?: TemperatureData;
+}
+
+export interface TemperatureData {
+  value?:    number;
+  unit?:     Unit;
+  unitType?: number;
+}
+
+export enum Unit {
+  F = "F",
+  C = "C",
+}
+
+export interface Headline {
+  effectiveDate?:      Date;
+  effectiveEpochDate?: number;
+  severity?:           number;
+  text?:               string;
+  category?:           string;
+  endDate?:            Date;
+  endEpochDate?:       number;
+  mobileLink?:         string;
+  link?:               string;
 }

@@ -9,16 +9,18 @@ import { PanelState } from '@constants/panel-state.enum'
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent implements OnInit {
-  public sidenavState: PanelState;
   public currentRoute: string;
-  constructor(private app: ApplicationService, private router: Router) {
-    this.sidenavState = this.app.sidenavState;
+  public isLoading: boolean = false;
+  public sidenavState: PanelState;
+  constructor(private application: ApplicationService, private router: Router) {
+    this.sidenavState = this.application.sidenavState;
     this.router.events.subscribe({
       next: event =>
         this.currentRoute = !(event instanceof NavigationEnd) ? this.currentRoute :
           `Weather ${event.urlAfterRedirects.slice(1).replace('/', ' ')}`
     });
-
+    this.application.isLoading$
+      .subscribe({ next: value => this.isLoading = value });
   }
   ngOnInit() { }
   public onSidenavToggle() {

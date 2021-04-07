@@ -1,13 +1,16 @@
+import { Subject                       } from 'rxjs'
 import { Injectable                    } from '@angular/core'
 import { ColorTheme                    } from '@constants/color-theme.enum'
 import { PanelMode                     } from '@constants/panel-mode.enum'
 import { PanelState                    } from '@constants/panel-state.enum'
-import { CLIENT_ID  , DEFAULT_POSITION } from '@env/environment'
+import { CLIENT_ID  , DEFAULT_LOCATION } from '@env/environment'
 import { AppSettings                   } from '@helpers/app-settings'
 import { Geolocation                   } from '@helpers/geolocation'
 
 @Injectable()
 export class ApplicationService {
+  public readonly userLocation$: Subject<Geolocation> = new Subject();
+  public readonly isLoading$: Subject<boolean> = new Subject();
   public clientSecret: string     ;
   public colorTheme  : ColorTheme ;
   public sidenavMode : PanelMode  ;
@@ -23,8 +26,12 @@ export class ApplicationService {
   private getUserLocation() {
     navigator.geolocation
       .getCurrentPosition(
-        (success) => this.userLocation = new Geolocation({ latitude: success.coords.latitude, longitude: success.coords.longitude }),
-        (failure) => this.userLocation = DEFAULT_POSITION
+        (success) => this.setUserLocation({ latitude: success.coords.latitude, longitude: success.coords.longitude }),
+        (failure) => this.setUserLocation(DEFAULT_LOCATION)
       );
+  }
+  private setUserLocation(location: Geolocation) {
+    this.userLocation = location;
+    this.userLocation$.next(location);
   }
 }

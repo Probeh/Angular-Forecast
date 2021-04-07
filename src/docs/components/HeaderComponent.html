@@ -122,6 +122,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currentDate">currentDate</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -175,7 +190,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/container/header/header.component.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/container/header/header.component.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -237,8 +252,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/app/container/header/header.component.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="12"
+                            class="link-to-prism">src/app/container/header/header.component.ts:12</a></div>
                 </td>
             </tr>
 
@@ -278,8 +293,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/container/header/header.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="13"
+                            class="link-to-prism">src/app/container/header/header.component.ts:13</a></div>
                 </td>
             </tr>
 
@@ -296,6 +311,45 @@
         </tbody>
     </table>
 </section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentDate"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            currentDate</b>
+                            <a href="#currentDate"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Date()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/container/header/header.component.ts:10</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
 </div>
 
@@ -309,7 +363,8 @@
   styleUrls: [&#x27;./header.component.scss&#x27;]
 })
 export class HeaderComponent implements OnInit {
-  @Output() public sidenavStateChange: EventEmitter&lt;void&gt; &#x3D; new EventEmitter()
+  @Output() public sidenavStateChange: EventEmitter&lt;void&gt; &#x3D; new EventEmitter();
+  public currentDate: Date &#x3D; new Date();
   constructor() { }
   ngOnInit() { }
   public toggleSidenav() {
@@ -323,20 +378,21 @@ export class HeaderComponent implements OnInit {
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-header flex&quot;&gt;
   &lt;div class&#x3D;&quot;header-items&quot;&gt;
     &lt;img class&#x3D;&quot;header-image&quot; src&#x3D;&quot;../../../assets/images/logo.png&quot;&gt;
-    &lt;a class&#x3D;&quot;btn&quot; routerLink&#x3D;&quot;&quot;&gt;
+    &lt;a class&#x3D;&quot;btn&quot; routerLink&#x3D;&quot;&quot; pRipple&gt;
       &lt;i class&#x3D;&quot;fa fa-home&quot;&gt;&lt;/i&gt;
       &lt;span class&#x3D;&quot;action-text&quot;&gt;Main&lt;/span&gt;
     &lt;/a&gt;
-    &lt;a class&#x3D;&quot;btn&quot; routerLink&#x3D;&quot;favorites&quot;&gt;
+    &lt;a class&#x3D;&quot;btn&quot; routerLink&#x3D;&quot;favorites&quot; pRipple&gt;
       &lt;i class&#x3D;&quot;fa fa-star&quot;&gt;&lt;/i&gt;
       &lt;span class&#x3D;&quot;action-text&quot;&gt;Favorites&lt;/span&gt;
     &lt;/a&gt;
   &lt;/div&gt;
+  &lt;div class&#x3D;&quot;header-date&quot; style&#x3D;&quot;font-size: larger;&quot;&gt;{{this.currentDate | date: &#x27;EEEE MMMM d, y&#x27;}}&lt;/div&gt;
   &lt;div class&#x3D;&quot;header-actions&quot;&gt;
-    &lt;a class&#x3D;&quot;btn&quot; target&#x3D;&quot;_blank&quot; href&#x3D;&quot;https://github.com/Probeh/Yonathan-Probeh-04-04-2021&quot;&gt;&lt;i
+    &lt;a class&#x3D;&quot;btn&quot; target&#x3D;&quot;_blank&quot; href&#x3D;&quot;https://github.com/Probeh/Yonathan-Probeh-04-04-2021&quot; pRipple&gt;&lt;i
         class&#x3D;&quot;fa fa-github&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-    &lt;a class&#x3D;&quot;btn&quot; target&#x3D;&quot;_blank&quot; href&#x3D;&quot;../../../docs/overview.html&quot;&gt;&lt;i class&#x3D;&quot;fa fa-code&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-    &lt;a class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;this.toggleSidenav()&quot;&gt;&lt;i class&#x3D;&quot;fa fa-bars&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class&#x3D;&quot;btn&quot; target&#x3D;&quot;_blank&quot; href&#x3D;&quot;../../../docs/overview.html&quot; pRipple&gt;&lt;i class&#x3D;&quot;fa fa-code&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class&#x3D;&quot;btn&quot; (click)&#x3D;&quot;this.toggleSidenav()&quot; pRipple&gt;&lt;i class&#x3D;&quot;fa fa-bars&quot;&gt;&lt;/i&gt;&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
     </div>
@@ -366,6 +422,15 @@ export class HeaderComponent implements OnInit {
     align-items: center;
     .header-image {
       width: calc(#{$navbar-height} * 0.9);
+    }
+  }
+  .header-date {
+    @media screen and (max-width: 650px) {
+      display: none;
+    }
+    @media screen and (min-width: 650px) {
+      display: flex;
+      align-items: center;
     }
   }
   .header-actions {
@@ -428,7 +493,7 @@ export class HeaderComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-header flex">  <div class="header-items">    <img class="header-image" src="../../../assets/images/logo.png">    <a class="btn" routerLink="">      <i class="fa fa-home"></i>      <span class="action-text">Main</span>    </a>    <a class="btn" routerLink="favorites">      <i class="fa fa-star"></i>      <span class="action-text">Favorites</span>    </a>  </div>  <div class="header-actions">    <a class="btn" target="_blank" href="https://github.com/Probeh/Yonathan-Probeh-04-04-2021"><i        class="fa fa-github"></i></a>    <a class="btn" target="_blank" href="../../../docs/overview.html"><i class="fa fa-code"></i></a>    <a class="btn" (click)="this.toggleSidenav()"><i class="fa fa-bars"></i></a>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-header flex">  <div class="header-items">    <img class="header-image" src="../../../assets/images/logo.png">    <a class="btn" routerLink="" pRipple>      <i class="fa fa-home"></i>      <span class="action-text">Main</span>    </a>    <a class="btn" routerLink="favorites" pRipple>      <i class="fa fa-star"></i>      <span class="action-text">Favorites</span>    </a>  </div>  <div class="header-date" style="font-size: larger;">{{this.currentDate | date: \'EEEE MMMM d, y\'}}</div>  <div class="header-actions">    <a class="btn" target="_blank" href="https://github.com/Probeh/Yonathan-Probeh-04-04-2021" pRipple><i        class="fa fa-github"></i></a>    <a class="btn" target="_blank" href="../../../docs/overview.html" pRipple><i class="fa fa-code"></i></a>    <a class="btn" (click)="this.toggleSidenav()" pRipple><i class="fa fa-bars"></i></a>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'ForecastComponent', 'selector': 'app-forecast'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};

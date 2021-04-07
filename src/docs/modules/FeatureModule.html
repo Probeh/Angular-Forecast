@@ -55,7 +55,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/feature.module.ts</code>
+            <code>src/app/container/feature.module.ts</code>
         </p>
 
 
@@ -71,38 +71,32 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AutoCompleteModule      } from &#x27;primeng/autocomplete&#x27;
-import { ButtonModule            } from &#x27;primeng/button&#x27;
-import { CarouselModule          } from &#x27;primeng/carousel&#x27;
-import { CheckboxModule          } from &#x27;primeng/checkbox&#x27;
-import { DropdownModule          } from &#x27;primeng/dropdown&#x27;
-import { FieldsetModule          } from &#x27;primeng/fieldset&#x27;
-import { GMapModule              } from &#x27;primeng/gmap&#x27;
-import { InputSwitchModule       } from &#x27;primeng/inputswitch&#x27;
-import { InputTextModule         } from &#x27;primeng/inputtext&#x27;
-import { KeyFilterModule         } from &#x27;primeng/keyfilter&#x27;
-import { MenuModule              } from &#x27;primeng/menu&#x27;
-import { ProgressBarModule       } from &#x27;primeng/progressbar&#x27;
-import { ProgressSpinnerModule   } from &#x27;primeng/progressspinner&#x27;
-import { RadioButtonModule       } from &#x27;primeng/radiobutton&#x27;
-import { RippleModule            } from &#x27;primeng/ripple&#x27;
-import { TabMenuModule           } from &#x27;primeng/tabmenu&#x27;
-import { ToastModule             } from &#x27;primeng/toast&#x27;
-import { ToggleButtonModule      } from &#x27;primeng/togglebutton&#x27;
-import { TooltipModule           } from &#x27;primeng/tooltip&#x27;
-import { CommonModule            } from &#x27;@angular/common&#x27;
-import { HttpClientModule        } from &#x27;@angular/common/http&#x27;
-import { NgModule                } from &#x27;@angular/core&#x27;
-import { ReactiveFormsModule     } from &#x27;@angular/forms&#x27;
-import { BrowserAnimationsModule } from &#x27;@angular/platform-browser/animations&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { PrimeNGConfig         } from &#x27;primeng/api&#x27;
+import { AutoCompleteModule    } from &#x27;primeng/autocomplete&#x27;
+import { ButtonModule          } from &#x27;primeng/button&#x27;
+import { CarouselModule        } from &#x27;primeng/carousel&#x27;
+import { CheckboxModule        } from &#x27;primeng/checkbox&#x27;
+import { DropdownModule        } from &#x27;primeng/dropdown&#x27;
+import { FieldsetModule        } from &#x27;primeng/fieldset&#x27;
+import { GMapModule            } from &#x27;primeng/gmap&#x27;
+import { InputSwitchModule     } from &#x27;primeng/inputswitch&#x27;
+import { InputTextModule       } from &#x27;primeng/inputtext&#x27;
+import { KeyFilterModule       } from &#x27;primeng/keyfilter&#x27;
+import { MenuModule            } from &#x27;primeng/menu&#x27;
+import { ProgressBarModule     } from &#x27;primeng/progressbar&#x27;
+import { ProgressSpinnerModule } from &#x27;primeng/progressspinner&#x27;
+import { RadioButtonModule     } from &#x27;primeng/radiobutton&#x27;
+import { RippleModule          } from &#x27;primeng/ripple&#x27;
+import { TabMenuModule         } from &#x27;primeng/tabmenu&#x27;
+import { ToastModule           } from &#x27;primeng/toast&#x27;
+import { ToggleButtonModule    } from &#x27;primeng/togglebutton&#x27;
+import { TooltipModule         } from &#x27;primeng/tooltip&#x27;
+import { CommonModule          } from &#x27;@angular/common&#x27;
+import { NgModule              } from &#x27;@angular/core&#x27;
 
 @NgModule({
   imports: [CommonModule],
   exports: [
-    BrowserAnimationsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-
     AutoCompleteModule,
     ButtonModule,
     CarouselModule,
@@ -121,10 +115,12 @@ import { BrowserAnimationsModule } from &#x27;@angular/platform-browser/animatio
     TabMenuModule,
     ToastModule,
     ToggleButtonModule,
-    TooltipModule,
-  ],
+    TooltipModule
+  ]
 })
-export class FeatureModule { }
+export class FeatureModule {
+  constructor(private primengConfig: PrimeNGConfig) { this.primengConfig.ripple &#x3D; true; }
+}
 </code></pre>
     </div>
 </div>
