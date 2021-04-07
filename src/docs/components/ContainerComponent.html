@@ -136,7 +136,7 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#isLoading">isLoading</a>
+                                <a href="#isLoading$">isLoading$</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -184,7 +184,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/container/container.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -309,7 +309,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/container/container.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/container/container.component.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -320,29 +320,24 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="isLoading"></a>
+                        <a name="isLoading$"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            isLoading</b>
-                            <a href="#isLoading"><span class="icon ion-ios-link"></span></a>
+                            isLoading$</b>
+                            <a href="#isLoading$"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                            <i>Type : </i>    <code>Observable&lt;boolean&gt;</code>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>false</code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/container/container.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/container/container.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -397,7 +392,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/container/container.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -410,10 +405,11 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component         , OnInit } from &#x27;@angular/core&#x27;
-import { NavigationEnd     , Router } from &#x27;@angular/router&#x27;                     ;
-import { ApplicationService         } from &#x27;@common/services/application.service&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable                 } from &#x27;rxjs&#x27;
+import { Component         , OnInit } from &#x27;@angular/core&#x27;
+import { NavigationEnd     , Router } from &#x27;@angular/router&#x27;
 import { PanelState                 } from &#x27;@constants/panel-state.enum&#x27;
+import { ApplicationService         } from &#x27;@services/application.service&#x27;
 
 @Component({
   selector: &#x27;app-container&#x27;,
@@ -421,18 +417,17 @@ import { PanelState                 } from &#x27;@constants/panel-state.enum&#x2
   styleUrls: [&#x27;./container.component.scss&#x27;]
 })
 export class ContainerComponent implements OnInit {
-  public currentRoute: string         ;
-  public isLoading   : boolean &#x3D; false;
-  public sidenavState: PanelState     ;
+  public currentRoute: string             ;
+  public isLoading$  : Observable&lt;boolean&gt;;
+  public sidenavState: PanelState         ;
   constructor(private application: ApplicationService, private router: Router) {
+    this.isLoading$   &#x3D; this.application.isLoading$  ;
     this.sidenavState &#x3D; this.application.sidenavState;
     this.router.events.subscribe({
-      next: event &#x3D;&gt;
-        this.currentRoute &#x3D; !(event instanceof NavigationEnd) ? this.currentRoute :
-          &#x60;Weather ${event.urlAfterRedirects.slice(1).replace(&#x27;/&#x27;, &#x27; &#x27;)}&#x60;
+      next: event &#x3D;&gt; this.currentRoute &#x3D; !(event instanceof NavigationEnd)
+        ? this.currentRoute
+        : &#x60;Weather ${event.urlAfterRedirects.slice(1).replace(&#x27;/&#x27;, &#x27; &#x27;)}&#x60;
     });
-    this.application.isLoading$
-      .subscribe({ next: value &#x3D;&gt; this.isLoading &#x3D; value });
   }
   ngOnInit() { }
   public onSidenavToggle &#x3D; () &#x3D;&gt;

@@ -1,7 +1,8 @@
+import { Observable                 } from 'rxjs'
 import { Component         , OnInit } from '@angular/core'
-import { NavigationEnd     , Router } from '@angular/router'                     ;
-import { ApplicationService         } from '@common/services/application.service'
+import { NavigationEnd     , Router } from '@angular/router'
 import { PanelState                 } from '@constants/panel-state.enum'
+import { ApplicationService         } from '@services/application.service'
 
 @Component({
   selector: 'app-container',
@@ -9,18 +10,17 @@ import { PanelState                 } from '@constants/panel-state.enum'
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent implements OnInit {
-  public currentRoute: string         ;
-  public isLoading   : boolean = false;
-  public sidenavState: PanelState     ;
+  public currentRoute: string             ;
+  public isLoading$  : Observable<boolean>;
+  public sidenavState: PanelState         ;
   constructor(private application: ApplicationService, private router: Router) {
+    this.isLoading$   = this.application.isLoading$  ;
     this.sidenavState = this.application.sidenavState;
     this.router.events.subscribe({
-      next: event =>
-        this.currentRoute = !(event instanceof NavigationEnd) ? this.currentRoute :
-          `Weather ${event.urlAfterRedirects.slice(1).replace('/', ' ')}`
+      next: event => this.currentRoute = !(event instanceof NavigationEnd)
+        ? this.currentRoute
+        : `Weather ${event.urlAfterRedirects.slice(1).replace('/', ' ')}`
     });
-    this.application.isLoading$
-      .subscribe({ next: value => this.isLoading = value });
   }
   ngOnInit() { }
   public onSidenavToggle = () =>

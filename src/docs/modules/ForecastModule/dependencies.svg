@@ -24,6 +24,10 @@
 <title>cluster_ForecastModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="8,-70 8,-268 592,-268 592,-70 8,-70"/>
 </g>
+<g id="clust5" class="cluster">
+<title>cluster_ForecastModule_exports</title>
+<polygon fill="none" stroke="black" points="85,-208 85,-260 489,-260 489,-208 85,-208"/>
+</g>
 <g id="clust2" class="cluster">
 <title>cluster_ForecastModule_declarations</title>
 <polygon fill="none" stroke="black" points="432,-78 432,-130 584,-130 584,-78 432,-78"/>
@@ -31,10 +35,6 @@
 <g id="clust4" class="cluster">
 <title>cluster_ForecastModule_imports</title>
 <polygon fill="none" stroke="black" points="16,-78 16,-130 424,-130 424,-78 16,-78"/>
-</g>
-<g id="clust5" class="cluster">
-<title>cluster_ForecastModule_exports</title>
-<polygon fill="none" stroke="black" points="85,-208 85,-260 489,-260 489,-208 85,-208"/>
 </g>
 <!-- ContainerComponent -->
 <g id="node1" class="node">

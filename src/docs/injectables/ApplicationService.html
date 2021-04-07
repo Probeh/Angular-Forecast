@@ -77,7 +77,7 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#colorTheme">colorTheme</a>
+                                <a href="#colorScheme">colorScheme</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
@@ -281,12 +281,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="colorTheme"></a>
+                        <a name="colorScheme"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            colorTheme</b>
-                            <a href="#colorTheme"><span class="icon ion-ios-link"></span></a>
+                            colorScheme</b>
+                            <a href="#colorScheme"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -493,32 +493,32 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Subject          } from &#x27;rxjs&#x27;
 import { HttpClient       } from &#x27;@angular/common/http&#x27;
 import { Injectable       } from &#x27;@angular/core&#x27;
-import { ColorScheme       } from &#x27;@constants/color-scheme.enum&#x27;
+import { ColorScheme      } from &#x27;@constants/color-scheme.enum&#x27;
 import { PanelMode        } from &#x27;@constants/panel-mode.enum&#x27;
 import { PanelState       } from &#x27;@constants/panel-state.enum&#x27;
 import { DEFAULT_LOCATION } from &#x27;@env/environment&#x27;
 import { AppSettings      } from &#x27;@helpers/app-settings&#x27;
-import { IGeoPosition      } from &#x27;@models/geoPosition-model&#x27;
+import { IGeoPosition     } from &#x27;@models/geoPosition-model&#x27;
 
 @Injectable()
 export class ApplicationService {
   public readonly userLocation$: Subject&lt;IGeoPosition&gt; &#x3D; new Subject();
   public readonly isLoading$: Subject&lt;boolean&gt; &#x3D; new Subject();
-  public colorTheme  : ColorScheme ;
-  public sidenavMode : PanelMode  ;
-  public sidenavState: PanelState ;
+  public colorScheme : ColorScheme ;
+  public sidenavMode : PanelMode   ;
+  public sidenavState: PanelState  ;
   public userLocation: IGeoPosition;
   constructor(private http: HttpClient, private args?: AppSettings) {
-    this.colorTheme &#x3D; ColorScheme.Light;
-    this.sidenavMode &#x3D; PanelMode.Push;
+    this.colorScheme &#x3D; args.colorScheme;
+    this.sidenavMode &#x3D; args.sidenavMode;
     this.sidenavState &#x3D; this.args.sidenavState;
     this.getUserLocation();
   }
   private getUserLocation &#x3D; () &#x3D;&gt; navigator.geolocation
     .getCurrentPosition(
       (success) &#x3D;&gt; this.setUserLocation({ latitude: success.coords.latitude, longitude: success.coords.longitude }),
-      (failure) &#x3D;&gt; this.setUserLocation(DEFAULT_LOCATION)
-    );
+      (failure) &#x3D;&gt; this.setUserLocation(DEFAULT_LOCATION));
+
   private setUserLocation(location: IGeoPosition) {
     this.userLocation &#x3D; location;
     this.userLocation$.next(location);
