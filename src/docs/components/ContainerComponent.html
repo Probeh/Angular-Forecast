@@ -179,12 +179,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(application: <a href="../injectables/ApplicationService.html">ApplicationService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+<code>constructor(application: <a href="../injectables/ApplicationService.html">ApplicationService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, message: MessageService)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/container/container.component.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -218,6 +218,18 @@
                                                   
                                                         <td>
                                                                         <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>message</td>
+                                                  
+                                                        <td>
+                                                                    <code>MessageService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -265,8 +277,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/app/container/container.component.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/container/container.component.ts:32</a></div>
                 </td>
             </tr>
 
@@ -309,7 +321,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/container/container.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -337,7 +349,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -364,7 +376,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/container/container.component.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/container/container.component.ts:27</a></div>
                             </td>
                         </tr>
 
@@ -392,7 +404,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/container/container.component.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -411,6 +423,7 @@ import { NavigationEnd, Router } from &#x27;@angular/router&#x27;
 import { PanelState } from &#x27;@constants/panel-state.enum&#x27;
 import { ApplicationService } from &#x27;@services/application.service&#x27;
 import { environment } from &#x27;@env/environment&#x27;
+import { MessageService } from &#x27;primeng/api&#x27;
 
 @Component({
   selector: &#x27;app-container&#x27;,
@@ -421,7 +434,7 @@ export class ContainerComponent implements OnInit {
   public currentRoute: string;
   public isLoading$: Observable&lt;boolean&gt;;
   public sidenavState: PanelState;
-  constructor(private application: ApplicationService, private router: Router) {
+  constructor(private application: ApplicationService, private router: Router, private message: MessageService) {
     this.isLoading$ &#x3D; this.application.isLoading$;
     this.sidenavState &#x3D; this.application.sidenavState;
     this.router.events.subscribe({
@@ -451,7 +464,8 @@ export class ContainerComponent implements OnInit {
   &lt;div class&#x3D;&quot;container-sidenav&quot;&gt;
     &lt;app-sidenav [sidenavState]&#x3D;&quot;this.sidenavState&quot;&gt;&lt;/app-sidenav&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+&lt;p-toast&gt;&lt;/p-toast&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -516,7 +530,7 @@ export class ContainerComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-container">  <div class="container-main">    <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>    <div class="container-content">      <ng-content></ng-content>    </div>  </div>  <div class="container-sidenav">    <app-sidenav [sidenavState]="this.sidenavState"></app-sidenav>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-container">  <div class="container-main">    <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>    <div class="container-content">      <ng-content></ng-content>    </div>  </div>  <div class="container-sidenav">    <app-sidenav [sidenavState]="this.sidenavState"></app-sidenav>  </div></div><p-toast></p-toast></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'ForecastComponent', 'selector': 'app-forecast'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ContainerComponent'};

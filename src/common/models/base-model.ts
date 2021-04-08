@@ -6,14 +6,10 @@ export abstract class BaseModel {
   public name: string;
   public type: string;
   constructor(args?: any) {
-    Object.keys(args)?.forEach(key => typeof (args[key]) != 'object'
-      ? this[camelCase(key)] = this[camelCase(key)] ?? args[key] : {});
+    Object.keys(args)?.forEach(key => this[key] = this[key] ?? args[key]);
     this.created = new Date();
-    this.id = Guid.newGuid();
+    this.id = this.id ?? Guid.newGuid();
     this.type = this.type ?? this.constructor.name;
+    console.log(JSON.stringify(Object.keys(this)));
   }
 }
-export const camelCase = (original: string): string =>
-  original[0].toLowerCase() + original.substring(1);
-export const titleCase = (original: string): string =>
-  original.split(' ').map(item => item[0].toUpperCase() + item.substring(1)).join(' ');

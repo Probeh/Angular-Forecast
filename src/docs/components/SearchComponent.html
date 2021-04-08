@@ -302,7 +302,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/search/search.component.ts:24</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/search/search.component.ts:25</a></div>
                             </td>
                         </tr>
 
@@ -329,7 +329,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/search/search.component.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/search/search.component.ts:27</a></div>
                             </td>
                         </tr>
 
@@ -452,7 +452,8 @@ export class SearchComponent implements OnInit {
   constructor(private weather: WeatherService) { }
   ngOnInit() {
     this.searchText$ &#x3D; new Subject&lt;string&gt;();
-    this.suggestions$ &#x3D; this.searchText$.pipe(debounceTime(500),
+    this.suggestions$ &#x3D; this.searchText$.pipe(
+      debounceTime(1000),
       distinctUntilChanged(),
       switchMap(text &#x3D;&gt; this.weather.autoComplete(text.toLowerCase())));
   }
@@ -474,7 +475,7 @@ export class SearchComponent implements OnInit {
       [minLength]&#x3D;3 [placeholder]&#x3D;&quot;&#x27;Search&#x27;&quot; [autoHighlight]&#x3D;&quot;true&quot; [field]&#x3D;&quot;&#x27;LocalizedName&#x27;&quot; [completeOnFocus]&#x3D;&quot;true&quot;&gt;
       &lt;ng-template let-result pTemplate&#x3D;&quot;item&quot;&gt;
         &lt;div style&#x3D;&quot;display: flex; align-items: center;&quot;&gt;
-          &lt;img src&#x3D;&quot;{{result.getFlag()}}&quot; style&#x3D;&quot;margin-right: 15px;&quot;&gt;
+          &lt;img src&#x3D;&quot;{{result.flagIcon()}}&quot; style&#x3D;&quot;margin-right: 15px;&quot;&gt;
           {{result.toString()}}
         &lt;/div&gt;
       &lt;/ng-template&gt;
@@ -518,7 +519,7 @@ export class SearchComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-search container p-5 shadow">  <div class="shadow">    <p-autoComplete #search [suggestions]="this.suggestions$ | async" [emptyMessage]="\'No results\'"      (onSelect)="this.onSelect($event)" (completeMethod)="this.onSearch($event)" [pKeyFilter]="this.searchPattern"      [minLength]=3 [placeholder]="\'Search\'" [autoHighlight]="true" [field]="\'LocalizedName\'" [completeOnFocus]="true">      <ng-template let-result pTemplate="item">        <div style="display: flex; align-items: center;">          <img src="{{result.getFlag()}}" style="margin-right: 15px;">          {{result.toString()}}        </div>      </ng-template>    </p-autoComplete>  </div>  <hr>  <app-weather></app-weather></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-search container p-5 shadow">  <div class="shadow">    <p-autoComplete #search [suggestions]="this.suggestions$ | async" [emptyMessage]="\'No results\'"      (onSelect)="this.onSelect($event)" (completeMethod)="this.onSearch($event)" [pKeyFilter]="this.searchPattern"      [minLength]=3 [placeholder]="\'Search\'" [autoHighlight]="true" [field]="\'LocalizedName\'" [completeOnFocus]="true">      <ng-template let-result pTemplate="item">        <div style="display: flex; align-items: center;">          <img src="{{result.flagIcon()}}" style="margin-right: 15px;">          {{result.toString()}}        </div>      </ng-template>    </p-autoComplete>  </div>  <hr>  <app-weather></app-weather></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'ForecastComponent', 'selector': 'app-forecast'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SearchComponent'};

@@ -1,9 +1,9 @@
-import { Observable } from 'rxjs'
-import { map } from 'rxjs/operators'
-import { HttpClient } from '@angular/common/http'
-import { Injectable } from '@angular/core'
-import { providers } from '@env/environment'
-import { AppSettings } from '@helpers/app-settings'
+import { Observable                  } from 'rxjs'
+import { map                         } from 'rxjs/operators'
+import { HttpClient                  } from '@angular/common/http'
+import { Injectable                  } from '@angular/core'
+import { providers                   } from '@env/environment'
+import { AppSettings                 } from '@helpers/app-settings'
 import { ISearchResult, SearchResult } from '@models/autoComplete-model'
 
 @Injectable()

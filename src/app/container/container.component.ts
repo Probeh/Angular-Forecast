@@ -4,6 +4,7 @@ import { NavigationEnd, Router } from '@angular/router'
 import { PanelState } from '@constants/panel-state.enum'
 import { ApplicationService } from '@services/application.service'
 import { environment } from '@env/environment'
+import { MessageService } from 'primeng/api'
 
 @Component({
   selector: 'app-container',
@@ -14,7 +15,7 @@ export class ContainerComponent implements OnInit {
   public currentRoute: string;
   public isLoading$: Observable<boolean>;
   public sidenavState: PanelState;
-  constructor(private application: ApplicationService, private router: Router) {
+  constructor(private application: ApplicationService, private router: Router, private message: MessageService) {
     this.isLoading$ = this.application.isLoading$;
     this.sidenavState = this.application.sidenavState;
     this.router.events.subscribe({

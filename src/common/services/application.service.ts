@@ -1,12 +1,11 @@
-import { Subject } from 'rxjs'
-import { HttpClient } from '@angular/common/http'
-import { Injectable } from '@angular/core'
-import { ColorScheme } from '@constants/color-scheme.enum'
-import { PanelMode } from '@constants/panel-mode.enum'
-import { PanelState } from '@constants/panel-state.enum'
+import { Subject          } from 'rxjs'
+import { Injectable       } from '@angular/core'
+import { ColorScheme      } from '@constants/color-scheme.enum'
+import { PanelMode        } from '@constants/panel-mode.enum'
+import { PanelState       } from '@constants/panel-state.enum'
 import { DEFAULT_LOCATION } from '@env/environment'
-import { AppSettings } from '@helpers/app-settings'
-import { IGeoPosition } from '@models/geoPosition-model'
+import { AppSettings      } from '@helpers/app-settings'
+import { IGeoPosition     } from '@models/geoPosition-model'
 
 @Injectable()
 export class ApplicationService {
@@ -16,7 +15,7 @@ export class ApplicationService {
   public sidenavMode : PanelMode   ;
   public sidenavState: PanelState  ;
   public userLocation: IGeoPosition;
-  constructor(private http: HttpClient, private args?: AppSettings) {
+  constructor(private args?: AppSettings) {
     this.colorScheme  = this.args.colorScheme ;
     this.sidenavMode  = this.args.sidenavMode ;
     this.sidenavState = this.args.sidenavState;
@@ -26,7 +25,6 @@ export class ApplicationService {
     .getCurrentPosition(
       (success) => this.setUserLocation({ Latitude: success.coords.latitude, Longitude: success.coords.longitude }),
       (failure) => this.setUserLocation(DEFAULT_LOCATION));
-
   private setUserLocation(location: IGeoPosition) {
     this.userLocation = location;
     this.userLocation$.next(location);

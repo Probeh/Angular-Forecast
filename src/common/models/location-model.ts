@@ -8,17 +8,17 @@ import { ITimeZone, TimeZone } from '@models/timeZone-model'
 
 export interface ILocation {
   AdministrativeArea?: IAdministrativeArea;
-  Country?: ICountry;
-  DataSets?: string[];
-  EnglishName?: string;
-  GeoPosition?: IGeoPosition;
-  IsAlias?: boolean;
-  Key?: string;
-  LocalizedName?: string;
-  Rank?: number;
-  Region?: ICountry;
-  TimeZone?: ITimeZone;
-  Type?: string;
+  Country           ?: ICountry           ;
+  DataSets          ?: string[]           ;
+  EnglishName       ?: string             ;
+  GeoPosition       ?: IGeoPosition       ;
+  IsAlias           ?: boolean            ;
+  Key               ?: string             ;
+  LocalizedName     ?: string             ;
+  Rank              ?: number             ;
+  Region            ?: ICountry           ;
+  TimeZone          ?: ITimeZone          ;
+  Type              ?: string             ;
 }
 export class LocationModel extends BaseModel {
   public administrativeArea: AdministrativeArea;

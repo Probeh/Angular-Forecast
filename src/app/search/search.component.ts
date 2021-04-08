@@ -17,7 +17,8 @@ export class SearchComponent implements OnInit {
   constructor(private weather: WeatherService) { }
   ngOnInit() {
     this.searchText$ = new Subject<string>();
-    this.suggestions$ = this.searchText$.pipe(debounceTime(500),
+    this.suggestions$ = this.searchText$.pipe(
+      debounceTime(1000),
       distinctUntilChanged(),
       switchMap(text => this.weather.autoComplete(text.toLowerCase())));
   }

@@ -1,6 +1,6 @@
-import { providers } from '@env/environment';
+import { providers                               } from '@env/environment'
 import { AdministrativeArea, IAdministrativeArea } from '@models/administrativeArea-model'
-import { BaseModel } from '@models/base-model'
+import { BaseModel                               } from '@models/base-model'
 
 export interface ISearchResult {
   AdministrativeArea: IAdministrativeArea;

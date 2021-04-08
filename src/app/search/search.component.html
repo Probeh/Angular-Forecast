@@ -5,7 +5,7 @@
       [minLength]=3 [placeholder]="'Search'" [autoHighlight]="true" [field]="'LocalizedName'" [completeOnFocus]="true">
       <ng-template let-result pTemplate="item">
         <div style="display: flex; align-items: center;">
-          <img src="{{result.getFlag()}}" style="margin-right: 15px;">
+          <img src="{{result.flagIcon()}}" style="margin-right: 15px;">
           {{result.toString()}}
         </div>
       </ng-template>
