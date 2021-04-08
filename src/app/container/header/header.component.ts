@@ -6,9 +6,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core'
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Output() public onChange: EventEmitter<void> = new EventEmitter();
+  @Output() public sidenavChanged: EventEmitter<void> = new EventEmitter();
   public currentDate: Date = new Date();
   constructor() { }
   ngOnInit() { }
-  public toggleSidenav = () => this.onChange.emit();
+  public toggleSidenav = () => this.sidenavChanged.emit();
 }

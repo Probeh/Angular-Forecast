@@ -1,6 +1,6 @@
-import { Subject     } from 'rxjs'
-import { Injectable  } from '@angular/core'
-import { DataSets    } from '@constants/data-sets.enum'
+import { Subject } from 'rxjs'
+import { Injectable } from '@angular/core'
+import { DataSets } from '@constants/data-sets.enum'
 import { IDictionary } from '@helpers/dictionary'
 
 @Injectable()

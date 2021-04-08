@@ -1,12 +1,12 @@
-import { Subject          } from 'rxjs'
-import { HttpClient       } from '@angular/common/http'
-import { Injectable       } from '@angular/core'
-import { ColorScheme      } from '@constants/color-scheme.enum'
-import { PanelMode        } from '@constants/panel-mode.enum'
-import { PanelState       } from '@constants/panel-state.enum'
+import { Subject } from 'rxjs'
+import { HttpClient } from '@angular/common/http'
+import { Injectable } from '@angular/core'
+import { ColorScheme } from '@constants/color-scheme.enum'
+import { PanelMode } from '@constants/panel-mode.enum'
+import { PanelState } from '@constants/panel-state.enum'
 import { DEFAULT_LOCATION } from '@env/environment'
-import { AppSettings      } from '@helpers/app-settings'
-import { IGeoPosition     } from '@models/geoPosition-model'
+import { AppSettings } from '@helpers/app-settings'
+import { IGeoPosition } from '@models/geoPosition-model'
 
 @Injectable()
 export class ApplicationService {
@@ -24,7 +24,7 @@ export class ApplicationService {
   }
   private getUserLocation = () => navigator.geolocation
     .getCurrentPosition(
-      (success) => this.setUserLocation({ latitude: success.coords.latitude, longitude: success.coords.longitude }),
+      (success) => this.setUserLocation({ Latitude: success.coords.latitude, Longitude: success.coords.longitude }),
       (failure) => this.setUserLocation(DEFAULT_LOCATION));
 
   private setUserLocation(location: IGeoPosition) {

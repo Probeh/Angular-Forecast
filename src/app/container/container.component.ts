@@ -1,8 +1,9 @@
-import { Observable                 } from 'rxjs'
-import { Component         , OnInit } from '@angular/core'
-import { NavigationEnd     , Router } from '@angular/router'
-import { PanelState                 } from '@constants/panel-state.enum'
-import { ApplicationService         } from '@services/application.service'
+import { Observable } from 'rxjs'
+import { Component, enableProdMode, OnInit } from '@angular/core'
+import { NavigationEnd, Router } from '@angular/router'
+import { PanelState } from '@constants/panel-state.enum'
+import { ApplicationService } from '@services/application.service'
+import { environment } from '@env/environment'
 
 @Component({
   selector: 'app-container',
@@ -10,11 +11,11 @@ import { ApplicationService         } from '@services/application.service'
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent implements OnInit {
-  public currentRoute: string             ;
-  public isLoading$  : Observable<boolean>;
-  public sidenavState: PanelState         ;
+  public currentRoute: string;
+  public isLoading$: Observable<boolean>;
+  public sidenavState: PanelState;
   constructor(private application: ApplicationService, private router: Router) {
-    this.isLoading$   = this.application.isLoading$  ;
+    this.isLoading$ = this.application.isLoading$;
     this.sidenavState = this.application.sidenavState;
     this.router.events.subscribe({
       next: event => this.currentRoute = !(event instanceof NavigationEnd)
@@ -22,10 +23,10 @@ export class ContainerComponent implements OnInit {
         : `Weather ${event.urlAfterRedirects.slice(1).replace('/', ' ')}`
     });
   }
-  ngOnInit() { }
   public onSidenavToggle = () =>
     this.sidenavState =
     this.sidenavState == PanelState.Hide
       ? PanelState.Show
       : PanelState.Hide;
+  ngOnInit() { }
 }

@@ -81,11 +81,11 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#dailyForecasts">dailyForecasts</a>
+                                        <a href="#DailyForecasts">DailyForecasts</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#headline">headline</a>
+                                        <a href="#Headline">Headline</a>
                                 </li>
                             </ul>
                         </td>
@@ -102,13 +102,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="dailyForecasts"></a>
-                                        <span class="name"><b>dailyForecasts</b><a href="#dailyForecasts"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="DailyForecasts"></a>
+                                        <span class="name"><b>DailyForecasts</b><a href="#DailyForecasts"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>dailyForecasts:         <code><a href="../interfaces/IWeather.html" target="_self" >IWeather[]</a></code>
+                                        <code>DailyForecasts:         <code><a href="../interfaces/IWeather.html" target="_self" >IWeather[]</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -136,13 +136,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="headline"></a>
-                                        <span class="name"><b>headline</b><a href="#headline"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="Headline"></a>
+                                        <span class="name"><b>Headline</b><a href="#Headline"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>headline:         <code><a href="../interfaces/IHeadline.html" target="_self" >IHeadline</a></code>
+                                        <code>Headline:         <code><a href="../interfaces/IHeadline.html" target="_self" >IHeadline</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -172,19 +172,22 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BaseModel } from &#x27;@models/base-model&#x27;
-import { IHeadline } from &#x27;@models/headline-model&#x27;
-import { IWeather  } from &#x27;@models/weather-model&#x27;
+import { Headline, IHeadline } from &#x27;@models/headline-model&#x27;
+import { IWeather, Weather } from &#x27;@models/weather-model&#x27;
 
 export interface IForecast {
-  dailyForecasts?: IWeather [];
-  headline      ?: IHeadline  ;
+  DailyForecasts?: IWeather [];
+  Headline      ?: IHeadline  ;
 }
-export class ForecastModel extends BaseModel {
-  public dailyForecasts: IWeather [];
-  public headline      : IHeadline  ;
+export class Forecast extends BaseModel {
+  public forecasts: Weather [];
+  public headline : Headline  ;
   constructor(args?: IForecast) {
     super(args);
-    this.dailyForecasts &#x3D; this.dailyForecasts ?? new Array();
+    this.forecasts &#x3D; !args?.DailyForecasts
+      ? new Array()
+      : args?.DailyForecasts?.map(item &#x3D;&gt; new Weather(item));
+    this.headline &#x3D; new Headline(args?.Headline);
   }
 }</code></pre>
     </div>

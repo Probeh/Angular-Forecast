@@ -81,15 +81,15 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#englishName">englishName</a>
+                                        <a href="#EnglishName">EnglishName</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#id">id</a>
+                                        <a href="#ID">ID</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#localizedName">localizedName</a>
+                                        <a href="#LocalizedName">LocalizedName</a>
                                 </li>
                             </ul>
                         </td>
@@ -106,13 +106,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="englishName"></a>
-                                        <span class="name"><b>englishName</b><a href="#englishName"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="EnglishName"></a>
+                                        <span class="name"><b>EnglishName</b><a href="#EnglishName"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>englishName:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>EnglishName:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -140,13 +140,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="id"></a>
-                                        <span class="name"><b>id</b><a href="#id"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="ID"></a>
+                                        <span class="name"><b>ID</b><a href="#ID"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>id:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>ID:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -174,13 +174,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="localizedName"></a>
-                                        <span class="name"><b>localizedName</b><a href="#localizedName"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="LocalizedName"></a>
+                                        <span class="name"><b>LocalizedName</b><a href="#LocalizedName"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>localizedName:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>LocalizedName:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -212,13 +212,12 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BaseModel } from &#x27;@models/base-model&#x27;
 
 export interface ICountry {
-  englishName  ?: string;
-  id           ?: string;
-  localizedName?: string;
+  EnglishName  ?: string;
+  ID           ?: string;
+  LocalizedName?: string;
 }
-export class CountryModel extends BaseModel {
+export class Country extends BaseModel {
   public englishName  : string;
-  public id           : string;
   public localizedName: string;
   constructor(args?: ICountry) {
     super(args);

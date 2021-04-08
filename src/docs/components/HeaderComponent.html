@@ -167,7 +167,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#onChange">onChange</a>
+                                <a href="#sidenavChanged">sidenavChanged</a>
                             </li>
                         </ul>
                     </td>
@@ -205,8 +205,8 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="onChange"></a>
-                        <b>onChange</b>
+                        <a name="sidenavChanged"></a>
+                        <b>sidenavChanged</b>
                     </td>
                 </tr>
                 <tr>
@@ -349,11 +349,11 @@
   styleUrls: [&#x27;./header.component.scss&#x27;]
 })
 export class HeaderComponent implements OnInit {
-  @Output() public onChange: EventEmitter&lt;void&gt; &#x3D; new EventEmitter();
+  @Output() public sidenavChanged: EventEmitter&lt;void&gt; &#x3D; new EventEmitter();
   public currentDate: Date &#x3D; new Date();
   constructor() { }
   ngOnInit() { }
-  public toggleSidenav &#x3D; () &#x3D;&gt; this.onChange.emit();
+  public toggleSidenav &#x3D; () &#x3D;&gt; this.sidenavChanged.emit();
 }
 </code></pre>
     </div>

@@ -1,5 +1,5 @@
-import { CLIENT_ID as secret } from '@env/environment';
-import { AES, enc } from 'crypto-js';
+import { AES, enc } from 'crypto-js'
+import { CLIENT_ID as secret } from '@env/environment'
 
 export class Encoding {
   public static decodeBase64 = (value: string): string => atob(value);

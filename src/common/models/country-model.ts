@@ -1,13 +1,12 @@
 import { BaseModel } from '@models/base-model'
 
 export interface ICountry {
-  englishName  ?: string;
-  id           ?: string;
-  localizedName?: string;
+  EnglishName  ?: string;
+  ID           ?: string;
+  LocalizedName?: string;
 }
-export class CountryModel extends BaseModel {
+export class Country extends BaseModel {
   public englishName  : string;
-  public id           : string;
   public localizedName: string;
   constructor(args?: ICountry) {
     super(args);

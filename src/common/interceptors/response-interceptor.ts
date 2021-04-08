@@ -12,8 +12,6 @@ export class ResponseInterceptor implements HttpInterceptor {
     return next.handle(req).pipe(
       map(event => {
         if (event instanceof HttpResponse) {
-          const elapsed = Date.now() - started;
-          console.log(`Request for ${req.urlWithParams} took ${elapsed} ms.`);
         }
         return event;
       })

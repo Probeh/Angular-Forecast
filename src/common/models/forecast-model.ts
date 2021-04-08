@@ -1,16 +1,19 @@
 import { BaseModel } from '@models/base-model'
-import { IHeadline } from '@models/headline-model'
-import { IWeather  } from '@models/weather-model'
+import { Headline, IHeadline } from '@models/headline-model'
+import { IWeather, Weather } from '@models/weather-model'
 
 export interface IForecast {
-  dailyForecasts?: IWeather [];
-  headline      ?: IHeadline  ;
+  DailyForecasts?: IWeather [];
+  Headline      ?: IHeadline  ;
 }
-export class ForecastModel extends BaseModel {
-  public dailyForecasts: IWeather [];
-  public headline      : IHeadline  ;
+export class Forecast extends BaseModel {
+  public forecasts: Weather [];
+  public headline : Headline  ;
   constructor(args?: IForecast) {
     super(args);
-    this.dailyForecasts = this.dailyForecasts ?? new Array();
+    this.forecasts = !args?.DailyForecasts
+      ? new Array()
+      : args?.DailyForecasts?.map(item => new Weather(item));
+    this.headline = new Headline(args?.Headline);
   }
 }

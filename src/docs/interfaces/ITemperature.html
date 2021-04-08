@@ -81,11 +81,11 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#maximum">maximum</a>
+                                        <a href="#Maximum">Maximum</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#minimum">minimum</a>
+                                        <a href="#Minimum">Minimum</a>
                                 </li>
                             </ul>
                         </td>
@@ -102,13 +102,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="maximum"></a>
-                                        <span class="name"><b>maximum</b><a href="#maximum"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="Maximum"></a>
+                                        <span class="name"><b>Maximum</b><a href="#Maximum"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>maximum:         <code><a href="../interfaces/IMetric.html" target="_self" >IMetric</a></code>
+                                        <code>Maximum:         <code><a href="../interfaces/IMetric.html" target="_self" >IMetric</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -136,13 +136,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="minimum"></a>
-                                        <span class="name"><b>minimum</b><a href="#minimum"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="Minimum"></a>
+                                        <span class="name"><b>Minimum</b><a href="#Minimum"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>minimum:         <code><a href="../interfaces/IMetric.html" target="_self" >IMetric</a></code>
+                                        <code>Minimum:         <code><a href="../interfaces/IMetric.html" target="_self" >IMetric</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -171,13 +171,22 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { IMetric } from &#x27;@models/metric-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BaseModel } from &#x27;@models/base-model&#x27;
+import { IMetric, Metric } from &#x27;@models/metric-model&#x27;
 
 export interface ITemperature {
-  maximum?: IMetric;
-  minimum?: IMetric;
+  Maximum?: IMetric;
+  Minimum?: IMetric;
 }
-</code></pre>
+export class Temperature extends BaseModel {
+  public maximum: Metric;
+  public minimum: Metric;
+  constructor(args?: ITemperature) {
+    super(args);
+    this.maximum &#x3D; new Metric(args?.Maximum);
+    this.minimum &#x3D; new Metric(args?.Minimum);
+  }
+}</code></pre>
     </div>
 </div>
 

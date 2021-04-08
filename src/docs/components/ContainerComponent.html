@@ -184,7 +184,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -265,8 +265,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/app/container/container.component.ts:25</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/container/container.component.ts:31</a></div>
                 </td>
             </tr>
 
@@ -309,7 +309,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/container/container.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/container/container.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -337,7 +337,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/container/container.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -392,7 +392,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -405,11 +405,12 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable                 } from &#x27;rxjs&#x27;
-import { Component         , OnInit } from &#x27;@angular/core&#x27;
-import { NavigationEnd     , Router } from &#x27;@angular/router&#x27;
-import { PanelState                 } from &#x27;@constants/panel-state.enum&#x27;
-import { ApplicationService         } from &#x27;@services/application.service&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable } from &#x27;rxjs&#x27;
+import { Component, enableProdMode, OnInit } from &#x27;@angular/core&#x27;
+import { NavigationEnd, Router } from &#x27;@angular/router&#x27;
+import { PanelState } from &#x27;@constants/panel-state.enum&#x27;
+import { ApplicationService } from &#x27;@services/application.service&#x27;
+import { environment } from &#x27;@env/environment&#x27;
 
 @Component({
   selector: &#x27;app-container&#x27;,
@@ -417,11 +418,11 @@ import { ApplicationService         } from &#x27;@services/application.service&#
   styleUrls: [&#x27;./container.component.scss&#x27;]
 })
 export class ContainerComponent implements OnInit {
-  public currentRoute: string             ;
-  public isLoading$  : Observable&lt;boolean&gt;;
-  public sidenavState: PanelState         ;
+  public currentRoute: string;
+  public isLoading$: Observable&lt;boolean&gt;;
+  public sidenavState: PanelState;
   constructor(private application: ApplicationService, private router: Router) {
-    this.isLoading$   &#x3D; this.application.isLoading$  ;
+    this.isLoading$ &#x3D; this.application.isLoading$;
     this.sidenavState &#x3D; this.application.sidenavState;
     this.router.events.subscribe({
       next: event &#x3D;&gt; this.currentRoute &#x3D; !(event instanceof NavigationEnd)
@@ -429,12 +430,12 @@ export class ContainerComponent implements OnInit {
         : &#x60;Weather ${event.urlAfterRedirects.slice(1).replace(&#x27;/&#x27;, &#x27; &#x27;)}&#x60;
     });
   }
-  ngOnInit() { }
   public onSidenavToggle &#x3D; () &#x3D;&gt;
     this.sidenavState &#x3D;
     this.sidenavState &#x3D;&#x3D; PanelState.Hide
       ? PanelState.Show
       : PanelState.Hide;
+  ngOnInit() { }
 }
 </code></pre>
     </div>
@@ -442,7 +443,7 @@ export class ContainerComponent implements OnInit {
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-container&quot;&gt;
   &lt;div class&#x3D;&quot;container-main&quot;&gt;
-    &lt;app-header (sidenavStateChange)&#x3D;&quot;this.onSidenavToggle()&quot;&gt;&lt;/app-header&gt;
+    &lt;app-header (sidenavChanged)&#x3D;&quot;this.onSidenavToggle()&quot;&gt;&lt;/app-header&gt;
     &lt;div class&#x3D;&quot;container-content&quot;&gt;
       &lt;ng-content&gt;&lt;/ng-content&gt;
     &lt;/div&gt;
@@ -515,7 +516,7 @@ export class ContainerComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-container">  <div class="container-main">    <app-header (sidenavStateChange)="this.onSidenavToggle()"></app-header>    <div class="container-content">      <ng-content></ng-content>    </div>  </div>  <div class="container-sidenav">    <app-sidenav [sidenavState]="this.sidenavState"></app-sidenav>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-container">  <div class="container-main">    <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>    <div class="container-content">      <ng-content></ng-content>    </div>  </div>  <div class="container-sidenav">    <app-sidenav [sidenavState]="this.sidenavState"></app-sidenav>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'ForecastComponent', 'selector': 'app-forecast'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ContainerComponent'};

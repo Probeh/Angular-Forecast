@@ -81,15 +81,15 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#unit">unit</a>
+                                        <a href="#Unit">Unit</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#unitType">unitType</a>
+                                        <a href="#UnitType">UnitType</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#value">value</a>
+                                        <a href="#Value">Value</a>
                                 </li>
                             </ul>
                         </td>
@@ -106,13 +106,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="unit"></a>
-                                        <span class="name"><b>unit</b><a href="#unit"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="Unit"></a>
+                                        <span class="name"><b>Unit</b><a href="#Unit"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>unit:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>Unit:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -140,13 +140,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="unitType"></a>
-                                        <span class="name"><b>unitType</b><a href="#unitType"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="UnitType"></a>
+                                        <span class="name"><b>UnitType</b><a href="#UnitType"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>unitType:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>UnitType:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -174,13 +174,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="value"></a>
-                                        <span class="name"><b>value</b><a href="#value"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="Value"></a>
+                                        <span class="name"><b>Value</b><a href="#Value"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>value:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>Value:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -209,12 +209,21 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface IMetric {
-  unit    ?: string;
-  unitType?: number;
-  value   ?: number;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BaseModel } from &#x27;@models/base-model&#x27;
+
+export interface IMetric {
+  Unit    ?: string;
+  UnitType?: number;
+  Value   ?: number;
 }
-</code></pre>
+export class Metric extends BaseModel {
+  public unit    : string;
+  public unitType: number;
+  public value   : number;
+  constructor(args?: IMetric) {
+    super(args);
+  }
+}</code></pre>
     </div>
 </div>
 

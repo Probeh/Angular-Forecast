@@ -81,15 +81,15 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#elevation">elevation</a>
+                                        <a href="#Elevation">Elevation</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#latitude">latitude</a>
+                                        <a href="#Latitude">Latitude</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#longitude">longitude</a>
+                                        <a href="#Longitude">Longitude</a>
                                 </li>
                             </ul>
                         </td>
@@ -106,13 +106,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="elevation"></a>
-                                        <span class="name"><b>elevation</b><a href="#elevation"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="Elevation"></a>
+                                        <span class="name"><b>Elevation</b><a href="#Elevation"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>elevation:         <code><a href="../interfaces/IElevation.html" target="_self" >IElevation</a></code>
+                                        <code>Elevation:         <code><a href="../interfaces/IElevation.html" target="_self" >IElevation</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -140,13 +140,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="latitude"></a>
-                                        <span class="name"><b>latitude</b><a href="#latitude"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="Latitude"></a>
+                                        <span class="name"><b>Latitude</b><a href="#Latitude"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>latitude:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>Latitude:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -174,13 +174,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="longitude"></a>
-                                        <span class="name"><b>longitude</b><a href="#longitude"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="Longitude"></a>
+                                        <span class="name"><b>Longitude</b><a href="#Longitude"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>longitude:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>Longitude:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -209,14 +209,23 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { IElevation } from &#x27;@models/elevation-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BaseModel } from &#x27;@models/base-model&#x27;
+import { Elevation, IElevation } from &#x27;@models/elevation-model&#x27;
 
 export interface IGeoPosition {
-  elevation?: IElevation;
-  latitude ?: number    ;
-  longitude?: number    ;
+  Elevation?: IElevation;
+  Latitude ?: number    ;
+  Longitude?: number    ;
 }
-</code></pre>
+export class GeoPosition extends BaseModel {
+  public elevation: Elevation;
+  public latitude : number   ;
+  public longitude: number   ;
+  constructor(args?: IGeoPosition) {
+    super(args);
+    this.elevation &#x3D; new Elevation(args?.Elevation);
+  }
+}</code></pre>
     </div>
 </div>
 

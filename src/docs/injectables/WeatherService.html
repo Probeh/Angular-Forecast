@@ -79,6 +79,22 @@
                                     <span class="modifier">Public</span>
                                 <a href="#autoComplete">autoComplete</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getConditions">getConditions</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getForecast">getForecast</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getGeoPosition">getGeoPosition</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#getLocation">getLocation</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -103,7 +119,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/common/services/weather.service.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/common/services/weather.service.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -179,7 +195,115 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/common/services/weather.service.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/common/services/weather.service.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getConditions"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getConditions</b>
+                            <a href="#getConditions"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/common/services/weather.service.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getForecast"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getForecast</b>
+                            <a href="#getForecast"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/common/services/weather.service.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getGeoPosition"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getGeoPosition</b>
+                            <a href="#getGeoPosition"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/common/services/weather.service.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getLocation"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            getLocation</b>
+                            <a href="#getLocation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/common/services/weather.service.ts:20</a></div>
                             </td>
                         </tr>
 
@@ -192,18 +316,27 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable    } from &#x27;rxjs&#x27;
-import { HttpClient    } from &#x27;@angular/common/http&#x27;
-import { Injectable    } from &#x27;@angular/core&#x27;
-import { providers     } from &#x27;@env/environment&#x27;
-import { AppSettings   } from &#x27;@helpers/app-settings&#x27;
-import { ISearchResult } from &#x27;@models/autoComplete-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable } from &#x27;rxjs&#x27;
+import { map } from &#x27;rxjs/operators&#x27;
+import { HttpClient } from &#x27;@angular/common/http&#x27;
+import { Injectable } from &#x27;@angular/core&#x27;
+import { providers } from &#x27;@env/environment&#x27;
+import { AppSettings } from &#x27;@helpers/app-settings&#x27;
+import { ISearchResult, SearchResult } from &#x27;@models/autoComplete-model&#x27;
 
 @Injectable()
 export class WeatherService {
   constructor(private http: HttpClient, private args?: AppSettings) { }
-  public autoComplete &#x3D; (search: string): Observable&lt;ISearchResult[]&gt; &#x3D;&gt;
-    this.http.get&lt;ISearchResult[]&gt;(providers.weather.autocomplete, { params: { q: search } });
+  public autoComplete &#x3D; (search: string): Observable&lt;SearchResult[]&gt; &#x3D;&gt;
+    this.http.get&lt;ISearchResult[]&gt;(providers.weather.autocomplete, { params: { q: search } }).pipe(map(results &#x3D;&gt; results.map(item &#x3D;&gt; new SearchResult(item))));
+  public getConditions &#x3D; (search: string): Observable&lt;SearchResult[]&gt; &#x3D;&gt;
+    this.http.get&lt;ISearchResult[]&gt;(providers.weather.autocomplete, { params: { q: search } }).pipe(map(results &#x3D;&gt; results.map(item &#x3D;&gt; new SearchResult(item))));
+  public getForecast &#x3D; (search: string): Observable&lt;SearchResult[]&gt; &#x3D;&gt;
+    this.http.get&lt;ISearchResult[]&gt;(providers.weather.autocomplete, { params: { q: search } }).pipe(map(results &#x3D;&gt; results.map(item &#x3D;&gt; new SearchResult(item))));
+  public getGeoPosition &#x3D; (search: string): Observable&lt;SearchResult[]&gt; &#x3D;&gt;
+    this.http.get&lt;ISearchResult[]&gt;(providers.weather.autocomplete, { params: { q: search } }).pipe(map(results &#x3D;&gt; results.map(item &#x3D;&gt; new SearchResult(item))));
+  public getLocation &#x3D; (search: string): Observable&lt;SearchResult[]&gt; &#x3D;&gt;
+    this.http.get&lt;ISearchResult[]&gt;(providers.weather.autocomplete, { params: { q: search } }).pipe(map(results &#x3D;&gt; results.map(item &#x3D;&gt; new SearchResult(item))));
 }</code></pre>
     </div>
 

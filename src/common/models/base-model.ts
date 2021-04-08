@@ -1,14 +1,19 @@
-import { Guid      } from 'guid-ts'
-import { providers } from '@env/environment'
+import { Guid } from 'guid-ts'
 
-export class BaseModel {
-  public created: Date         ;
-  public uid    : Guid | string;
+export abstract class BaseModel {
+  public created: Date;
+  public id: Guid | string;
+  public name: string;
+  public type: string;
   constructor(args?: any) {
-    Object.keys(args)?.forEach(key => this[key] ? this[key] = this[key] ?? args[key] : {});
+    Object.keys(args)?.forEach(key => typeof (args[key]) != 'object'
+      ? this[camelCase(key)] = this[camelCase(key)] ?? args[key] : {});
     this.created = new Date();
-    this.uid = Guid.newGuid();
+    this.id = Guid.newGuid();
+    this.type = this.type ?? this.constructor.name;
   }
-  public getFlag = (code: string, size: string) => `${providers.countryFlags.baseUrl}/${code}/shiny/${size}.png`;
-  public getIcon = (code: number) => `${providers.weather.icons}/${code}.svg`;
 }
+export const camelCase = (original: string): string =>
+  original[0].toLowerCase() + original.substring(1);
+export const titleCase = (original: string): string =>
+  original.split(' ').map(item => item[0].toUpperCase() + item.substring(1)).join(' ');

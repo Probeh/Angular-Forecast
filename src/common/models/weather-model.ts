@@ -1,27 +1,31 @@
-import { BaseModel    } from '@models/base-model'
-import { IDay         } from '@models/day-model'
-import { ITemperature } from '@models/temperature-model'
+import { BaseModel } from '@models/base-model'
+import { Day, IDay } from '@models/day-model'
+import { ITemperature, Temperature } from '@models/temperature-model'
 
 export interface IWeather {
-  date       ?: Date        ;
-  day        ?: IDay        ;
-  epochDate  ?: number      ;
-  link       ?: string      ;
-  mobileLink ?: string      ;
-  night      ?: IDay        ;
-  sources    ?: string[]    ;
-  temperature?: ITemperature;
+  Date       ?: Date        ;
+  Day        ?: IDay        ;
+  EpochDate  ?: number      ;
+  Link       ?: string      ;
+  MobileLink ?: string      ;
+  Night      ?: IDay        ;
+  Sources    ?: string[]    ;
+  Temperature?: ITemperature;
 }
-export class WeatherModel extends BaseModel {
-  public date       : Date        ;
-  public day        : IDay        ;
-  public epochDate  : number      ;
-  public link       : string      ;
-  public mobileLink : string      ;
-  public night      : IDay        ;
-  public sources    : string[]    ;
-  public temperature: ITemperature;
+export class Weather extends BaseModel {
+  public date       : Date       ;
+  public day        : Day        ;
+  public epochDate  : number     ;
+  public link       : string     ;
+  public mobileLink : string     ;
+  public night      : Day        ;
+  public sources    : string[]   ;
+  public temperature: Temperature;
   constructor(args?: IWeather) {
     super(args);
+    this.sources = this.sources ?? new Array();
+    this.day         = new Day        (args?.Day        );
+    this.night       = new Day        (args?.Night      );
+    this.temperature = new Temperature(args?.Temperature);
   }
 }

@@ -1,12 +1,12 @@
 <div class="app-search container p-5 shadow">
   <div class="shadow">
-    <p-autoComplete [suggestions]="this.suggestions$ | async" [emptyMessage]="'No results'"
-      (completeMethod)="this.onSearch($event)" pKeyFilter="alpha" [placeholder]="'Search'" [autoHighlight]="true"
-      [completeOnFocus]="false" [forceSelection]="true" [autofocus]="true">
+    <p-autoComplete #search [suggestions]="this.suggestions$ | async" [emptyMessage]="'No results'"
+      (onSelect)="this.onSelect($event)" (completeMethod)="this.onSearch($event)" [pKeyFilter]="this.searchPattern"
+      [minLength]=3 [placeholder]="'Search'" [autoHighlight]="true" [field]="'LocalizedName'" [completeOnFocus]="true">
       <ng-template let-result pTemplate="item">
-        <div class="flex">
-          <img src="https://www.countryflags.io/us/shiny/32.png" />
-          {{result}}
+        <div style="display: flex; align-items: center;">
+          <img src="{{result.getFlag()}}" style="margin-right: 15px;">
+          {{result.toString()}}
         </div>
       </ng-template>
     </p-autoComplete>

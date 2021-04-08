@@ -442,8 +442,8 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CLIENT_ID as secret } from &#x27;@env/environment&#x27;;
-import { AES, enc } from &#x27;crypto-js&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AES, enc } from &#x27;crypto-js&#x27;
+import { CLIENT_ID as secret } from &#x27;@env/environment&#x27;
 
 export class Encoding {
   public static decodeBase64 &#x3D; (value: string): string &#x3D;&gt; atob(value);

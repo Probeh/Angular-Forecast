@@ -490,15 +490,15 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Subject          } from &#x27;rxjs&#x27;
-import { HttpClient       } from &#x27;@angular/common/http&#x27;
-import { Injectable       } from &#x27;@angular/core&#x27;
-import { ColorScheme      } from &#x27;@constants/color-scheme.enum&#x27;
-import { PanelMode        } from &#x27;@constants/panel-mode.enum&#x27;
-import { PanelState       } from &#x27;@constants/panel-state.enum&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Subject } from &#x27;rxjs&#x27;
+import { HttpClient } from &#x27;@angular/common/http&#x27;
+import { Injectable } from &#x27;@angular/core&#x27;
+import { ColorScheme } from &#x27;@constants/color-scheme.enum&#x27;
+import { PanelMode } from &#x27;@constants/panel-mode.enum&#x27;
+import { PanelState } from &#x27;@constants/panel-state.enum&#x27;
 import { DEFAULT_LOCATION } from &#x27;@env/environment&#x27;
-import { AppSettings      } from &#x27;@helpers/app-settings&#x27;
-import { IGeoPosition     } from &#x27;@models/geoPosition-model&#x27;
+import { AppSettings } from &#x27;@helpers/app-settings&#x27;
+import { IGeoPosition } from &#x27;@models/geoPosition-model&#x27;
 
 @Injectable()
 export class ApplicationService {
@@ -516,7 +516,7 @@ export class ApplicationService {
   }
   private getUserLocation &#x3D; () &#x3D;&gt; navigator.geolocation
     .getCurrentPosition(
-      (success) &#x3D;&gt; this.setUserLocation({ latitude: success.coords.latitude, longitude: success.coords.longitude }),
+      (success) &#x3D;&gt; this.setUserLocation({ Latitude: success.coords.latitude, Longitude: success.coords.longitude }),
       (failure) &#x3D;&gt; this.setUserLocation(DEFAULT_LOCATION));
 
   private setUserLocation(location: IGeoPosition) {

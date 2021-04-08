@@ -81,11 +81,11 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#imperial">imperial</a>
+                                        <a href="#Imperial">Imperial</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#metric">metric</a>
+                                        <a href="#Metric">Metric</a>
                                 </li>
                             </ul>
                         </td>
@@ -102,13 +102,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="imperial"></a>
-                                        <span class="name"><b>imperial</b><a href="#imperial"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="Imperial"></a>
+                                        <span class="name"><b>Imperial</b><a href="#Imperial"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>imperial:         <code><a href="../interfaces/IMetric.html" target="_self" >IMetric</a></code>
+                                        <code>Imperial:         <code><a href="../interfaces/IMetric.html" target="_self" >IMetric</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -136,13 +136,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="metric"></a>
-                                        <span class="name"><b>metric</b><a href="#metric"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="Metric"></a>
+                                        <span class="name"><b>Metric</b><a href="#Metric"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>metric:         <code><a href="../interfaces/IMetric.html" target="_self" >IMetric</a></code>
+                                        <code>Metric:         <code><a href="../interfaces/IMetric.html" target="_self" >IMetric</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -171,13 +171,22 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { IMetric } from &#x27;@models/metric-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BaseModel } from &#x27;@models/base-model&#x27;
+import { IMetric, Metric } from &#x27;@models/metric-model&#x27;
 
 export interface IElevation {
-  imperial?: IMetric;
-  metric  ?: IMetric;
+  Imperial?: IMetric;
+  Metric  ?: IMetric;
 }
-</code></pre>
+export class Elevation extends BaseModel {
+  public imperial: Metric;
+  public metric  : Metric;
+  constructor(args?: IElevation) {
+    super(args)
+    this.imperial &#x3D; new Metric(args?.Imperial);
+    this.metric   &#x3D; new Metric(args?.Metric  );
+  }
+}</code></pre>
     </div>
 </div>
 
