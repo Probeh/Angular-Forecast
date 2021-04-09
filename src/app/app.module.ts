@@ -4,7 +4,7 @@ import { BrowserModule           } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule        } from '@client/app-routing.module'
 import { AppComponent            } from '@client/app.component'
-import { ColorScheme             } from '@constants/color-scheme.enum'
+import { ColorTheme              } from '@constants/color-theme.enum'
 import { PanelMode               } from '@constants/panel-mode.enum'
 import { PanelState              } from '@constants/panel-state.enum'
 import { ContainerModule         } from '@container/container.module'
@@ -12,14 +12,14 @@ import { ContainerModule         } from '@container/container.module'
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
+    BrowserModule          ,
     BrowserAnimationsModule,
-    HttpClientModule,
-    AppRoutingModule,
+    HttpClientModule       ,
+    AppRoutingModule       ,
     ContainerModule.forRoot({
-      colorScheme: ColorScheme.Light,
-      sidenavMode: PanelMode.Push,
-      sidenavState: PanelState.Hide,
+      appTheme    : ColorTheme.Light,
+      sidenavMode : PanelMode .Push ,
+      sidenavState: PanelState.Hide ,
     }),
   ],
   providers: [],

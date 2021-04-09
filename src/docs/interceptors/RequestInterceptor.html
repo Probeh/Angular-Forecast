@@ -97,12 +97,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(cache: <a href="../classes/RequestCache.html">RequestCache</a>)</code>
+<code>constructor(application: <a href="../injectables/ApplicationService.html">ApplicationService</a>, cache: <a href="../classes/RequestCache.html">RequestCache</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/common/interceptors/request-interceptor.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/common/interceptors/request-interceptor.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -119,6 +119,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                                <tr>
+                                                        <td>application</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ApplicationService.html" target="_self" >ApplicationService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                                 <tr>
                                                         <td>cache</td>
                                                   
@@ -167,8 +179,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/common/interceptors/request-interceptor.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="13"
+                            class="link-to-prism">src/common/interceptors/request-interceptor.ts:13</a></div>
                 </td>
             </tr>
 
@@ -233,24 +245,24 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable, of } from &#x27;rxjs&#x27;
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from &#x27;@angular/common/http&#x27;
-import { Injectable } from &#x27;@angular/core&#x27;
-import { providers } from &#x27;@env/environment&#x27;
-import { decodeBase64 } from &#x27;@helpers/formatters&#x27;
-import { RequestCache } from &#x27;@services/request-cache.service&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable        , of                                        } from &#x27;rxjs&#x27;
+import { HttpEvent         , HttpHandler, HttpInterceptor, HttpRequest } from &#x27;@angular/common/http&#x27;
+import { Injectable                                                    } from &#x27;@angular/core&#x27;
+import { providers                                                     } from &#x27;@env/environment&#x27;
+import { decodeBase64                                                  } from &#x27;@helpers/formatters&#x27;
+import { ApplicationService                                            } from &#x27;@services/application.service&#x27;
+import { RequestCache                                                  } from &#x27;@services/request-cache.service&#x27;
 
 @Injectable()
 export class RequestInterceptor implements HttpInterceptor {
-  constructor(private cache: RequestCache) { }
+  constructor(private application: ApplicationService, private cache: RequestCache) { }
 
   intercept(req: HttpRequest&lt;any&gt;, next: HttpHandler): Observable&lt;HttpEvent&lt;any&gt;&gt; {
-    req &#x3D; req.url.includes(providers.weather.baseUrl)
-      ? req.clone({
-        params: req.params.append(&#x27;apikey&#x27;, decodeBase64(providers.weather.apiKey))
-      }) : req;
+    this.application.loadingChange$.next(true);
+    req.url.includes(providers.weather.baseUrl)
+      ? req.params.append(&#x27;apikey&#x27;, decodeBase64(providers.weather.apiKey)) : {};
     const cachedResponse &#x3D; this.cache.get(req);
-    return cachedResponse ? of(cachedResponse) : next.handle(req);
+    return !cachedResponse ? next.handle(req) : of(cachedResponse);
   }
 }
 </code></pre>

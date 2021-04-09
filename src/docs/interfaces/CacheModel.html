@@ -213,9 +213,9 @@
 import { Injectable } from &#x27;@angular/core&#x27;
 
 export interface CacheModel {
-  lastRead?: number;
+  lastRead?: number           ;
   response?: HttpResponse&lt;any&gt;;
-  url?: string;
+  url     ?: string           ;
 }
 
 export abstract class RequestCache {
@@ -227,11 +227,11 @@ const maxAge &#x3D; 8.64e+7; // maximum cache age (ms)
 
 @Injectable()
 export class RequestCacheService implements RequestCache {
-  cache &#x3D; new Map&lt;string, CacheModel&gt;();
+  private cache &#x3D; new Map&lt;string, CacheModel&gt;();
 
   constructor() { }
 
-  get(req: HttpRequest&lt;any&gt;): HttpResponse&lt;any&gt; | undefined {
+  public get(req: HttpRequest&lt;any&gt;): HttpResponse&lt;any&gt; | undefined{
     const url &#x3D; req.urlWithParams;
     const cached &#x3D; this.cache.get(url);
 
@@ -243,7 +243,7 @@ export class RequestCacheService implements RequestCache {
     return isExpired ? undefined : cached.response;
   }
 
-  put(req: HttpRequest&lt;any&gt;, response: HttpResponse&lt;any&gt;): void {
+  public put(req: HttpRequest&lt;any&gt;, response: HttpResponse&lt;any&gt;): void {
     const url &#x3D; req.urlWithParams;
     const newEntry &#x3D; { url, response, lastRead: Date.now() };
     this.cache.set(url, newEntry);

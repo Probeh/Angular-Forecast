@@ -1,10 +1,9 @@
-import { Observable } from 'rxjs'
-import { Component, enableProdMode, OnInit } from '@angular/core'
-import { NavigationEnd, Router } from '@angular/router'
-import { PanelState } from '@constants/panel-state.enum'
-import { ApplicationService } from '@services/application.service'
-import { environment } from '@env/environment'
-import { MessageService } from 'primeng/api'
+import { MessageService             } from 'primeng/api'
+import { Observable                 } from 'rxjs'
+import { Component         , OnInit } from '@angular/core'
+import { NavigationEnd     , Router } from '@angular/router'
+import { PanelState                 } from '@constants/panel-state.enum'
+import { ApplicationService         } from '@services/application.service'
 
 @Component({
   selector: 'app-container',
@@ -12,12 +11,12 @@ import { MessageService } from 'primeng/api'
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent implements OnInit {
-  public currentRoute: string;
-  public isLoading$: Observable<boolean>;
-  public sidenavState: PanelState;
+  public currentRoute: string             ;
+  public isLoading$  : Observable<boolean>;
+  public sidenavState: PanelState         ;
   constructor(private application: ApplicationService, private router: Router, private message: MessageService) {
-    this.isLoading$ = this.application.isLoading$;
-    this.sidenavState = this.application.sidenavState;
+    this.isLoading$   = this.application.loadingState$;
+    this.sidenavState = this.application.sidenavState ;
     this.router.events.subscribe({
       next: event => this.currentRoute = !(event instanceof NavigationEnd)
         ? this.currentRoute

@@ -184,7 +184,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/container/container.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -277,8 +277,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/app/container/container.component.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/container/container.component.ts:31</a></div>
                 </td>
             </tr>
 
@@ -321,7 +321,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/container/container.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -349,7 +349,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -376,7 +376,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/container/container.component.ts:27</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/container/container.component.ts:26</a></div>
                             </td>
                         </tr>
 
@@ -404,7 +404,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/container/container.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -417,13 +417,12 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable } from &#x27;rxjs&#x27;
-import { Component, enableProdMode, OnInit } from &#x27;@angular/core&#x27;
-import { NavigationEnd, Router } from &#x27;@angular/router&#x27;
-import { PanelState } from &#x27;@constants/panel-state.enum&#x27;
-import { ApplicationService } from &#x27;@services/application.service&#x27;
-import { environment } from &#x27;@env/environment&#x27;
-import { MessageService } from &#x27;primeng/api&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { MessageService             } from &#x27;primeng/api&#x27;
+import { Observable                 } from &#x27;rxjs&#x27;
+import { Component         , OnInit } from &#x27;@angular/core&#x27;
+import { NavigationEnd     , Router } from &#x27;@angular/router&#x27;
+import { PanelState                 } from &#x27;@constants/panel-state.enum&#x27;
+import { ApplicationService         } from &#x27;@services/application.service&#x27;
 
 @Component({
   selector: &#x27;app-container&#x27;,
@@ -431,12 +430,12 @@ import { MessageService } from &#x27;primeng/api&#x27;
   styleUrls: [&#x27;./container.component.scss&#x27;]
 })
 export class ContainerComponent implements OnInit {
-  public currentRoute: string;
-  public isLoading$: Observable&lt;boolean&gt;;
-  public sidenavState: PanelState;
+  public currentRoute: string             ;
+  public isLoading$  : Observable&lt;boolean&gt;;
+  public sidenavState: PanelState         ;
   constructor(private application: ApplicationService, private router: Router, private message: MessageService) {
-    this.isLoading$ &#x3D; this.application.isLoading$;
-    this.sidenavState &#x3D; this.application.sidenavState;
+    this.isLoading$   &#x3D; this.application.loadingState$;
+    this.sidenavState &#x3D; this.application.sidenavState ;
     this.router.events.subscribe({
       next: event &#x3D;&gt; this.currentRoute &#x3D; !(event instanceof NavigationEnd)
         ? this.currentRoute

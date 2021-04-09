@@ -145,7 +145,7 @@
                             <li>
                                     <span class="modifier">Private</span>
                                     <span class="modifier">Optional</span>
-                                <a href="#searchText$">searchText$</a>
+                                <a href="#searchSubject$">searchSubject$</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -373,13 +373,13 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="searchText$"></a>
+                        <a name="searchSubject$"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Private</span>
                                 <span class="modifier">Optional</span>
-                            searchText$</b>
-                            <a href="#searchText$"><span class="icon ion-ios-link"></span></a>
+                            searchSubject$</b>
+                            <a href="#searchSubject$"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -446,19 +446,19 @@ import { WeatherService                                  } from &#x27;@services/
   styleUrls: [&#x27;./search.component.scss&#x27;]
 })
 export class SearchComponent implements OnInit {
-  private searchText$?: Subject&lt;string&gt;;
-  public searchPattern: RegExp &#x3D; /[a-zA-Z ]/;
-  public suggestions$?: Observable&lt;SearchResult[]&gt;;
+  private searchSubject$?: Subject   &lt;string&gt;        ;
+  public  searchPattern  : RegExp     &#x3D; /[a-zA-Z ]/  ;
+  public  suggestions$  ?: Observable&lt;SearchResult[]&gt;;
   constructor(private weather: WeatherService) { }
   ngOnInit() {
-    this.searchText$ &#x3D; new Subject&lt;string&gt;();
-    this.suggestions$ &#x3D; this.searchText$.pipe(
+    this.searchSubject$ &#x3D; new Subject&lt;string&gt;();
+    this.suggestions$ &#x3D; this.searchSubject$.pipe(
       debounceTime(1000),
       distinctUntilChanged(),
       switchMap(text &#x3D;&gt; this.weather.autoComplete(text.toLowerCase())));
   }
   public onSearch &#x3D; (event: ISearchEvent) &#x3D;&gt;
-    event.query ? this.searchText$.next(event.query) : {};
+    event.query ? this.searchSubject$.next(event.query) : {};
   public onSelect &#x3D; (value: SearchResult) &#x3D;&gt; {
     // this.weather.getConditions(value);
   };

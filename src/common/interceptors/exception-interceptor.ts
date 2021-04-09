@@ -38,7 +38,7 @@ export class ExceptionInterceptor implements HttpInterceptor {
               .handle(req.clone({
                 params: req.params.append('apikey', decodeBase64(providers.weather.apiKey))
               }))
-              .pipe(tap(x => ExceptionInterceptor.failCount = 0));
+              .pipe(tap(() => ExceptionInterceptor.failCount = 0));
           }
         }
         this.message.add({ closable: true, detail: 'Retrieving static data from local JSON', severity: 'info', summary: 'Static Response' });

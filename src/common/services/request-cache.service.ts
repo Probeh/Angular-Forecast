@@ -2,9 +2,9 @@ import { HttpRequest, HttpResponse } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 
 export interface CacheModel {
-  lastRead?: number;
+  lastRead?: number           ;
   response?: HttpResponse<any>;
-  url?: string;
+  url     ?: string           ;
 }
 
 export abstract class RequestCache {
@@ -16,11 +16,11 @@ const maxAge = 8.64e+7; // maximum cache age (ms)
 
 @Injectable()
 export class RequestCacheService implements RequestCache {
-  cache = new Map<string, CacheModel>();
+  private cache = new Map<string, CacheModel>();
 
   constructor() { }
 
-  get(req: HttpRequest<any>): HttpResponse<any> | undefined {
+  public get(req: HttpRequest<any>): HttpResponse<any> | undefined{
     const url = req.urlWithParams;
     const cached = this.cache.get(url);
 
@@ -32,7 +32,7 @@ export class RequestCacheService implements RequestCache {
     return isExpired ? undefined : cached.response;
   }
 
-  put(req: HttpRequest<any>, response: HttpResponse<any>): void {
+  public put(req: HttpRequest<any>, response: HttpResponse<any>): void {
     const url = req.urlWithParams;
     const newEntry = { url, response, lastRead: Date.now() };
     this.cache.set(url, newEntry);
