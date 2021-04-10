@@ -1,4 +1,4 @@
-import { BaseModel } from '@models/base-model'
+import { AbstractModel } from '@models/abstract-model'
 
 export interface IHeadline {
   Category          ?: string;
@@ -11,7 +11,7 @@ export interface IHeadline {
   Severity          ?: number;
   Text              ?: string;
 }
-export class Headline extends BaseModel {
+export class Headline extends AbstractModel {
   public category          : string;
   public effectiveDate     : Date  ;
   public effectiveEpochDate: number;

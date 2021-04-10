@@ -1,4 +1,4 @@
-import { BaseModel } from '@models/base-model'
+import { AbstractModel } from '@models/abstract-model'
 
 export interface ITimeZone {
   Code            ?: string ;
@@ -7,7 +7,7 @@ export interface ITimeZone {
   Name            ?: string ;
   NextOffsetChange?: Date   ;
 }
-export class TimeZone extends BaseModel {
+export class TimeZone extends AbstractModel {
   public code            : string ;
   public gmtOffset       : number ;
   public isDaylightSaving: boolean;

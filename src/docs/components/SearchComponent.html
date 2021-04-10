@@ -354,7 +354,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/search/search.component.ts:40</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/search/search.component.ts:41</a></div>
                             </td>
                         </tr>
 
@@ -463,7 +463,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/search/search.component.ts:39</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/search/search.component.ts:40</a></div>
                             </td>
                         </tr>
 
@@ -580,7 +580,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/search/search.component.ts:45</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/search/search.component.ts:46</a></div>
                             </td>
                         </tr>
 
@@ -656,8 +656,9 @@ export class SearchComponent implements OnInit {
       switchMap(text &#x3D;&gt; this.weather.autoComplete(text.toLowerCase())));
   }
   public onSearch &#x3D; (event: ISearchEvent) &#x3D;&gt;
-    event.query ? this.searchSubject$.next(event.query) : {};
+    event.query ? this.searchSubject$.next(event.query) : undefined;
   public onSelect &#x3D; (value: AutoComplete) &#x3D;&gt; {
+
     // this.weather.getConditions(value);
   };
   public onSubmit &#x3D; ($event) &#x3D;&gt; { }

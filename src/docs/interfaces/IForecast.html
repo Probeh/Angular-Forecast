@@ -171,7 +171,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BaseModel } from &#x27;@models/base-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AbstractModel } from &#x27;@models/abstract-model&#x27;
 import { Headline, IHeadline } from &#x27;@models/headline-model&#x27;
 import { IWeather, Weather } from &#x27;@models/weather-model&#x27;
 
@@ -179,7 +179,7 @@ export interface IForecast {
   DailyForecasts?: IWeather [];
   Headline      ?: IHeadline  ;
 }
-export class Forecast extends BaseModel {
+export class Forecast extends AbstractModel {
   public forecasts: Weather [];
   public headline : Headline  ;
   constructor(args?: IForecast) {

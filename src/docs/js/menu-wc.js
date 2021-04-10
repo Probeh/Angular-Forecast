@@ -249,9 +249,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="components-links"' : 'id="xs-components-links"' }>
                             <li class="link">
-                                <a href="components/AppComponent.html" data-type="entity-link">AppComponent</a>
-                            </li>
-                            <li class="link">
                                 <a href="components/FavoritesComponent.html" data-type="entity-link">FavoritesComponent</a>
                             </li>
                             <li class="link">
@@ -283,6 +280,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"' }>
                             <li class="link">
+                                <a href="classes/AbstractModel.html" data-type="entity-link">AbstractModel</a>
+                            </li>
+                            <li class="link">
                                 <a href="classes/AdministrativeArea.html" data-type="entity-link">AdministrativeArea</a>
                             </li>
                             <li class="link">
@@ -290,9 +290,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="classes/AutoComplete.html" data-type="entity-link">AutoComplete</a>
-                            </li>
-                            <li class="link">
-                                <a href="classes/BaseModel.html" data-type="entity-link">BaseModel</a>
                             </li>
                             <li class="link">
                                 <a href="classes/Conditions.html" data-type="entity-link">Conditions</a>

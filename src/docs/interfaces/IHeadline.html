@@ -437,7 +437,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BaseModel } from &#x27;@models/base-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AbstractModel } from &#x27;@models/abstract-model&#x27;
 
 export interface IHeadline {
   Category          ?: string;
@@ -450,7 +450,7 @@ export interface IHeadline {
   Severity          ?: number;
   Text              ?: string;
 }
-export class Headline extends BaseModel {
+export class Headline extends AbstractModel {
   public category          : string;
   public effectiveDate     : Date  ;
   public effectiveEpochDate: number;

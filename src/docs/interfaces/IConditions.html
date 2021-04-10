@@ -438,7 +438,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { providers } from &#x27;@env/environment&#x27;;
-import { BaseModel } from &#x27;@models/base-model&#x27;
+import { AbstractModel } from &#x27;@models/abstract-model&#x27;
 import { ITemperature, Temperature } from &#x27;@models/temperature-model&#x27;
 
 export interface IConditions {
@@ -452,7 +452,7 @@ export interface IConditions {
   WeatherIcon             ?: number      ;
   WeatherText             ?: string      ;
 }
-export class Conditions extends BaseModel {
+export class Conditions extends AbstractModel {
   public epochTime               : number     ;
   public hasPrecipitation        : boolean    ;
   public isDayTime               : boolean    ;

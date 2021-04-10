@@ -1,5 +1,5 @@
 import { AdministrativeArea, IAdministrativeArea } from '@models/administrativeArea-model'
-import { BaseModel } from '@models/base-model'
+import { AbstractModel } from '@models/abstract-model'
 import { Conditions } from '@models/conditions-model'
 import { Country, ICountry } from '@models/country-model'
 import { Forecast } from '@models/forecast-model'
@@ -20,7 +20,7 @@ export interface ILocation {
   TimeZone          ?: ITimeZone          ;
   Type              ?: string             ;
 }
-export class Location extends BaseModel {
+export class Location extends AbstractModel {
   public administrativeArea: AdministrativeArea;
   public conditions        : Conditions        ;
   public country           : Country           ;
@@ -43,5 +43,10 @@ export class Location extends BaseModel {
     this.geoPosition        = new GeoPosition       (args?.GeoPosition       );
     this.region             = new Country           (args?.Region            );
     this.timeZone           = new TimeZone          (args?.TimeZone          );
+  }
+  public update = (conditions: Conditions, forecast: Forecast): Location => {
+    this.conditions = conditions;
+    this.forecast = forecast;
+    return this;
   }
 }

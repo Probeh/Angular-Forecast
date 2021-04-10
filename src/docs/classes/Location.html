@@ -69,7 +69,7 @@
                 <h3>Extends</h3>
             </p>
             <p class="comment">
-                        <code><a href="../classes/BaseModel.html" target="_self" >BaseModel</a></code>
+                        <code><a href="../classes/AbstractModel.html" target="_self" >AbstractModel</a></code>
             </p>
 
 
@@ -141,6 +141,10 @@
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#timeZone">timeZone</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#update">update</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -621,6 +625,33 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="update"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            update</b>
+                            <a href="#update"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/common/models/location-model.ts:47</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="created"></a>
                         <span class="name">
                             <b>
@@ -638,13 +669,13 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/BaseModel.html" target="_self" >BaseModel</a></code>
+                                    <div class="io-line">Inherited from         <code><a href="../classes/AbstractModel.html" target="_self" >AbstractModel</a></code>
 </div>
                                 </td>
                             </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/BaseModel.html#source" target="_self" >BaseModel:5</a></code>
+                                    <div class="io-line">Defined in         <code><a href="../classes/AbstractModel.html#source" target="_self" >AbstractModel:5</a></code>
 </div>
                             </td>
                         </tr>
@@ -673,13 +704,13 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/BaseModel.html" target="_self" >BaseModel</a></code>
+                                    <div class="io-line">Inherited from         <code><a href="../classes/AbstractModel.html" target="_self" >AbstractModel</a></code>
 </div>
                                 </td>
                             </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/BaseModel.html#source" target="_self" >BaseModel:6</a></code>
+                                    <div class="io-line">Defined in         <code><a href="../classes/AbstractModel.html#source" target="_self" >AbstractModel:6</a></code>
 </div>
                             </td>
                         </tr>
@@ -708,13 +739,13 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/BaseModel.html" target="_self" >BaseModel</a></code>
+                                    <div class="io-line">Inherited from         <code><a href="../classes/AbstractModel.html" target="_self" >AbstractModel</a></code>
 </div>
                                 </td>
                             </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/BaseModel.html#source" target="_self" >BaseModel:7</a></code>
+                                    <div class="io-line">Defined in         <code><a href="../classes/AbstractModel.html#source" target="_self" >AbstractModel:7</a></code>
 </div>
                             </td>
                         </tr>
@@ -743,13 +774,13 @@
                     </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Inherited from         <code><a href="../classes/BaseModel.html" target="_self" >BaseModel</a></code>
+                                    <div class="io-line">Inherited from         <code><a href="../classes/AbstractModel.html" target="_self" >AbstractModel</a></code>
 </div>
                                 </td>
                             </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in         <code><a href="../classes/BaseModel.html#source" target="_self" >BaseModel:8</a></code>
+                                    <div class="io-line">Defined in         <code><a href="../classes/AbstractModel.html#source" target="_self" >AbstractModel:8</a></code>
 </div>
                             </td>
                         </tr>
@@ -770,7 +801,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AdministrativeArea, IAdministrativeArea } from &#x27;@models/administrativeArea-model&#x27;
-import { BaseModel } from &#x27;@models/base-model&#x27;
+import { AbstractModel } from &#x27;@models/abstract-model&#x27;
 import { Conditions } from &#x27;@models/conditions-model&#x27;
 import { Country, ICountry } from &#x27;@models/country-model&#x27;
 import { Forecast } from &#x27;@models/forecast-model&#x27;
@@ -791,7 +822,7 @@ export interface ILocation {
   TimeZone          ?: ITimeZone          ;
   Type              ?: string             ;
 }
-export class Location extends BaseModel {
+export class Location extends AbstractModel {
   public administrativeArea: AdministrativeArea;
   public conditions        : Conditions        ;
   public country           : Country           ;
@@ -814,6 +845,11 @@ export class Location extends BaseModel {
     this.geoPosition        &#x3D; new GeoPosition       (args?.GeoPosition       );
     this.region             &#x3D; new Country           (args?.Region            );
     this.timeZone           &#x3D; new TimeZone          (args?.TimeZone          );
+  }
+  public update &#x3D; (conditions: Conditions, forecast: Forecast): Location &#x3D;&gt; {
+    this.conditions &#x3D; conditions;
+    this.forecast &#x3D; forecast;
+    return this;
   }
 }</code></pre>
     </div>

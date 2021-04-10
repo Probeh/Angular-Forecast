@@ -1,11 +1,11 @@
-import { BaseModel } from '@models/base-model'
+import { AbstractModel } from '@models/abstract-model'
 
 export interface IMetric {
   Unit    ?: string;
   UnitType?: number;
   Value   ?: number;
 }
-export class Metric extends BaseModel {
+export class Metric extends AbstractModel {
   public unit    : string;
   public unitType: number;
   public value   : number;

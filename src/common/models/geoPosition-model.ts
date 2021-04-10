@@ -1,4 +1,4 @@
-import { BaseModel } from '@models/base-model'
+import { AbstractModel } from '@models/abstract-model'
 import { Elevation, IElevation } from '@models/elevation-model'
 
 export interface IGeoPosition {
@@ -6,7 +6,7 @@ export interface IGeoPosition {
   Latitude ?: number    ;
   Longitude?: number    ;
 }
-export class GeoPosition extends BaseModel {
+export class GeoPosition extends AbstractModel {
   public elevation: Elevation;
   public latitude : number   ;
   public longitude: number   ;

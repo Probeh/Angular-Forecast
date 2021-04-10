@@ -1,6 +1,6 @@
 import { providers                               } from '@env/environment'
 import { AdministrativeArea, IAdministrativeArea } from '@models/administrativeArea-model'
-import { BaseModel                               } from '@models/base-model'
+import { AbstractModel                               } from '@models/abstract-model'
 
 export interface IAutoComplete {
   AdministrativeArea: IAdministrativeArea;
@@ -11,7 +11,7 @@ export interface IAutoComplete {
   Type              : string             ;
   Version           : number             ;
 }
-export class AutoComplete extends BaseModel {
+export class AutoComplete extends AbstractModel {
   public administrativeArea: AdministrativeArea;
   public country           : AdministrativeArea;
   public key               : string            ;

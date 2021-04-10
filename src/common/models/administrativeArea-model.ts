@@ -1,4 +1,4 @@
-import { BaseModel } from '@models/base-model'
+import { AbstractModel } from '@models/abstract-model'
 
 export interface IAdministrativeArea {
   CountryId?:     string;
@@ -9,7 +9,7 @@ export interface IAdministrativeArea {
   LocalizedName?: string;
   LocalizedType?: string;
 }
-export class AdministrativeArea extends BaseModel {
+export class AdministrativeArea extends AbstractModel {
   public countryId:     string;
   public englishName:   string;
   public englishType:   string;

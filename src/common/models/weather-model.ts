@@ -1,4 +1,4 @@
-import { BaseModel } from '@models/base-model'
+import { AbstractModel } from '@models/abstract-model'
 import { Day, IDay } from '@models/day-model'
 import { ITemperature, Temperature } from '@models/temperature-model'
 
@@ -12,7 +12,7 @@ export interface IWeather {
   Sources    ?: string[]    ;
   Temperature?: ITemperature;
 }
-export class Weather extends BaseModel {
+export class Weather extends AbstractModel {
   public date       : Date       ;
   public day        : Day        ;
   public epochDate  : number     ;

@@ -235,7 +235,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../classes/BaseModel.html" target="_self" >Map&lt;string | BaseModel[]&gt;</a></code>
+                            <i>Type : </i>        <code><a href="../classes/AbstractModel.html" target="_self" >Map&lt;DataSets | AbstractModel[]&gt;</a></code>
 
                         </td>
                     </tr>
@@ -273,7 +273,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/common/services/weather.service.ts:51</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/common/services/weather.service.ts:56</a></div>
                             </td>
                         </tr>
 
@@ -408,7 +408,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/common/services/weather.service.ts:44</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/common/services/weather.service.ts:47</a></div>
                             </td>
                         </tr>
 
@@ -448,32 +448,32 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable  , of            } from &#x27;rxjs&#x27;
-import { map                         } from &#x27;rxjs/operators&#x27;
-import { HttpClient                  } from &#x27;@angular/common/http&#x27;
-import { Injectable                  } from &#x27;@angular/core&#x27;
-import { DataSets                    } from &#x27;@constants/data-sets.enum&#x27;
-import { providers                   } from &#x27;@env/environment&#x27;
-import { AppSettings                 } from &#x27;@helpers/app-settings&#x27;
-import { AutoComplete, IAutoComplete } from &#x27;@models/autoComplete-model&#x27;
-import { BaseModel                   } from &#x27;@models/base-model&#x27;
-import { Conditions  , IConditions   } from &#x27;@models/conditions-model&#x27;
-import { Forecast    , IForecast     } from &#x27;@models/forecast-model&#x27;
-import { ILocation   , Location      } from &#x27;@models/location-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { forkJoin     , Observable, of } from &#x27;rxjs&#x27;
+import { map          , switchMap      } from &#x27;rxjs/operators&#x27;
+import { HttpClient                    } from &#x27;@angular/common/http&#x27;
+import { Injectable                    } from &#x27;@angular/core&#x27;
+import { DataSets                      } from &#x27;@constants/data-sets.enum&#x27;
+import { providers                     } from &#x27;@env/environment&#x27;
+import { AppSettings                   } from &#x27;@helpers/app-settings&#x27;
+import { AbstractModel                 } from &#x27;@models/abstract-model&#x27;
+import { AutoComplete , IAutoComplete  } from &#x27;@models/autoComplete-model&#x27;
+import { Conditions   , IConditions    } from &#x27;@models/conditions-model&#x27;
+import { Forecast     , IForecast      } from &#x27;@models/forecast-model&#x27;
+import { ILocation    , Location       } from &#x27;@models/location-model&#x27;
 
 @Injectable()
 export class WeatherService {
-  private readonly context: Map&lt;string, BaseModel[]&gt; &#x3D; new Map();
+  private readonly context: Map&lt;DataSets, AbstractModel[]&gt; &#x3D; new Map();
   constructor(private http: HttpClient, private args?: AppSettings) { this.createContext(); }
 
-  private setContext &#x3D; (dataSet: string, value: any): any | null &#x3D;&gt; {
-    !this.getContext(null, dataSet, x &#x3D;&gt; x &#x3D;&#x3D; value)
-      ? this.context.get(dataSet).unshift(value) : {};
+  private setContext &#x3D; (data: DataSets, value: any): any | undefined &#x3D;&gt; {
+    !this.getContext(null, data, x &#x3D;&gt; x &#x3D;&#x3D; value)
+      ? this.context.get(data).unshift(value) : undefined;
     return value;
   }
-  private getContext &#x3D; (key?: string, dataSet: string &#x3D; DataSets.Locations, predicate?: (value: any) &#x3D;&gt; unknown): any | null &#x3D;&gt;
-    this.context.get(dataSet).some(predicate ?? ((item: Location) &#x3D;&gt; item.key &#x3D;&#x3D; key))
-      ? this.context.get(dataSet).slice().find((item: Location) &#x3D;&gt; item.key &#x3D;&#x3D; key) : null;
+  private getContext &#x3D; (key?: string, data: DataSets &#x3D; DataSets.Locations, predicate?: (value: any) &#x3D;&gt; unknown): any | undefined &#x3D;&gt;
+    this.context.get(data).some(predicate ?? ((item: Location) &#x3D;&gt; item.key &#x3D;&#x3D; key))
+      ? this.context.get(data).slice().find((item: Location) &#x3D;&gt; item.key &#x3D;&#x3D; key) : undefined;
 
   public autoComplete &#x3D; (search: string): Observable&lt;AutoComplete[]&gt; &#x3D;&gt; this.http
     .get&lt;IAutoComplete[]&gt;(providers.weather.autocomplete, { params: { q: search } })
@@ -489,14 +489,19 @@ export class WeatherService {
 
   public getGeoPosition &#x3D; (lat: number, lng: number): Observable&lt;Location&gt; &#x3D;&gt; this.http
     .get&lt;ILocation&gt;(providers.weather.geoposition, { params: { q: &#x60;${lat},${lng}&#x60; } })
-    .pipe(map(result &#x3D;&gt; this.setContext(DataSets.Locations, new Location(result))));
+    .pipe(switchMap(location &#x3D;&gt;
+      forkJoin(of(location), this.getConditions(location.Key), this.getForecast(location.Key))
+        .pipe(map(results &#x3D;&gt;
+          this.setContext(DataSets.Locations, new Location(results[0]).update(results[1], results[2]))))));
 
-  public getLocation &#x3D; (key: string): Observable&lt;Location&gt; &#x3D;&gt;
-    this.getContext(key)
-      ? of(this.getContext(key))
-      : this.http
-        .get&lt;ILocation&gt;(&#x60;${providers.weather.locations}/${key}&#x60;)
-        .pipe(map(result &#x3D;&gt; this.setContext(DataSets.Locations, new Location(result))));
+  public getLocation &#x3D; (key: string): Observable&lt;Location&gt; &#x3D;&gt; this.getContext(key)
+    ? of(this.getContext(key))
+    : this.http
+      .get&lt;ILocation&gt;(&#x60;${providers.weather.locations}/${key}&#x60;)
+      .pipe(switchMap(location &#x3D;&gt;
+        forkJoin(of(location), this.getConditions(location.Key), this.getForecast(location.Key))
+          .pipe(map(results &#x3D;&gt;
+            this.setContext(DataSets.Locations, new Location(results[0]).update(results[1], results[2]))))));
 
   private createContext &#x3D; () &#x3D;&gt; this.context
     .set(DataSets.Conditions, new Array&lt;Conditions&gt;())

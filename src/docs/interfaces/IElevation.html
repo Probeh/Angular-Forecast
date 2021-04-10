@@ -171,14 +171,14 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BaseModel } from &#x27;@models/base-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AbstractModel } from &#x27;@models/abstract-model&#x27;
 import { IMetric, Metric } from &#x27;@models/metric-model&#x27;
 
 export interface IElevation {
   Imperial?: IMetric;
   Metric  ?: IMetric;
 }
-export class Elevation extends BaseModel {
+export class Elevation extends AbstractModel {
   public imperial: Metric;
   public metric  : Metric;
   constructor(args?: IElevation) {

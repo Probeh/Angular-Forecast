@@ -209,7 +209,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BaseModel } from &#x27;@models/base-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AbstractModel } from &#x27;@models/abstract-model&#x27;
 import { Elevation, IElevation } from &#x27;@models/elevation-model&#x27;
 
 export interface IGeoPosition {
@@ -217,7 +217,7 @@ export interface IGeoPosition {
   Latitude ?: number    ;
   Longitude?: number    ;
 }
-export class GeoPosition extends BaseModel {
+export class GeoPosition extends AbstractModel {
   public elevation: Elevation;
   public latitude : number   ;
   public longitude: number   ;

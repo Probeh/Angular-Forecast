@@ -32,8 +32,9 @@ export class SearchComponent implements OnInit {
       switchMap(text => this.weather.autoComplete(text.toLowerCase())));
   }
   public onSearch = (event: ISearchEvent) =>
-    event.query ? this.searchSubject$.next(event.query) : {};
+    event.query ? this.searchSubject$.next(event.query) : undefined;
   public onSelect = (value: AutoComplete) => {
+
     // this.weather.getConditions(value);
   };
   public onSubmit = ($event) => { }

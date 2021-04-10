@@ -1,5 +1,5 @@
 import { providers } from '@env/environment';
-import { BaseModel } from '@models/base-model'
+import { AbstractModel } from '@models/abstract-model'
 import { ITemperature, Temperature } from '@models/temperature-model'
 
 export interface IConditions {
@@ -13,7 +13,7 @@ export interface IConditions {
   WeatherIcon             ?: number      ;
   WeatherText             ?: string      ;
 }
-export class Conditions extends BaseModel {
+export class Conditions extends AbstractModel {
   public epochTime               : number     ;
   public hasPrecipitation        : boolean    ;
   public isDayTime               : boolean    ;

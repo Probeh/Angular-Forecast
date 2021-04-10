@@ -210,14 +210,14 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { providers } from &#x27;@env/environment&#x27;;
-import { BaseModel } from &#x27;@models/base-model&#x27;
+import { AbstractModel } from &#x27;@models/abstract-model&#x27;
 
 export interface IDay {
   HasPrecipitation?: boolean;
   Icon            ?: number ;
   IconPhrase      ?: string ;
 }
-export class Day extends BaseModel {
+export class Day extends AbstractModel {
   public hasPrecipitation: boolean;
   public icon            : number ;
   public iconPhrase      : string ;

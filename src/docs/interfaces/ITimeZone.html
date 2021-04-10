@@ -285,7 +285,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BaseModel } from &#x27;@models/base-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AbstractModel } from &#x27;@models/abstract-model&#x27;
 
 export interface ITimeZone {
   Code            ?: string ;
@@ -294,7 +294,7 @@ export interface ITimeZone {
   Name            ?: string ;
   NextOffsetChange?: Date   ;
 }
-export class TimeZone extends BaseModel {
+export class TimeZone extends AbstractModel {
   public code            : string ;
   public gmtOffset       : number ;
   public isDaylightSaving: boolean;

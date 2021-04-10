@@ -1,11 +1,11 @@
-import { BaseModel } from '@models/base-model'
+import { AbstractModel } from '@models/abstract-model'
 import { IMetric, Metric } from '@models/metric-model'
 
 export interface ITemperature {
   Maximum?: IMetric;
   Minimum?: IMetric;
 }
-export class Temperature extends BaseModel {
+export class Temperature extends AbstractModel {
   public maximum: Metric;
   public minimum: Metric;
   constructor(args?: ITemperature) {
