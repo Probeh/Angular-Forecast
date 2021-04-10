@@ -44,7 +44,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>IGeoPosition</li>
+  <li>IQueryParams</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,7 +62,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/common/models/geoPosition-model.ts</code>
+            <code>src/common/helpers/query-params.ts</code>
         </p>
 
 
@@ -81,15 +81,15 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#Elevation">Elevation</a>
+                                        <a href="#key">key</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#Latitude">Latitude</a>
+                                        <a href="#lat">lat</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#Longitude">Longitude</a>
+                                        <a href="#lng">lng</a>
                                 </li>
                             </ul>
                         </td>
@@ -106,47 +106,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="Elevation"></a>
-                                        <span class="name"><b>Elevation</b><a href="#Elevation"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="key"></a>
+                                        <span class="name"><b>key</b><a href="#key"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>Elevation:         <code><a href="../interfaces/IElevation.html" target="_self" >IElevation</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/IElevation.html" target="_self" >IElevation</a></code>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="Latitude"></a>
-                                        <span class="name"><b>Latitude</b><a href="#Latitude"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>Latitude:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>key:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -174,13 +140,47 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="Longitude"></a>
-                                        <span class="name"><b>Longitude</b><a href="#Longitude"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="lat"></a>
+                                        <span class="name"><b>lat</b><a href="#lat"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>Longitude:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>lat:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="lng"></a>
+                                        <span class="name"><b>lng</b><a href="#lng"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>lng:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -209,23 +209,24 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AbstractModel } from &#x27;@models/abstract-model&#x27;
-import { Elevation, IElevation } from &#x27;@models/elevation-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { camelCase } from &#x27;@helpers/formatters&#x27;;
 
-export interface IGeoPosition {
-  Elevation?: IElevation;
-  Latitude ?: number    ;
-  Longitude?: number    ;
+export interface IQueryParams {
+  lat?: number;
+  lng?: number;
+  key?: number;
 }
-export class GeoPosition extends AbstractModel {
-  public elevation: Elevation;
-  public latitude : number   ;
-  public longitude: number   ;
-  constructor(args?: IGeoPosition | any) {
-    super(args);
-    this.elevation &#x3D; new Elevation(args?.Elevation);
+export class QueryParams implements IQueryParams {
+  public lat: number;
+  public lng: number;
+  public q  : string;
+  constructor(args?: IQueryParams) {
+    Object.assign(this, args);
   }
-}</code></pre>
+  public build &#x3D; (): string &#x3D;&gt;
+    &#x60;?${Object.entries(this).map(x &#x3D;&gt; &#x60;${camelCase(x[0])}&#x3D;${x[1]}&#x60;).join(&#x27;&amp;&#x27;)}&#x60;;
+}
+</code></pre>
     </div>
 </div>
 
@@ -252,7 +253,7 @@ export class GeoPosition extends AbstractModel {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'IGeoPosition.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'IQueryParams.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

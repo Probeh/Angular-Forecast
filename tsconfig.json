@@ -21,6 +21,7 @@
       "@forecast/*" : ["src/app/forecast/*"    ],
       "@helpers/*"  : ["src/common/helpers/*"  ],
       "@models/*"   : ["src/common/models/*"   ],
+      "@resolvers/*": ["src/common/resolvers/*"],
       "@search/*"   : ["src/app/search/*"      ],
       "@services/*" : ["src/common/services/*" ],
       "@weather/*"  : ["src/app/weather/*"     ],

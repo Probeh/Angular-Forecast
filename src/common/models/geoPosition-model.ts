@@ -10,7 +10,7 @@ export class GeoPosition extends AbstractModel {
   public elevation: Elevation;
   public latitude : number   ;
   public longitude: number   ;
-  constructor(args?: IGeoPosition) {
+  constructor(args?: IGeoPosition | any) {
     super(args);
     this.elevation = new Elevation(args?.Elevation);
   }

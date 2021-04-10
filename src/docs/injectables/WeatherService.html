@@ -449,7 +449,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { forkJoin     , Observable, of } from &#x27;rxjs&#x27;
-import { map          , switchMap      } from &#x27;rxjs/operators&#x27;
+import { map          , mergeMap       } from &#x27;rxjs/operators&#x27;
 import { HttpClient                    } from &#x27;@angular/common/http&#x27;
 import { Injectable                    } from &#x27;@angular/core&#x27;
 import { DataSets                      } from &#x27;@constants/data-sets.enum&#x27;
@@ -488,8 +488,8 @@ export class WeatherService {
     .pipe(map(result &#x3D;&gt; new Forecast(result)));
 
   public getGeoPosition &#x3D; (lat: number, lng: number): Observable&lt;Location&gt; &#x3D;&gt; this.http
-    .get&lt;ILocation&gt;(providers.weather.geoposition, { params: { q: &#x60;${lat},${lng}&#x60; } })
-    .pipe(switchMap(location &#x3D;&gt;
+    .get&lt;ILocation&gt;(providers.weather.geoposition, { params: { q: lat + &#x27;,&#x27; + lng } })
+    .pipe(mergeMap(location &#x3D;&gt;
       forkJoin(of(location), this.getConditions(location.Key), this.getForecast(location.Key))
         .pipe(map(results &#x3D;&gt;
           this.setContext(DataSets.Locations, new Location(results[0]).update(results[1], results[2]))))));
@@ -498,15 +498,15 @@ export class WeatherService {
     ? of(this.getContext(key))
     : this.http
       .get&lt;ILocation&gt;(&#x60;${providers.weather.locations}/${key}&#x60;)
-      .pipe(switchMap(location &#x3D;&gt;
+      .pipe(mergeMap(location &#x3D;&gt;
         forkJoin(of(location), this.getConditions(location.Key), this.getForecast(location.Key))
           .pipe(map(results &#x3D;&gt;
             this.setContext(DataSets.Locations, new Location(results[0]).update(results[1], results[2]))))));
 
   private createContext &#x3D; () &#x3D;&gt; this.context
     .set(DataSets.Conditions, new Array&lt;Conditions&gt;())
-    .set(DataSets.Forecasts , new Array&lt;Forecast  &gt;())
-    .set(DataSets.Locations , new Array&lt;Location  &gt;());
+    .set(DataSets.Forecasts, new Array&lt;Forecast&gt;())
+    .set(DataSets.Locations, new Array&lt;Location&gt;());
 }</code></pre>
     </div>
 

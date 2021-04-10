@@ -1,5 +1,5 @@
 import { forkJoin     , Observable, of } from 'rxjs'
-import { map          , switchMap      } from 'rxjs/operators'
+import { map          , mergeMap       } from 'rxjs/operators'
 import { HttpClient                    } from '@angular/common/http'
 import { Injectable                    } from '@angular/core'
 import { DataSets                      } from '@constants/data-sets.enum'
@@ -38,8 +38,8 @@ export class WeatherService {
     .pipe(map(result => new Forecast(result)));
 
   public getGeoPosition = (lat: number, lng: number): Observable<Location> => this.http
-    .get<ILocation>(providers.weather.geoposition, { params: { q: `${lat},${lng}` } })
-    .pipe(switchMap(location =>
+    .get<ILocation>(providers.weather.geoposition, { params: { q: lat + ',' + lng } })
+    .pipe(mergeMap(location =>
       forkJoin(of(location), this.getConditions(location.Key), this.getForecast(location.Key))
         .pipe(map(results =>
           this.setContext(DataSets.Locations, new Location(results[0]).update(results[1], results[2]))))));
@@ -48,13 +48,13 @@ export class WeatherService {
     ? of(this.getContext(key))
     : this.http
       .get<ILocation>(`${providers.weather.locations}/${key}`)
-      .pipe(switchMap(location =>
+      .pipe(mergeMap(location =>
         forkJoin(of(location), this.getConditions(location.Key), this.getForecast(location.Key))
           .pipe(map(results =>
             this.setContext(DataSets.Locations, new Location(results[0]).update(results[1], results[2]))))));
 
   private createContext = () => this.context
     .set(DataSets.Conditions, new Array<Conditions>())
-    .set(DataSets.Forecasts , new Array<Forecast  >())
-    .set(DataSets.Locations , new Array<Location  >());
+    .set(DataSets.Forecasts, new Array<Forecast>())
+    .set(DataSets.Locations, new Array<Location>());
 }

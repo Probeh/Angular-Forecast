@@ -7,6 +7,7 @@ import { WeatherService } from '@services/weather.service'
 import { MenuItem } from 'primeng/api'
 import { IMenuEvent } from '@helpers/menu-event'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-search',
@@ -20,7 +21,7 @@ export class SearchComponent implements OnInit {
   public currentOption: MenuItem;
   public searchPattern: RegExp = /[a-zA-Z ]/;
   public suggestions$?: Observable<AutoComplete[]>;
-  constructor(private weather: WeatherService) { }
+  constructor(private weather: WeatherService, private router: Router) { }
   ngOnInit() {
     this.createForm();
     this.setOptions();
@@ -33,10 +34,7 @@ export class SearchComponent implements OnInit {
   }
   public onSearch = (event: ISearchEvent) =>
     event.query ? this.searchSubject$.next(event.query) : undefined;
-  public onSelect = (value: AutoComplete) => {
-
-    // this.weather.getConditions(value);
-  };
+  public onSelect = (value: AutoComplete) => this.router.navigate(['weather'], { queryParams: { key: value.key } });
   public onSubmit = ($event) => { }
   public createForm = () => this.coordinatesForm =
     new FormGroup({
