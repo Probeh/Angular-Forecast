@@ -1,3 +1,18 @@
-<p>
-  weather works!
-</p>
+<div class="app-weather" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+  <div class="row m-0" style="min-height: 250px;">
+    <div class="col-md-4 text-center shadow">
+      <img src="{{this.location?.conditions.getIcon()}}" style="height: 200px;">
+      <h1 class="text-white m-1">{{this.location?.conditions.weatherText}}</h1>
+      <div class="flex">
+        <h4 class="m-2 text-white">{{this.location?.administrativeArea.englishName}}</h4>
+        <div class="temperature text-white flex">
+          <h4>{{this.location?.conditions.temperature.metric.value}}</h4>
+          {{this.location ? '/' :''}}{{this.location?.conditions.temperature.metric.unit}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 shadow">
+      <div>{{this.location | json}}</div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-import { Observable, Subject, Subscriber } from 'rxjs'
+import { BehaviorSubject, Observable, Subject, Subscriber } from 'rxjs'
 import { Injectable } from '@angular/core'
 import { ColorTheme } from '@constants/color-theme.enum'
 import { PanelMode } from '@constants/panel-mode.enum'
@@ -9,19 +9,20 @@ import { GeoPosition } from '@models/geoPosition-model'
 
 @Injectable()
 export class ApplicationService {
-  public readonly appThemeChange$: Subject<ColorTheme> = new Subject();
-  public readonly loadingChange$: Subject<boolean> = new Subject();
-  public appThemeState$: Observable<ColorTheme>;
-  public loadingState$: Observable<boolean>;
-  public appTheme: ColorTheme;
-  public geoPosition: GeoPosition;
+  public $isLoading: Observable<boolean>;
+  public $isLoadingChange: Subject<boolean>;
+  public $siteTheme: Observable<ColorTheme>;
+  public $siteThemeChange: Subject<ColorTheme>;
+  public geoLatLng: GeoPosition;
   public isLoading: boolean;
-  public sidenavMode: PanelMode;
+  public siteTheme: ColorTheme;
+  public sidenavPanel: PanelMode;
   public sidenavState: PanelState;
   constructor(private args?: AppSettings) {
-    this.appTheme = this.args?.appTheme;
-    this.sidenavMode = this.args?.sidenavMode;
+    this.sidenavPanel = this.args?.sidenavMode;
     this.sidenavState = this.args?.sidenavState;
+    this.$isLoadingChange = new Subject();
+    this.$siteThemeChange = new BehaviorSubject(args?.themeOption);
     this.setObservables();
   }
   public getUserLocation = (): Observable<GeoPosition> => new Observable<GeoPosition>(
@@ -29,22 +30,22 @@ export class ApplicationService {
       navigator.geolocation
         .getCurrentPosition(
           (success) => {
-            this.geoPosition = new GeoPosition({latitude: success.coords.latitude, longitude: success.coords.longitude});
-            subscriber.next(this.geoPosition);
+            this.geoLatLng = new GeoPosition({latitude: success.coords.latitude, longitude: success.coords.longitude});
+            subscriber.next(this.geoLatLng);
             subscriber.complete();
           },
           (failure) => {
-            this.geoPosition = new GeoPosition(DEFAULT_LOCATION);
-            subscriber.next(this.geoPosition);
+            this.geoLatLng = new GeoPosition(DEFAULT_LOCATION);
+            subscriber.next(this.geoLatLng);
             subscriber.complete();
           });
     }
   )
 
   private setObservables = () => {
-    this.loadingState$ = new Observable<boolean>(
+    this.$isLoading = new Observable<boolean>(
       subscriber => {
-        this.loadingChange$.subscribe({
+        this.$isLoadingChange.subscribe({
           next: value => {
             if (value != this.isLoading) {
               this.isLoading = value;
@@ -54,12 +55,12 @@ export class ApplicationService {
         })
       });
 
-    this.appThemeState$ = new Observable<ColorTheme>(
+    this.$siteTheme = new Observable<ColorTheme>(
       subscriber => {
-        this.appThemeChange$.subscribe({
+        this.$siteThemeChange.subscribe({
           next: value => {
-            if (value != this.appTheme) {
-              this.appTheme = value;
+            if (value != this.siteTheme) {
+              this.siteTheme = value;
               subscriber.next(value);
             }
           }

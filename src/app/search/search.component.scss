@@ -1,14 +1,12 @@
 @import "common.scss";
 
 .app-search {
-  border-radius: 25px;
-  padding: 35px;
+  padding: 10px 35px;
   margin-bottom: 15px;
-  @extend .shadow;
   .search-header {
     padding: 5px;
     align-items: center;
-    color: $font-color;
+    color: $color-text;
     display: flex;
     font-size: 32px;
     justify-content: space-between;
@@ -43,18 +41,15 @@
 }
 label {
   margin: 0px;
-  color: $font-color;
-}
-input:focus {
-  @extend .shadow;
+  color: $color-text;
 }
 .form-control.ng-invalid:not(.ng-pristine) {
   border: 2px solid red;
   color: red;
 }
 .form-control.ng-valid:not(.ng-pristine) {
-  border: 2px solid $teal;
-  color: $teal;
+  border: 2px solid $color-teal;
+  color: $color-teal;
 }
 .input-col {
   flex: auto;

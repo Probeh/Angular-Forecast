@@ -17,7 +17,7 @@ import { ContainerModule         } from '@container/container.module'
     HttpClientModule       ,
     AppRoutingModule       ,
     ContainerModule.forRoot({
-      appTheme    : ColorTheme.Light,
+      themeOption    : ColorTheme.Light,
       sidenavMode : PanelMode .Push ,
       sidenavState: PanelState.Hide ,
     }),

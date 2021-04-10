@@ -1,4 +1,4 @@
-<div class="app-search container">
+<div class="app-search">
   <div class="search-header">
     <div class="header-title">
       <i class="fa fa-search"></i>Search
@@ -10,7 +10,7 @@
   <div class="search-form" [ngSwitch]="this.currentOption.label">
     <div class="form-autocomplete" *ngSwitchCase="'Location'">
       <label>Location</label>
-      <p-autoComplete [suggestions]="this.suggestions$ | async" [emptyMessage]="'No results'"
+      <p-autoComplete [suggestions]="this.$suggestions | async" [emptyMessage]="'No results'"
         (onSelect)="this.onSelect($event)" (completeMethod)="this.onSearch($event)" [pKeyFilter]="this.searchPattern"
         [minLength]=3 [placeholder]="'Search Location'" [autoHighlight]="true" [field]="'localizedName'"
         [completeOnFocus]="true">
@@ -22,7 +22,7 @@
         </ng-template>
       </p-autoComplete>
     </div>
-    <form [formGroup]="this.coordinatesForm" (ngSubmit)="this.onSubmit($event)" class="form-coordinates"
+    <form [formGroup]="this.locationInput" (ngSubmit)="this.onSubmit($event)" class="form-coordinates"
       *ngSwitchCase="'Coordinates'">
       <div class="input-col">
         <label for="lat">Latitude</label>
@@ -36,10 +36,10 @@
         <ng-container [ngTemplateOutlet]="invalidInput" [ngTemplateOutletContext]="{ control: 'lng' }">
         </ng-container>
       </div>
-      <div class="input-col">
-        <button type="submit" pRipple class="btn text-white bg-indigo btn-block"
-          [disabled]="this.coordinatesForm.invalid" style="height: 35px; margin-top: 21px;"
-          [ngStyle]="{'opacity': this.coordinatesForm.invalid ? '50%' : '100%'}">
+      <div class="input-col text-center" style="max-width: 50px;">
+        <button type="submit" pRipple class="btn text-white bg-primary"
+          [disabled]="this.locationInput.invalid" style="height: 35px; border-radius: 50%; margin-top: 21px;"
+          [ngStyle]="{'opacity': this.locationInput.invalid ? '50%' : '100%'}">
           <i class="fa fa-compass"></i></button>
       </div>
     </form>

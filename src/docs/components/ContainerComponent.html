@@ -132,11 +132,15 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#currentRoute">currentRoute</a>
+                                <a href="#$isLoading">$isLoading</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#isLoading$">isLoading$</a>
+                                <a href="#$siteTheme">$siteTheme</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#currentRoute">currentRoute</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -179,12 +183,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(application: <a href="../injectables/ApplicationService.html">ApplicationService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, message: MessageService)</code>
+<code>constructor(application: <a href="../injectables/ApplicationService.html">ApplicationService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/container/container.component.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -218,18 +222,6 @@
                                                   
                                                         <td>
                                                                         <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>message</td>
-                                                  
-                                                        <td>
-                                                                    <code>MessageService</code>
                                                         </td>
                                                   
                                                     <td>
@@ -277,8 +269,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="31"
-                            class="link-to-prism">src/app/container/container.component.ts:31</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/app/container/container.component.ts:33</a></div>
                 </td>
             </tr>
 
@@ -300,6 +292,62 @@
         <h3 id="inputs">
             Properties
         </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="$isLoading"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            $isLoading</b>
+                            <a href="#$isLoading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;boolean&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="$siteTheme"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            $siteTheme</b>
+                            <a href="#$siteTheme"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#ColorTheme" target="_self" >Observable&lt;ColorTheme&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/container/container.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -332,34 +380,6 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="isLoading$"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            isLoading$</b>
-                            <a href="#isLoading$"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>Observable&lt;boolean&gt;</code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
                         <a name="onSidenavToggle"></a>
                         <span class="name">
                             <b>
@@ -376,7 +396,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/container/container.component.ts:26</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/container/container.component.ts:28</a></div>
                             </td>
                         </tr>
 
@@ -404,7 +424,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -417,10 +437,10 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { MessageService             } from &#x27;primeng/api&#x27;
-import { Observable                 } from &#x27;rxjs&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable                 } from &#x27;rxjs&#x27;
 import { Component         , OnInit } from &#x27;@angular/core&#x27;
 import { NavigationEnd     , Router } from &#x27;@angular/router&#x27;
+import { ColorTheme                 } from &#x27;@constants/color-theme.enum&#x27;
 import { PanelState                 } from &#x27;@constants/panel-state.enum&#x27;
 import { ApplicationService         } from &#x27;@services/application.service&#x27;
 
@@ -430,12 +450,14 @@ import { ApplicationService         } from &#x27;@services/application.service&#
   styleUrls: [&#x27;./container.component.scss&#x27;]
 })
 export class ContainerComponent implements OnInit {
-  public currentRoute: string             ;
-  public isLoading$  : Observable&lt;boolean&gt;;
-  public sidenavState: PanelState         ;
-  constructor(private application: ApplicationService, private router: Router, private message: MessageService) {
-    this.isLoading$   &#x3D; this.application.loadingState$;
-    this.sidenavState &#x3D; this.application.sidenavState ;
+  public currentRoute: string                ;
+  public sidenavState: PanelState            ;
+  public $isLoading  : Observable&lt;boolean&gt;   ;
+  public $siteTheme  : Observable&lt;ColorTheme&gt;;
+  constructor(private application: ApplicationService, private router: Router) {
+    this.$siteTheme &#x3D; this.application.$siteTheme;
+    this.$isLoading &#x3D; this.application.$isLoading;
+    this.sidenavState &#x3D; this.application.sidenavState;
     this.router.events.subscribe({
       next: event &#x3D;&gt; this.currentRoute &#x3D; !(event instanceof NavigationEnd)
         ? this.currentRoute
@@ -453,12 +475,16 @@ export class ContainerComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-container&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-container&quot; [ngClass]&#x3D;&quot;this.$siteTheme | async&quot;&gt;
   &lt;div class&#x3D;&quot;container-main&quot;&gt;
     &lt;app-header (sidenavChanged)&#x3D;&quot;this.onSidenavToggle()&quot;&gt;&lt;/app-header&gt;
-    &lt;div class&#x3D;&quot;container-content&quot;&gt;
-      &lt;app-search&gt;&lt;/app-search&gt;
-      &lt;ng-content&gt;&lt;/ng-content&gt;
+    &lt;div class&#x3D;&quot;container-content container&quot;&gt;
+      &lt;div class&#x3D;&quot;content-search&quot;&gt;
+        &lt;app-search&gt;&lt;/app-search&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;content-center&quot;&gt;
+        &lt;ng-content&gt;&lt;/ng-content&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class&#x3D;&quot;container-sidenav&quot;&gt;
@@ -475,7 +501,12 @@ export class ContainerComponent implements OnInit {
                 <pre class="line-numbers"><code class="language-scss">@import &quot;common.scss&quot;;
 
 .app-container {
-  background: linear-gradient(to top, $primary, lighten($color: $primary, $amount: 10%), lighten($color: $primary, $amount: 20%));
+  background: linear-gradient(
+    to top,
+    $color-primary,
+    lighten($color: $color-primary, $amount: 10%),
+    lighten($color: $color-primary, $amount: 20%)
+  );
   display: flex;
   height: 100vh;
   justify-content: space-between;
@@ -489,14 +520,25 @@ export class ContainerComponent implements OnInit {
     display: flex;
     flex-direction: column;
     flex: auto;
-    height: $content-height;
+    height: 100vh;
+    max-height: 100vh;
     justify-content: space-between;
     .container-content {
       max-height: $content-height;
-
+      overflow-y: hidden;
       flex: auto;
       padding: 15px;
-      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .content-search {
+      }
+      .content-center {
+        overflow-y: auto;
+        overflow-x: hidden;
+        flex: auto;
+      }
     }
     .container-sidenav {
       max-width: $sidenav-width;
@@ -531,7 +573,7 @@ export class ContainerComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-container">  <div class="container-main">    <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>    <div class="container-content">      <app-search></app-search>      <ng-content></ng-content>    </div>  </div>  <div class="container-sidenav">    <app-sidenav [sidenavState]="this.sidenavState"></app-sidenav>  </div></div><p-toast></p-toast></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-container" [ngClass]="this.$siteTheme | async">  <div class="container-main">    <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>    <div class="container-content container">      <div class="content-search">        <app-search></app-search>      </div>      <div class="content-center">        <ng-content></ng-content>      </div>    </div>  </div>  <div class="container-sidenav">    <app-sidenav [sidenavState]="this.sidenavState"></app-sidenav>  </div></div><p-toast></p-toast></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'ForecastComponent', 'selector': 'app-forecast'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ContainerComponent'};

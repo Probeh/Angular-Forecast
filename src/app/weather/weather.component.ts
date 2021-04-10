@@ -8,15 +8,11 @@ import { Location } from '@models/location-model'
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent implements OnInit {
+  public location: Location;
   constructor(private router: Router, private route: ActivatedRoute) {
-    this.route.queryParamMap.subscribe({
-      next: params => {
-        console.log(params);
-      }
-    });
     this.route.data.subscribe({
-      next: (data: { location: Location }) => {
-        console.log(data);
+      next: (result) => {
+        this.location = result['location'];
       }
     });
   }

@@ -1,9 +1,13 @@
-<div class="app-container">
+<div class="app-container" [ngClass]="this.$siteTheme | async">
   <div class="container-main">
     <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>
-    <div class="container-content">
-      <app-search></app-search>
-      <ng-content></ng-content>
+    <div class="container-content container">
+      <div class="content-search">
+        <app-search></app-search>
+      </div>
+      <div class="content-center">
+        <ng-content></ng-content>
+      </div>
     </div>
   </div>
   <div class="container-sidenav">

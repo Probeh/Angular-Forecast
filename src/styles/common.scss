@@ -1,12 +1,47 @@
-@import "./themes/dark.scss";
-@import "./themes/light.scss";
-@import "colors.scss";
-
-$font-color: white;
 $navbar-height: 40px;
 $content-height: calc(100vh - #{$navbar-height});
 $sidenav-width: 200px;
+$color-primary: #007bff;
+$color-teal: #20c997;
+$color-text: white;
 
+.form-control {
+  height: 37px;
+}
+.p-autocomplete {
+  height: 37px;
+}
+.p-tabmenu-nav {
+  background: transparent !important;
+  min-width: 250px;
+  overflow: hidden;
+  .p-tabmenuitem:not(.p-highlight) * {
+    color: var(--dark);
+  }
+  .p-tabmenuitem.p-highlight {
+    transition: ease-in-out 300ms;
+    background: lighten($color: $color-primary, $amount: 30%);
+  }
+  .p-tabmenuitem.p-highlight * {
+    color: white;
+  }
+  .p-menuitem-link {
+    background: transparent !important;
+  }
+}
+input,
+.p-autocomplete,
+.p-inputtext {
+  width: 100% !important;
+  background: transparent;
+}
+input:focus,
+.p-autocomplete:focus,
+.p-inputtext:focus {
+  transition: ease-in-out 300ms;
+  background: lighten($color: $color-primary, $amount: 30%);
+  @extend .shadow;
+}
 .shadow {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }

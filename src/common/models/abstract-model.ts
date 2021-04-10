@@ -9,7 +9,7 @@ export abstract class AbstractModel {
   constructor(args?: any) {
     args ? Object.keys(args)?.forEach(key => this[camelCase(key)] = this[camelCase(key)] ?? args[key]) : {};
     this.created = new Date();
-    this.id = this.id ?? Guid.newGuid();
+    this.id = this.id ?? Guid.newGuid().toString();
     this.type = this.type ?? this.constructor.name;
   }
 }

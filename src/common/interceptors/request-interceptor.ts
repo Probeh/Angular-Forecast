@@ -12,7 +12,7 @@ export class RequestInterceptor implements HttpInterceptor {
   constructor(private application: ApplicationService, private cache: RequestCache) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    this.application.loadingChange$.next(true);
+    this.application.$isLoadingChange.next(true);
     req = req.url.includes(providers.weather.baseUrl)
       ? req.clone({
         params: req.params.append('apikey', decodeBase64(providers.weather.apiKey))
@@ -23,7 +23,7 @@ export class RequestInterceptor implements HttpInterceptor {
         tap((event) => {
           if (event instanceof HttpResponse) {
             this.cache.put(req, event);
-            this.application.loadingChange$.next(false);
+            this.application.$isLoadingChange.next(false);
           }
         })
       );

@@ -77,20 +77,23 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#appTheme">appTheme</a>
+                                <a href="#$isLoading">$isLoading</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                    <span class="modifier">Readonly</span>
-                                <a href="#appThemeChange$">appThemeChange$</a>
+                                <a href="#$isLoadingChange">$isLoadingChange</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#appThemeState$">appThemeState$</a>
+                                <a href="#$siteTheme">$siteTheme</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#geoPosition">geoPosition</a>
+                                <a href="#$siteThemeChange">$siteThemeChange</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#geoLatLng">geoLatLng</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -101,25 +104,20 @@
                                 <a href="#isLoading">isLoading</a>
                             </li>
                             <li>
-                                    <span class="modifier">Public</span>
-                                    <span class="modifier">Readonly</span>
-                                <a href="#loadingChange$">loadingChange$</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#loadingState$">loadingState$</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Private</span>
                                 <a href="#setObservables">setObservables</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#sidenavMode">sidenavMode</a>
+                                <a href="#sidenavPanel">sidenavPanel</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#sidenavState">sidenavState</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#siteTheme">siteTheme</a>
                             </li>
                         </ul>
                     </td>
@@ -193,53 +191,19 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="appTheme"></a>
+                        <a name="$isLoading"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            appTheme</b>
-                            <a href="#appTheme"><span class="icon ion-ios-link"></span></a>
+                            $isLoading</b>
+                            <a href="#$isLoading"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#ColorTheme" target="_self" >ColorTheme</a></code>
+                            <i>Type : </i>    <code>Observable&lt;boolean&gt;</code>
 
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/common/services/application.service.ts:16</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="appThemeChange$"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                                <span class="modifier">Readonly</span>
-                            appThemeChange$</b>
-                            <a href="#appThemeChange$"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#ColorTheme" target="_self" >Subject&lt;ColorTheme&gt;</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>new Subject()</code>
                         </td>
                     </tr>
                         <tr>
@@ -255,12 +219,40 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="appThemeState$"></a>
+                        <a name="$isLoadingChange"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            appThemeState$</b>
-                            <a href="#appThemeState$"><span class="icon ion-ios-link"></span></a>
+                            $isLoadingChange</b>
+                            <a href="#$isLoadingChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subject&lt;boolean&gt;</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/common/services/application.service.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="$siteTheme"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            $siteTheme</b>
+                            <a href="#$siteTheme"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -283,12 +275,40 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="geoPosition"></a>
+                        <a name="$siteThemeChange"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            geoPosition</b>
-                            <a href="#geoPosition"><span class="icon ion-ios-link"></span></a>
+                            $siteThemeChange</b>
+                            <a href="#$siteThemeChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#ColorTheme" target="_self" >Subject&lt;ColorTheme&gt;</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/common/services/application.service.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="geoLatLng"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            geoLatLng</b>
+                            <a href="#geoLatLng"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -300,7 +320,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/common/services/application.service.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/common/services/application.service.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -327,7 +347,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/common/services/application.service.ts:27</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/common/services/application.service.ts:28</a></div>
                             </td>
                         </tr>
 
@@ -355,69 +375,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/common/services/application.service.ts:18</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="loadingChange$"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                                <span class="modifier">Readonly</span>
-                            loadingChange$</b>
-                            <a href="#loadingChange$"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>Subject&lt;boolean&gt;</code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>new Subject()</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/common/services/application.service.ts:13</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="loadingState$"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            loadingState$</b>
-                            <a href="#loadingState$"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>Observable&lt;boolean&gt;</code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/common/services/application.service.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/common/services/application.service.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -444,7 +402,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/common/services/application.service.ts:44</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/common/services/application.service.ts:45</a></div>
                             </td>
                         </tr>
 
@@ -455,12 +413,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="sidenavMode"></a>
+                        <a name="sidenavPanel"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            sidenavMode</b>
-                            <a href="#sidenavMode"><span class="icon ion-ios-link"></span></a>
+                            sidenavPanel</b>
+                            <a href="#sidenavPanel"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -507,13 +465,41 @@
 
             </tbody>
         </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="siteTheme"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            siteTheme</b>
+                            <a href="#siteTheme"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#ColorTheme" target="_self" >ColorTheme</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/common/services/application.service.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
 </section>
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable, Subject, Subscriber } from &#x27;rxjs&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BehaviorSubject, Observable, Subject, Subscriber } from &#x27;rxjs&#x27;
 import { Injectable } from &#x27;@angular/core&#x27;
 import { ColorTheme } from &#x27;@constants/color-theme.enum&#x27;
 import { PanelMode } from &#x27;@constants/panel-mode.enum&#x27;
@@ -524,19 +510,20 @@ import { GeoPosition } from &#x27;@models/geoPosition-model&#x27;
 
 @Injectable()
 export class ApplicationService {
-  public readonly appThemeChange$: Subject&lt;ColorTheme&gt; &#x3D; new Subject();
-  public readonly loadingChange$: Subject&lt;boolean&gt; &#x3D; new Subject();
-  public appThemeState$: Observable&lt;ColorTheme&gt;;
-  public loadingState$: Observable&lt;boolean&gt;;
-  public appTheme: ColorTheme;
-  public geoPosition: GeoPosition;
+  public $isLoading: Observable&lt;boolean&gt;;
+  public $isLoadingChange: Subject&lt;boolean&gt;;
+  public $siteTheme: Observable&lt;ColorTheme&gt;;
+  public $siteThemeChange: Subject&lt;ColorTheme&gt;;
+  public geoLatLng: GeoPosition;
   public isLoading: boolean;
-  public sidenavMode: PanelMode;
+  public siteTheme: ColorTheme;
+  public sidenavPanel: PanelMode;
   public sidenavState: PanelState;
   constructor(private args?: AppSettings) {
-    this.appTheme &#x3D; this.args?.appTheme;
-    this.sidenavMode &#x3D; this.args?.sidenavMode;
+    this.sidenavPanel &#x3D; this.args?.sidenavMode;
     this.sidenavState &#x3D; this.args?.sidenavState;
+    this.$isLoadingChange &#x3D; new Subject();
+    this.$siteThemeChange &#x3D; new BehaviorSubject(args?.themeOption);
     this.setObservables();
   }
   public getUserLocation &#x3D; (): Observable&lt;GeoPosition&gt; &#x3D;&gt; new Observable&lt;GeoPosition&gt;(
@@ -544,22 +531,22 @@ export class ApplicationService {
       navigator.geolocation
         .getCurrentPosition(
           (success) &#x3D;&gt; {
-            this.geoPosition &#x3D; new GeoPosition({latitude: success.coords.latitude, longitude: success.coords.longitude});
-            subscriber.next(this.geoPosition);
+            this.geoLatLng &#x3D; new GeoPosition({latitude: success.coords.latitude, longitude: success.coords.longitude});
+            subscriber.next(this.geoLatLng);
             subscriber.complete();
           },
           (failure) &#x3D;&gt; {
-            this.geoPosition &#x3D; new GeoPosition(DEFAULT_LOCATION);
-            subscriber.next(this.geoPosition);
+            this.geoLatLng &#x3D; new GeoPosition(DEFAULT_LOCATION);
+            subscriber.next(this.geoLatLng);
             subscriber.complete();
           });
     }
   )
 
   private setObservables &#x3D; () &#x3D;&gt; {
-    this.loadingState$ &#x3D; new Observable&lt;boolean&gt;(
+    this.$isLoading &#x3D; new Observable&lt;boolean&gt;(
       subscriber &#x3D;&gt; {
-        this.loadingChange$.subscribe({
+        this.$isLoadingChange.subscribe({
           next: value &#x3D;&gt; {
             if (value !&#x3D; this.isLoading) {
               this.isLoading &#x3D; value;
@@ -569,12 +556,12 @@ export class ApplicationService {
         })
       });
 
-    this.appThemeState$ &#x3D; new Observable&lt;ColorTheme&gt;(
+    this.$siteTheme &#x3D; new Observable&lt;ColorTheme&gt;(
       subscriber &#x3D;&gt; {
-        this.appThemeChange$.subscribe({
+        this.$siteThemeChange.subscribe({
           next: value &#x3D;&gt; {
-            if (value !&#x3D; this.appTheme) {
-              this.appTheme &#x3D; value;
+            if (value !&#x3D; this.siteTheme) {
+              this.siteTheme &#x3D; value;
               subscriber.next(value);
             }
           }

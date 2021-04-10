@@ -265,7 +265,7 @@ export class LocationResolver implements Resolve&lt;Location&gt; {
     if (params.has(&#x27;key&#x27;))
       return this.weather.getLocation(params.get(&#x27;key&#x27;));
 
-    if (!this.application.geoPosition) {
+    if (!this.application.geoLatLng) {
       return this.application.getUserLocation()
         .pipe(mergeMap((position: GeoPosition) &#x3D;&gt;
           this.weather.getGeoPosition(position.latitude, position.longitude)));
