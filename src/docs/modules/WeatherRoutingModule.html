@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>AppRoutingModule</li>
+    <li>WeatherRoutingModule</li>
 </ol>
 
 
@@ -55,7 +55,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/app-routing.module.ts</code>
+            <code>src/app/weather/weather-routing.module.ts</code>
         </p>
 
 
@@ -71,20 +71,19 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;
-import { RouterModule, Routes } from &#x27;@angular/router&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule                 } from &#x27;@angular/core&#x27;
+import { RouterModule    , Routes } from &#x27;@angular/router&#x27;
+import { WeatherComponent         } from &#x27;@weather/weather.component&#x27;
 
-export const AppRoutes: Routes &#x3D; [
-  { path: &#x27;weather&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./weather/weather.module&#x27;).then(m &#x3D;&gt; m.WeatherModule)&quot; },
-  { path: &#x27;favorites&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./favorites/favorites.module&#x27;).then(m &#x3D;&gt; m.FavoritesModule)&quot; },
-  { path: &#x27;**&#x27;, pathMatch: &#x27;full&#x27;, redirectTo: &#x27;weather&#x27; }
+export const WeatherRoutes: Routes &#x3D; [
+  { path: &#x27;&#x27;, component: WeatherComponent, children: [] }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(AppRoutes)],
+  imports: [RouterModule.forChild(WeatherRoutes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class WeatherRoutingModule { }
 </code></pre>
     </div>
 </div>
@@ -120,7 +119,7 @@ export class AppRoutingModule { }
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'WeatherRoutingModule.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

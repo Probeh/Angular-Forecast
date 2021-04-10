@@ -1,3 +1,4 @@
+import { toCamelCase } from '@helpers/formatters';
 import { Guid } from 'guid-ts'
 
 export abstract class BaseModel {
@@ -6,10 +7,10 @@ export abstract class BaseModel {
   public name: string;
   public type: string;
   constructor(args?: any) {
-    Object.keys(args)?.forEach(key => this[key] = this[key] ?? args[key]);
+    Object.keys(args)?.forEach(key => this[toCamelCase(key)] = this[toCamelCase(key)] ?? args[key]);
     this.created = new Date();
     this.id = this.id ?? Guid.newGuid();
     this.type = this.type ?? this.constructor.name;
-    console.log(JSON.stringify(Object.keys(this)));
+    console.log(this);
   }
 }

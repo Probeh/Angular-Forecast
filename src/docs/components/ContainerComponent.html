@@ -457,6 +457,7 @@ export class ContainerComponent implements OnInit {
   &lt;div class&#x3D;&quot;container-main&quot;&gt;
     &lt;app-header (sidenavChanged)&#x3D;&quot;this.onSidenavToggle()&quot;&gt;&lt;/app-header&gt;
     &lt;div class&#x3D;&quot;container-content&quot;&gt;
+      &lt;app-search&gt;&lt;/app-search&gt;
       &lt;ng-content&gt;&lt;/ng-content&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -480,6 +481,7 @@ export class ContainerComponent implements OnInit {
   justify-content: space-between;
   margin: 0;
   overflow-y: hidden;
+  overflow-x: hidden;
   padding: 0;
   width: 100vw;
 
@@ -529,7 +531,7 @@ export class ContainerComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-container">  <div class="container-main">    <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>    <div class="container-content">      <ng-content></ng-content>    </div>  </div>  <div class="container-sidenav">    <app-sidenav [sidenavState]="this.sidenavState"></app-sidenav>  </div></div><p-toast></p-toast></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-container">  <div class="container-main">    <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>    <div class="container-content">      <app-search></app-search>      <ng-content></ng-content>    </div>  </div>  <div class="container-sidenav">    <app-sidenav [sidenavState]="this.sidenavState"></app-sidenav>  </div></div><p-toast></p-toast></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'ForecastComponent', 'selector': 'app-forecast'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ContainerComponent'};

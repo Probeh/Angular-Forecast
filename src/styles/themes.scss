@@ -1,2 +1,31 @@
 @import "./themes/dark.scss";
 @import "./themes/light.scss";
+
+$font-color: white;
+
+.form-control {
+  height: 35px;
+}
+.p-autocomplete {
+  height: 35px;
+}
+.p-tabmenu-nav {
+  background: transparent !important;
+  min-width: 250px;
+  overflow-x: auto;
+  .p-menuitem-link {
+    background: transparent !important;
+  }
+  .p-tabmenuitem:not(.p-highlight) * {
+    color: white;
+  }
+}
+.p-tabmenu-nav:hover {
+  overflow: overlay;
+}
+input, .p-autocomplete, .p-inputtext {
+  width: 100% !important;
+}
+input:focus, .p-autocomplete:focus, .p-inputtext:focus {
+  @extend .shadow;
+}

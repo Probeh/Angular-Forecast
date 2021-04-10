@@ -97,12 +97,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(application: <a href="../injectables/ApplicationService.html">ApplicationService</a>, cache: <a href="../injectables/RequestCacheService.html">RequestCacheService</a>)</code>
+<code>constructor(application: <a href="../injectables/ApplicationService.html">ApplicationService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/common/interceptors/response-interceptor.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/common/interceptors/response-interceptor.ts:7</a></div>
                             </td>
                         </tr>
 
@@ -124,18 +124,6 @@
                                                   
                                                         <td>
                                                                         <code><a href="../injectables/ApplicationService.html" target="_self" >ApplicationService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>cache</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="../injectables/RequestCacheService.html" target="_self" >RequestCacheService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -179,8 +167,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/common/interceptors/response-interceptor.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="10"
+                            class="link-to-prism">src/common/interceptors/response-interceptor.ts:10</a></div>
                 </td>
             </tr>
 
@@ -246,27 +234,16 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable } from &#x27;rxjs&#x27;
-import { delay, tap } from &#x27;rxjs/operators&#x27;
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from &#x27;@angular/common/http&#x27;
+import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from &#x27;@angular/common/http&#x27;
 import { Injectable } from &#x27;@angular/core&#x27;
 import { ApplicationService } from &#x27;@services/application.service&#x27;
-import { RequestCacheService } from &#x27;@services/request-cache.service&#x27;
 
 @Injectable()
 export class ResponseInterceptor implements HttpInterceptor {
-  constructor(private application: ApplicationService, private cache: RequestCacheService) { }
+  constructor(private application: ApplicationService) { }
 
   intercept(req: HttpRequest&lt;any&gt;, next: HttpHandler): Observable&lt;HttpEvent&lt;any&gt;&gt; {
-    return next.handle(req)
-      .pipe(
-        delay(2000),
-        tap((event) &#x3D;&gt; {
-          if (event instanceof HttpResponse) {
-            this.cache.put(req, event);
-            this.application.loadingChange$.next(false);
-          }
-        })
-      );
+    return next.handle(req);
   }
 }</code></pre>
     </div>

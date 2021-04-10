@@ -371,7 +371,6 @@ export class HeaderComponent implements OnInit {
       &lt;span class&#x3D;&quot;action-text&quot;&gt;Favorites&lt;/span&gt;
     &lt;/a&gt;
   &lt;/div&gt;
-  &lt;div class&#x3D;&quot;header-date&quot; style&#x3D;&quot;font-size: larger;&quot;&gt;{{this.currentDate | date: &#x27;EEEE MMMM d, y&#x27;}}&lt;/div&gt;
   &lt;div class&#x3D;&quot;header-actions&quot;&gt;
     &lt;a class&#x3D;&quot;btn&quot; target&#x3D;&quot;_blank&quot; href&#x3D;&quot;https://github.com/Probeh/Yonathan-Probeh-04-04-2021&quot; pRipple&gt;&lt;i
         class&#x3D;&quot;fa fa-github&quot;&gt;&lt;/i&gt;&lt;/a&gt;
@@ -406,15 +405,6 @@ export class HeaderComponent implements OnInit {
     align-items: center;
     .header-image {
       width: calc(#{$navbar-height} * 0.9);
-    }
-  }
-  .header-date {
-    @media screen and (max-width: 650px) {
-      display: none;
-    }
-    @media screen and (min-width: 650px) {
-      display: flex;
-      align-items: center;
     }
   }
   .header-actions {
@@ -477,7 +467,7 @@ export class HeaderComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-header flex">  <div class="header-items">    <img class="header-image" src="../../../assets/images/logo.png">    <a class="btn" routerLink="" pRipple>      <i class="fa fa-home"></i>      <span class="action-text">Main</span>    </a>    <a class="btn" routerLink="favorites" pRipple>      <i class="fa fa-star"></i>      <span class="action-text">Favorites</span>    </a>  </div>  <div class="header-date" style="font-size: larger;">{{this.currentDate | date: \'EEEE MMMM d, y\'}}</div>  <div class="header-actions">    <a class="btn" target="_blank" href="https://github.com/Probeh/Yonathan-Probeh-04-04-2021" pRipple><i        class="fa fa-github"></i></a>    <a class="btn" target="_blank" href="../../../docs/overview.html" pRipple><i class="fa fa-code"></i></a>    <a class="btn" (click)="this.toggleSidenav()" pRipple><i class="fa fa-bars"></i></a>  </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-header flex">  <div class="header-items">    <img class="header-image" src="../../../assets/images/logo.png">    <a class="btn" routerLink="" pRipple>      <i class="fa fa-home"></i>      <span class="action-text">Main</span>    </a>    <a class="btn" routerLink="favorites" pRipple>      <i class="fa fa-star"></i>      <span class="action-text">Favorites</span>    </a>  </div>  <div class="header-actions">    <a class="btn" target="_blank" href="https://github.com/Probeh/Yonathan-Probeh-04-04-2021" pRipple><i        class="fa fa-github"></i></a>    <a class="btn" target="_blank" href="../../../docs/overview.html" pRipple><i class="fa fa-code"></i></a>    <a class="btn" (click)="this.toggleSidenav()" pRipple><i class="fa fa-bars"></i></a>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'ForecastComponent', 'selector': 'app-forecast'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};

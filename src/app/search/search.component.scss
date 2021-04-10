@@ -1,2 +1,62 @@
+@import "common.scss";
+
 .app-search {
+  border-radius: 25px;
+  padding: 35px;
+  margin-bottom: 15px;
+  @extend .shadow;
+  .search-header {
+    padding: 5px;
+    align-items: center;
+    color: $font-color;
+    display: flex;
+    font-size: 32px;
+    justify-content: space-between;
+    .header-title {
+      display: flex;
+      align-items: center;
+      padding-right: 10px;
+      .fa {
+        font-size: smaller;
+        margin-right: 10px;
+      }
+    }
+    .search-options {
+      padding-left: 10px;
+      flex: auto;
+    }
+  }
+  .search-form {
+    padding: 10px 0px;
+    .form-autocomplete {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 2.5px;
+    }
+    .form-coordinates {
+      margin-bottom: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+label {
+  margin: 0px;
+  color: $font-color;
+}
+input:focus {
+  @extend .shadow;
+}
+.form-control.ng-invalid:not(.ng-pristine) {
+  border: 2px solid red;
+  color: red;
+}
+.form-control.ng-valid:not(.ng-pristine) {
+  border: 2px solid $teal;
+  color: $teal;
+}
+.input-col {
+  flex: auto;
+  padding: 0px 2.5px;
 }

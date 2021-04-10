@@ -20,7 +20,7 @@ export interface ILocation {
   TimeZone          ?: ITimeZone          ;
   Type              ?: string             ;
 }
-export class LocationModel extends BaseModel {
+export class Location extends BaseModel {
   public administrativeArea: AdministrativeArea;
   public conditions        : Conditions        ;
   public country           : Country           ;

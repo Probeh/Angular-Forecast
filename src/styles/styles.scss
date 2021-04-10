@@ -4,7 +4,8 @@
 @import "../../node_modules/primeng/resources/themes/mdc-light-indigo/theme.css";
 @import "themes.scss";
 
-html, body {
+html,
+body {
   color: #515c66;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -15,9 +16,6 @@ html, body {
   overflow: hidden;
   padding: 0;
   width: 100vw;
-}
-.shadow {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
 .flex {
   align-items: center;
@@ -35,16 +33,21 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0px;
 }
 .pacifico {
   font-family: "Pacifico", sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0px;
+.shadow {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
-input, .p-autocomplete, .p-inputtext {
-  width: 100% !important;
+a:hover {
+  text-decoration: none;
 }

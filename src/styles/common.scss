@@ -1,5 +1,8 @@
+@import "./themes/dark.scss";
+@import "./themes/light.scss";
 @import "colors.scss";
 
+$font-color: white;
 $navbar-height: 40px;
 $content-height: calc(100vh - #{$navbar-height});
 $sidenav-width: 200px;

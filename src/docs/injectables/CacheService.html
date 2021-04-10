@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content class">
+               <div class="content injectable">
                    <div class="content-data">
 
 
@@ -37,13 +37,9 @@
 
 
 
-
-
-
-
 <ol class="breadcrumb">
-  <li>Classes</li>
-  <li>RequestCache</li>
+  <li>Injectables</li>
+  <li>CacheService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -67,11 +63,31 @@
 
 
 
-
             <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#cached">cached</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Readonly</span>
+                                <a href="#maxAge">maxAge</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -82,11 +98,11 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Abstract</span>
+                                    <span class="modifier">Public</span>
                                 <a href="#get">get</a>
                             </li>
                             <li>
-                                    <span class="modifier">Abstract</span>
+                                    <span class="modifier">Public</span>
                                 <a href="#put">put</a>
                             </li>
                         </ul>
@@ -101,7 +117,24 @@
     </table>
 </section>
 
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/common/services/cache.service.ts:13</a></div>
+                            </td>
+                        </tr>
 
+            </tbody>
+        </table>
+</section>
 
             <section>
     
@@ -115,7 +148,7 @@
                     <a name="get"></a>
                     <span class="name">
                         <b>
-                            <span class="modifier">Abstract</span>
+                            <span class="modifier">Public</span>
                             get
                         </b>
                         <a href="#get"><span class="icon ion-ios-link"></span></a>
@@ -132,8 +165,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="6"
-                            class="link-to-prism">src/common/services/cache.service.ts:6</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/common/services/cache.service.ts:16</a></div>
                 </td>
             </tr>
 
@@ -187,7 +220,7 @@
                     <a name="put"></a>
                     <span class="name">
                         <b>
-                            <span class="modifier">Abstract</span>
+                            <span class="modifier">Public</span>
                             put
                         </b>
                         <a href="#put"><span class="icon ion-ios-link"></span></a>
@@ -204,8 +237,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="7"
-                            class="link-to-prism">src/common/services/cache.service.ts:7</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/common/services/cache.service.ts:25</a></div>
                 </td>
             </tr>
 
@@ -265,10 +298,74 @@
         </tbody>
     </table>
 </section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="cached"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            cached</b>
+                            <a href="#cached"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Map&lt;string, CacheResult&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/common/services/cache.service.ts:13</a></div>
+                            </td>
+                        </tr>
 
 
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="maxAge"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                                <span class="modifier">Readonly</span>
+                            maxAge</b>
+                            <a href="#maxAge"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>8.64e+7</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/common/services/cache.service.ts:12</a></div>
+                            </td>
+                        </tr>
 
 
+            </tbody>
+        </table>
+</section>
 
     </div>
 
@@ -306,7 +403,12 @@ export class CacheService implements RequestCache {
   }
 }</code></pre>
     </div>
+
 </div>
+
+
+
+
 
 
 
@@ -331,8 +433,8 @@ export class CacheService implements RequestCache {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
-            var COMPODOC_CURRENT_PAGE_URL = 'RequestCache.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'CacheService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

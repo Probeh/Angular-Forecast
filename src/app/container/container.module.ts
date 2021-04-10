@@ -12,12 +12,13 @@ import { FeatureModule                               } from '@container/feature.
 import { HeaderModule                                } from '@container/header/header.module'
 import { SidenavModule                               } from '@container/sidenav/sidenav.module'
 import { AppSettings                                 } from '@helpers/app-settings'
+import { SearchModule                                } from '@search/search.module'
 import { ApplicationService                          } from '@services/application.service'
-import { RequestCache          , RequestCacheService } from '@services/request-cache.service'
+import { RequestCache          , CacheService } from '@services/cache.service'
 import { WeatherService                              } from '@services/weather.service'
 
 const Components = [ContainerComponent];
-const Modules = [SidenavModule, HeaderModule, FeatureModule];
+const Modules = [SidenavModule, HeaderModule, SearchModule, FeatureModule];
 
 @NgModule({
   declarations: Components,
@@ -29,7 +30,7 @@ const Modules = [SidenavModule, HeaderModule, FeatureModule];
     Modules
   ],
   providers: [
-    { provide: RequestCache, useClass: RequestCacheService },
+    { provide: RequestCache, useClass: CacheService },
     { provide: HTTP_INTERCEPTORS, useClass: ExceptionInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor  , multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ResponseInterceptor , multi: true },
