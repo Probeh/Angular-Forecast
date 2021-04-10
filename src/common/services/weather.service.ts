@@ -2,6 +2,7 @@ import { Observable  , of            } from 'rxjs'
 import { map                         } from 'rxjs/operators'
 import { HttpClient                  } from '@angular/common/http'
 import { Injectable                  } from '@angular/core'
+import { DataSets                    } from '@constants/data-sets.enum'
 import { providers                   } from '@env/environment'
 import { AppSettings                 } from '@helpers/app-settings'
 import { AutoComplete, IAutoComplete } from '@models/autoComplete-model'
@@ -20,7 +21,7 @@ export class WeatherService {
       ? this.context.get(dataSet).unshift(value) : {};
     return value;
   }
-  private getContext = (key?: string, dataSet: string = 'Location', predicate?: (value: any) => unknown): any | null =>
+  private getContext = (key?: string, dataSet: string = DataSets.Locations, predicate?: (value: any) => unknown): any | null =>
     this.context.get(dataSet).some(predicate ?? ((item: Location) => item.key == key))
       ? this.context.get(dataSet).slice().find((item: Location) => item.key == key) : null;
 
@@ -30,7 +31,7 @@ export class WeatherService {
 
   public getConditions = (locationKey: string): Observable<Conditions> => this.http
     .get<IConditions>(`${providers.weather.conditions}/${locationKey}`)
-    .pipe(map(result => this.setContext('Conditions', new Conditions(result))));
+    .pipe(map(result => this.setContext(DataSets.Conditions, new Conditions(result))));
 
   public getForecast = (locationKey: string): Observable<Forecast> => this.http
     .get<IForecast>(`${providers.weather.forecasts}/${locationKey}`)
@@ -38,17 +39,17 @@ export class WeatherService {
 
   public getGeoPosition = (lat: number, lng: number): Observable<Location> => this.http
     .get<ILocation>(providers.weather.geoposition, { params: { q: `${lat},${lng}` } })
-    .pipe(map(result => this.setContext('Location', new Location(result))));
+    .pipe(map(result => this.setContext(DataSets.Locations, new Location(result))));
 
   public getLocation = (key: string): Observable<Location> =>
     this.getContext(key)
       ? of(this.getContext(key))
       : this.http
         .get<ILocation>(`${providers.weather.locations}/${key}`)
-        .pipe(map(result => this.setContext('Location', new Location(result))));
+        .pipe(map(result => this.setContext(DataSets.Locations, new Location(result))));
 
   private createContext = () => this.context
-    .set('Conditions', new Array<Conditions>())
-    .set('Forecast'  , new Array<Forecast  >())
-    .set('Location'  , new Array<Location  >());
+    .set(DataSets.Conditions, new Array<Conditions>())
+    .set(DataSets.Forecasts , new Array<Forecast  >())
+    .set(DataSets.Locations , new Array<Location  >());
 }

@@ -136,7 +136,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/common/services/weather.service.ts:15</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/common/services/weather.service.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -212,7 +212,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/common/services/weather.service.ts:27</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/common/services/weather.service.ts:28</a></div>
                             </td>
                         </tr>
 
@@ -246,7 +246,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/common/services/weather.service.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/common/services/weather.service.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -273,7 +273,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/common/services/weather.service.ts:50</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/common/services/weather.service.ts:51</a></div>
                             </td>
                         </tr>
 
@@ -300,7 +300,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/common/services/weather.service.ts:31</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/common/services/weather.service.ts:32</a></div>
                             </td>
                         </tr>
 
@@ -327,7 +327,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/common/services/weather.service.ts:23</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/common/services/weather.service.ts:24</a></div>
                             </td>
                         </tr>
 
@@ -354,7 +354,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/common/services/weather.service.ts:35</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/common/services/weather.service.ts:36</a></div>
                             </td>
                         </tr>
 
@@ -381,7 +381,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/common/services/weather.service.ts:39</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/common/services/weather.service.ts:40</a></div>
                             </td>
                         </tr>
 
@@ -408,7 +408,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/common/services/weather.service.ts:43</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/common/services/weather.service.ts:44</a></div>
                             </td>
                         </tr>
 
@@ -435,7 +435,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/common/services/weather.service.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/common/services/weather.service.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -452,6 +452,7 @@
 import { map                         } from &#x27;rxjs/operators&#x27;
 import { HttpClient                  } from &#x27;@angular/common/http&#x27;
 import { Injectable                  } from &#x27;@angular/core&#x27;
+import { DataSets                    } from &#x27;@constants/data-sets.enum&#x27;
 import { providers                   } from &#x27;@env/environment&#x27;
 import { AppSettings                 } from &#x27;@helpers/app-settings&#x27;
 import { AutoComplete, IAutoComplete } from &#x27;@models/autoComplete-model&#x27;
@@ -470,7 +471,7 @@ export class WeatherService {
       ? this.context.get(dataSet).unshift(value) : {};
     return value;
   }
-  private getContext &#x3D; (key?: string, dataSet: string &#x3D; &#x27;Location&#x27;, predicate?: (value: any) &#x3D;&gt; unknown): any | null &#x3D;&gt;
+  private getContext &#x3D; (key?: string, dataSet: string &#x3D; DataSets.Locations, predicate?: (value: any) &#x3D;&gt; unknown): any | null &#x3D;&gt;
     this.context.get(dataSet).some(predicate ?? ((item: Location) &#x3D;&gt; item.key &#x3D;&#x3D; key))
       ? this.context.get(dataSet).slice().find((item: Location) &#x3D;&gt; item.key &#x3D;&#x3D; key) : null;
 
@@ -480,7 +481,7 @@ export class WeatherService {
 
   public getConditions &#x3D; (locationKey: string): Observable&lt;Conditions&gt; &#x3D;&gt; this.http
     .get&lt;IConditions&gt;(&#x60;${providers.weather.conditions}/${locationKey}&#x60;)
-    .pipe(map(result &#x3D;&gt; this.setContext(&#x27;Conditions&#x27;, new Conditions(result))));
+    .pipe(map(result &#x3D;&gt; this.setContext(DataSets.Conditions, new Conditions(result))));
 
   public getForecast &#x3D; (locationKey: string): Observable&lt;Forecast&gt; &#x3D;&gt; this.http
     .get&lt;IForecast&gt;(&#x60;${providers.weather.forecasts}/${locationKey}&#x60;)
@@ -488,19 +489,19 @@ export class WeatherService {
 
   public getGeoPosition &#x3D; (lat: number, lng: number): Observable&lt;Location&gt; &#x3D;&gt; this.http
     .get&lt;ILocation&gt;(providers.weather.geoposition, { params: { q: &#x60;${lat},${lng}&#x60; } })
-    .pipe(map(result &#x3D;&gt; this.setContext(&#x27;Location&#x27;, new Location(result))));
+    .pipe(map(result &#x3D;&gt; this.setContext(DataSets.Locations, new Location(result))));
 
   public getLocation &#x3D; (key: string): Observable&lt;Location&gt; &#x3D;&gt;
     this.getContext(key)
       ? of(this.getContext(key))
       : this.http
         .get&lt;ILocation&gt;(&#x60;${providers.weather.locations}/${key}&#x60;)
-        .pipe(map(result &#x3D;&gt; this.setContext(&#x27;Location&#x27;, new Location(result))));
+        .pipe(map(result &#x3D;&gt; this.setContext(DataSets.Locations, new Location(result))));
 
   private createContext &#x3D; () &#x3D;&gt; this.context
-    .set(&#x27;Conditions&#x27;, new Array&lt;Conditions&gt;())
-    .set(&#x27;Forecast&#x27;  , new Array&lt;Forecast  &gt;())
-    .set(&#x27;Location&#x27;  , new Array&lt;Location  &gt;());
+    .set(DataSets.Conditions, new Array&lt;Conditions&gt;())
+    .set(DataSets.Forecasts , new Array&lt;Forecast  &gt;())
+    .set(DataSets.Locations , new Array&lt;Location  &gt;());
 }</code></pre>
     </div>
 
