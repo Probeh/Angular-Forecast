@@ -247,14 +247,14 @@
 
 
         <div class="tab-pane fade  tab-source-code" id="c-source">
-            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable } from &#x27;rxjs&#x27;
-import { mergeMap } from &#x27;rxjs/operators&#x27;
-import { Injectable } from &#x27;@angular/core&#x27;
+            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable                              } from &#x27;rxjs&#x27;
+import { mergeMap                                } from &#x27;rxjs/operators&#x27;
+import { Injectable                              } from &#x27;@angular/core&#x27;
 import { ActivatedRouteSnapshot, Resolve, Router } from &#x27;@angular/router&#x27;
-import { GeoPosition } from &#x27;@models/geoPosition-model&#x27;
-import { Location } from &#x27;@models/location-model&#x27;
-import { ApplicationService } from &#x27;@services/application.service&#x27;
-import { WeatherService } from &#x27;@services/weather.service&#x27;
+import { GeoPosition                             } from &#x27;@models/geoPosition-model&#x27;
+import { Location                                } from &#x27;@models/location-model&#x27;
+import { ApplicationService                      } from &#x27;@services/application.service&#x27;
+import { WeatherService                          } from &#x27;@services/weather.service&#x27;
 
 @Injectable()
 export class LocationResolver implements Resolve&lt;Location&gt; {
@@ -262,18 +262,16 @@ export class LocationResolver implements Resolve&lt;Location&gt; {
   resolve(route: ActivatedRouteSnapshot): Observable&lt;Location&gt; {
     const params &#x3D; route.queryParamMap;
 
-    /* Upon initial entry, request and process the user&#x27;s location */
+    if (params.has(&#x27;key&#x27;))
+      return this.weather.getLocation(params.get(&#x27;key&#x27;));
+
     if (!this.application.geoPosition) {
       return this.application.getUserLocation()
         .pipe(mergeMap((position: GeoPosition) &#x3D;&gt;
           this.weather.getGeoPosition(position.latitude, position.longitude)));
     }
 
-    /* Upon navigation with provided location keys or coordinates as query params */
-    if (params.has(&#x27;key&#x27;))
-      return this.weather.getLocation(params.get(&#x27;key&#x27;));
-
-    else if (params.has(&#x27;lat&#x27;) &amp;&amp; params.has(&#x27;lng&#x27;))
+    if (params.has(&#x27;lat&#x27;) &amp;&amp; params.has(&#x27;lng&#x27;))
       return this.weather.getGeoPosition(+params.get(&#x27;lat&#x27;), +params.get(&#x27;lng&#x27;));
   }
 }</code></pre>
