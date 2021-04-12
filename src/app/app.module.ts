@@ -19,7 +19,7 @@ import { ContainerModule         } from '@container/container.module'
     ContainerModule.forRoot({
       themeOption : ColorTheme.Dark,
       sidenavMode : PanelMode .Push,
-      sidenavState: PanelState.Show,
+      sidenavState: PanelState.Hide,
     }),
   ],
   providers: [],

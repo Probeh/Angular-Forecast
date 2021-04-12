@@ -19,7 +19,7 @@ export class LocationResolver implements Resolve<Location> {
         ? this.application
           .getUserLocation()
           .pipe(mergeMap(
-            () => this.resolveAccordingly(params)))
+            (x) => this.weather.getGeoPosition(x.latitude, x.longitude)))
         : this.resolveAccordingly(params);
   }
 

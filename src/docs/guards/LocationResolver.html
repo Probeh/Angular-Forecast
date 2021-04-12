@@ -271,7 +271,7 @@ export class LocationResolver implements Resolve&lt;Location&gt; {
         ? this.application
           .getUserLocation()
           .pipe(mergeMap(
-            () &#x3D;&gt; this.resolveAccordingly(params)))
+            (x) &#x3D;&gt; this.weather.getGeoPosition(x.latitude, x.longitude)))
         : this.resolveAccordingly(params);
   }
 
