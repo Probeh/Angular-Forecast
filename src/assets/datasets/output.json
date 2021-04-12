@@ -1,0 +1,252 @@
+{
+  "AdministrativeArea": {
+    "CountryID": "IL",
+    "EnglishName": "Tel Aviv",
+    "EnglishType": "District",
+    "ID": "TA",
+    "Level": 1,
+    "LocalizedName": "Tel Aviv",
+    "LocalizedType": "District"
+  },
+  "Country": {
+    "EnglishName": "Israel",
+    "ID": "IL",
+    "LocalizedName": "Israel"
+  },
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "ForecastConfidence"
+  ],
+  "EnglishName": "Holon",
+  "GeoPosition": {
+    "Elevation": {
+      "Imperial": {
+        "Unit": "ft",
+        "UnitType": 0,
+        "Value": 75
+      },
+      "Metric": {
+        "Unit": "m",
+        "UnitType": 5,
+        "Value": 23
+      }
+    },
+    "Latitude": 32.003,
+    "Longitude": 34.756
+  },
+  "IsAlias": false,
+  "Key": "215838",
+  "LocalizedName": "Holon",
+  "PrimaryPostalCode": "",
+  "Rank": 45,
+  "Region": {
+    "EnglishName": "Middle East",
+    "ID": "MEA",
+    "LocalizedName": "Middle East"
+  },
+  "SupplementalAdminAreas": [],
+  "TimeZone": {
+    "Code": "IDT",
+    "GmtOffset": 3,
+    "IsDaylightSaving": true,
+    "Name": "Asia/Jerusalem",
+    "NextOffsetChange": "2021-10-30T23:00:00Z"
+  },
+  "Type": "City",
+  "Version": 1,
+  "Conditions": {
+    "EpochTime": 1618167300,
+    "HasPrecipitation": false,
+    "IsDayTime": false,
+    "Link": "http://www.accuweather.com/en/il/holon/215838/current-weather/215838?lang=en-us",
+    "LocalObservationDateTime": "2021-04-11T21:55:00+03:00",
+    "MobileLink": "http://m.accuweather.com/en/il/holon/215838/current-weather/215838?lang=en-us",
+    "PrecipitationType": null,
+    "Temperature": {
+      "Imperial": {
+        "Unit": "F",
+        "UnitType": 18,
+        "Value": 59
+      },
+      "Metric": {
+        "Unit": "C",
+        "UnitType": 17,
+        "Value": 15.3
+      }
+    },
+    "WeatherIcon": 34,
+    "WeatherText": "Mostly clear"
+  },
+  "Forecast": {
+    "DailyForecasts": [
+      {
+        "Date": "2021-04-11T07:00:00+03:00",
+        "Day": {
+          "HasPrecipitation": false,
+          "Icon": 4,
+          "IconPhrase": "Intermittent clouds"
+        },
+        "EpochDate": 1618113600,
+        "Link": "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=1&lang=en-us",
+        "MobileLink": "http://m.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=1&lang=en-us",
+        "Night": {
+          "HasPrecipitation": false,
+          "Icon": 36,
+          "IconPhrase": "Intermittent clouds"
+        },
+        "Sources": [
+          "AccuWeather"
+        ],
+        "Temperature": {
+          "Maximum": {
+            "Unit": "F",
+            "UnitType": 18,
+            "Value": 64
+          },
+          "Minimum": {
+            "Unit": "F",
+            "UnitType": 18,
+            "Value": 55
+          }
+        }
+      },
+      {
+        "Date": "2021-04-12T07:00:00+03:00",
+        "Day": {
+          "HasPrecipitation": false,
+          "Icon": 4,
+          "IconPhrase": "Intermittent clouds"
+        },
+        "EpochDate": 1618200000,
+        "Link": "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=2&lang=en-us",
+        "MobileLink": "http://m.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=2&lang=en-us",
+        "Night": {
+          "HasPrecipitation": false,
+          "Icon": 34,
+          "IconPhrase": "Mostly clear"
+        },
+        "Sources": [
+          "AccuWeather"
+        ],
+        "Temperature": {
+          "Maximum": {
+            "Unit": "F",
+            "UnitType": 18,
+            "Value": 65
+          },
+          "Minimum": {
+            "Unit": "F",
+            "UnitType": 18,
+            "Value": 50
+          }
+        }
+      },
+      {
+        "Date": "2021-04-13T07:00:00+03:00",
+        "Day": {
+          "HasPrecipitation": false,
+          "Icon": 2,
+          "IconPhrase": "Mostly sunny"
+        },
+        "EpochDate": 1618286400,
+        "Link": "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=3&lang=en-us",
+        "MobileLink": "http://m.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=3&lang=en-us",
+        "Night": {
+          "HasPrecipitation": false,
+          "Icon": 35,
+          "IconPhrase": "Partly cloudy"
+        },
+        "Sources": [
+          "AccuWeather"
+        ],
+        "Temperature": {
+          "Maximum": {
+            "Unit": "F",
+            "UnitType": 18,
+            "Value": 67
+          },
+          "Minimum": {
+            "Unit": "F",
+            "UnitType": 18,
+            "Value": 54
+          }
+        }
+      },
+      {
+        "Date": "2021-04-14T07:00:00+03:00",
+        "Day": {
+          "HasPrecipitation": false,
+          "Icon": 2,
+          "IconPhrase": "Mostly sunny"
+        },
+        "EpochDate": 1618372800,
+        "Link": "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=4&lang=en-us",
+        "MobileLink": "http://m.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=4&lang=en-us",
+        "Night": {
+          "HasPrecipitation": false,
+          "Icon": 34,
+          "IconPhrase": "Mostly clear"
+        },
+        "Sources": [
+          "AccuWeather"
+        ],
+        "Temperature": {
+          "Maximum": {
+            "Unit": "F",
+            "UnitType": 18,
+            "Value": 72
+          },
+          "Minimum": {
+            "Unit": "F",
+            "UnitType": 18,
+            "Value": 55
+          }
+        }
+      },
+      {
+        "Date": "2021-04-15T07:00:00+03:00",
+        "Day": {
+          "HasPrecipitation": false,
+          "Icon": 1,
+          "IconPhrase": "Sunny"
+        },
+        "EpochDate": 1618459200,
+        "Link": "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=5&lang=en-us",
+        "MobileLink": "http://m.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=5&lang=en-us",
+        "Night": {
+          "HasPrecipitation": false,
+          "Icon": 35,
+          "IconPhrase": "Partly cloudy"
+        },
+        "Sources": [
+          "AccuWeather"
+        ],
+        "Temperature": {
+          "Maximum": {
+            "Unit": "F",
+            "UnitType": 18,
+            "Value": 75
+          },
+          "Minimum": {
+            "Unit": "F",
+            "UnitType": 18,
+            "Value": 57
+          }
+        }
+      }
+    ],
+    "Headline": {
+      "Category": "cold",
+      "EffectiveDate": "2021-04-12T08:00:00+03:00",
+      "EffectiveEpochDate": 1618203600,
+      "EndDate": "2021-04-12T20:00:00+03:00",
+      "EndEpochDate": 1618246800,
+      "Link": "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?lang=en-us",
+      "MobileLink": "http://m.accuweather.com/en/il/holon/215838/extended-weather-forecast/215838?lang=en-us",
+      "Severity": 7,
+      "Text": "Cool Monday"
+    }
+  }
+}

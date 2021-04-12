@@ -23,7 +23,7 @@ export class AutoComplete extends AbstractModel {
     this.administrativeArea = new AdministrativeArea(args?.AdministrativeArea);
     this.country            = new AdministrativeArea(args?.Country           );
   }
-  public toString = (): string => `${this.localizedName} (${this.type}), ${this.country.localizedName} (${this.administrativeArea.localizedName})`;
-  public flagIcon = (): string => `${providers.countryFlags.baseUrl}/${this.country.id}/shiny/32.png`;
+  public toString = (): string => `${this.localizedName}, ${this.country.localizedName} (${this.administrativeArea.localizedName})`;
+  public flagIcon = (): string => `${providers.countryFlags.baseUrl}/${this.country.id}/flat/32.png`;
 }
 

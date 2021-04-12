@@ -132,7 +132,15 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#dateString">dateString</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#location">location</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#toggleFavorite">toggleFavorite</a>
                             </li>
                         </ul>
                     </td>
@@ -167,12 +175,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
+<code>constructor(weather: <a href="../injectables/WeatherService.html">WeatherService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/weather/weather.component.ts:11</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/weather/weather.component.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -190,10 +198,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>router</td>
+                                                        <td>weather</td>
                                                   
                                                         <td>
-                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                                        <code><a href="../injectables/WeatherService.html" target="_self" >WeatherService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -253,8 +261,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">src/app/weather/weather.component.ts:19</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/app/weather/weather.component.ts:23</a></div>
                 </td>
             </tr>
 
@@ -280,6 +288,34 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="dateString"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            dateString</b>
+                            <a href="#dateString"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Date | string</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/weather/weather.component.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="location"></a>
                         <span class="name">
                             <b>
@@ -297,7 +333,34 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/weather/weather.component.ts:11</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/weather/weather.component.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="toggleFavorite"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            toggleFavorite</b>
+                            <a href="#toggleFavorite"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>() &#x3D;&gt; {...}</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/weather/weather.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -311,8 +374,9 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;
-import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;
 import { Location } from &#x27;@models/location-model&#x27;
+import { WeatherService } from &#x27;@services/weather.service&#x27;
 
 @Component({
   selector: &#x27;app-weather&#x27;,
@@ -321,12 +385,15 @@ import { Location } from &#x27;@models/location-model&#x27;
 })
 export class WeatherComponent implements OnInit {
   public location: Location;
-  constructor(private router: Router, private route: ActivatedRoute) {
+  public dateString: Date | string;
+  constructor(private weather: WeatherService, private route: ActivatedRoute) {
     this.route.data.subscribe({
-      next: (result) &#x3D;&gt; {
-        this.location &#x3D; result[&#x27;location&#x27;];
-      }
+      next: (result) &#x3D;&gt; this.location &#x3D; result[&#x27;location&#x27;]
     });
+  }
+  public toggleFavorite &#x3D; () &#x3D;&gt; {
+    this.location.isFavorite &#x3D; !this.location.isFavorite;
+    this.weather.updateContext(this.location);
   }
   ngOnInit() { }
 }
@@ -334,24 +401,61 @@ export class WeatherComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-weather&quot; style&#x3D;&quot;height: 100%; display: flex; flex-direction: column; justify-content: space-between;&quot;&gt;
-  &lt;div class&#x3D;&quot;row m-0&quot; style&#x3D;&quot;min-height: 250px;&quot;&gt;
-    &lt;div class&#x3D;&quot;col-md-4 text-center shadow&quot;&gt;
-      &lt;img src&#x3D;&quot;{{this.location?.conditions.getIcon()}}&quot; style&#x3D;&quot;height: 200px;&quot;&gt;
-      &lt;h1 class&#x3D;&quot;text-white m-1&quot;&gt;{{this.location?.conditions.weatherText}}&lt;/h1&gt;
-      &lt;div class&#x3D;&quot;flex&quot;&gt;
-        &lt;h4 class&#x3D;&quot;m-2 text-white&quot;&gt;{{this.location?.administrativeArea.englishName}}&lt;/h4&gt;
-        &lt;div class&#x3D;&quot;temperature text-white flex&quot;&gt;
-          &lt;h4&gt;{{this.location?.conditions.temperature.metric.value}}&lt;/h4&gt;
-          {{this.location ? &#x27;/&#x27; :&#x27;&#x27;}}{{this.location?.conditions.temperature.metric.unit}}
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-weather text-white&quot;
+  style&#x3D;&quot;padding: 15px 0px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;&quot;&gt;
+  &lt;div class&#x3D;&quot;row m-0&quot;&gt;
+    &lt;div class&#x3D;&quot;col-md-3 col-lg-4&quot;&gt;
+      &lt;div class&#x3D;&quot;row m-0&quot;&gt;
+        &lt;div class&#x3D;&quot;col-6&quot; style&#x3D;&quot;min-width: max-content;&quot;&gt;
+          &lt;h1 class&#x3D;&quot;mb-1&quot;&gt;{{this.location?.localizedName}}&lt;/h1&gt;
+          &lt;h5 class&#x3D;&quot;mb-1&quot;&gt;{{this.location.forecast.headline.effectiveDate | date:&#x27;EEEE, MMMM d, y&#x27;}}&lt;/h5&gt;
+          &lt;h5 class&#x3D;&quot;mb-1&quot;&gt;{{this.location?.conditions.weatherText | titlecase}}&lt;/h5&gt;
+          &lt;hr&gt;
+          &lt;span&gt;
+            &lt;h1 style&#x3D;&quot;display: inline;&quot;&gt;{{this.location?.conditions.temperature.metric.value}}&lt;/h1&gt;
+            {{this.location?.conditions.temperature.metric.unit}}
+            &lt;small class&#x3D;&quot;ml-2 mr-2&quot;&gt; / &lt;/small&gt;
+            &lt;h1 style&#x3D;&quot;display: inline;&quot;&gt;{{this.location?.conditions.temperature.imperial.value}}&lt;/h1&gt;
+            {{this.location?.conditions.temperature.imperial.unit}}
+          &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;pl-0 col-6 pt-3 text-right&quot; style&#x3D;&quot;display: flex; align-items:flex-end;&quot;&gt;
+          &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-lg&quot; (click)&#x3D;&quot;this.toggleFavorite()&quot;
+              [ngStyle]&#x3D;&quot;{&#x27;color&#x27;: this.location.isFavorite ? &#x27;#e681b3&#x27; : &#x27;white&#x27;}&quot;&gt; &lt;i
+                class&#x3D;&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class&#x3D;&quot;col-md-8 shadow&quot;&gt;
-      &lt;div&gt;{{this.location | json}}&lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-md-9 col-lg-8 text-right&quot;&gt;
+      &lt;img src&#x3D;&quot;{{this.location.conditions.getAnimation()}}&quot; style&#x3D;&quot;max-width: 350px;&quot;&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+  &lt;div style&#x3D;&quot;flex: auto; overflow-x: hidden; overflow-y: auto;&quot;&gt;
+    &lt;div class&#x3D;&quot;row m-0 p-4&quot;&gt;
+      &lt;div class&#x3D;&quot;shadow col-md-12 col-lg-12 col-xl m-1&quot;
+        style&#x3D;&quot;background: linear-gradient(to bottom, #3b8afd, #1A88FF, #69a5fe); height: 125px; min-width: 125px; border-radius: 10px;&quot;
+        *ngFor&#x3D;&quot;let item of this.location.forecast.forecasts&quot;&gt;
+        &lt;p style&#x3D;&quot;margin: 0px;&quot;&gt;{{item.date | date: &#x27;EEEE&#x27;}}&lt;/p&gt;
+        &lt;div style&#x3D;&quot;height: 100px; display: flex; align-items: center; justify-content: space-around;&quot;&gt;
+          &lt;img [src]&#x3D;&quot;item.day.getIcon()&quot; style&#x3D;&quot;height: 70%;&quot;&gt;
+          &lt;div class&#x3D;&quot;&quot;&gt;
+            &lt;div&gt;
+              Min: &lt;h5 style&#x3D;&quot;display: inline;&quot;&gt;{{item.temperature.minimum.value}}&lt;/h5&gt;
+              {{item.temperature.minimum.unit}}
+            &lt;/div&gt;
+            &lt;hr&gt;
+            &lt;div&gt;
+              Max: &lt;h5 style&#x3D;&quot;display: inline;&quot;&gt;{{item.temperature.maximum.value}}&lt;/h5&gt;
+              {{item.temperature.maximum.unit}}
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- style&#x3D;&quot;min-width: 100px; flex: auto; height: 150px;&quot; --&gt;
+&lt;!-- style&#x3D;&quot;display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;&quot; --&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -386,8 +490,8 @@ export class WeatherComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-weather" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">  <div class="row m-0" style="min-height: 250px;">    <div class="col-md-4 text-center shadow">      <img src="{{this.location?.conditions.getIcon()}}" style="height: 200px;">      <h1 class="text-white m-1">{{this.location?.conditions.weatherText}}</h1>      <div class="flex">        <h4 class="m-2 text-white">{{this.location?.administrativeArea.englishName}}</h4>        <div class="temperature text-white flex">          <h4>{{this.location?.conditions.temperature.metric.value}}</h4>          {{this.location ? \'/\' :\'\'}}{{this.location?.conditions.temperature.metric.unit}}        </div>      </div>    </div>    <div class="col-md-8 shadow">      <div>{{this.location | json}}</div>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'ForecastComponent', 'selector': 'app-forecast'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
+        var COMPONENT_TEMPLATE = '<div><div class="app-weather text-white"  style="padding: 15px 0px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">  <div class="row m-0">    <div class="col-md-3 col-lg-4">      <div class="row m-0">        <div class="col-6" style="min-width: max-content;">          <h1 class="mb-1">{{this.location?.localizedName}}</h1>          <h5 class="mb-1">{{this.location.forecast.headline.effectiveDate | date:\'EEEE, MMMM d, y\'}}</h5>          <h5 class="mb-1">{{this.location?.conditions.weatherText | titlecase}}</h5>          <hr>          <span>            <h1 style="display: inline;">{{this.location?.conditions.temperature.metric.value}}</h1>            {{this.location?.conditions.temperature.metric.unit}}            <small class="ml-2 mr-2"> / </small>            <h1 style="display: inline;">{{this.location?.conditions.temperature.imperial.value}}</h1>            {{this.location?.conditions.temperature.imperial.unit}}          </span>        </div>        <div class="pl-0 col-6 pt-3 text-right" style="display: flex; align-items:flex-end;">          <button type="button" class="btn btn-lg" (click)="this.toggleFavorite()"              [ngStyle]="{\'color\': this.location.isFavorite ? \'#e681b3\' : \'white\'}"> <i                class="fa fa-heart"></i></button>        </div>      </div>    </div>    <div class="col-md-9 col-lg-8 text-right">      <img src="{{this.location.conditions.getAnimation()}}" style="max-width: 350px;">    </div>  </div>  <div style="flex: auto; overflow-x: hidden; overflow-y: auto;">    <div class="row m-0 p-4">      <div class="shadow col-md-12 col-lg-12 col-xl m-1"        style="background: linear-gradient(to bottom, #3b8afd, #1A88FF, #69a5fe); height: 125px; min-width: 125px; border-radius: 10px;"        *ngFor="let item of this.location.forecast.forecasts">        <p style="margin: 0px;">{{item.date | date: \'EEEE\'}}</p>        <div style="height: 100px; display: flex; align-items: center; justify-content: space-around;">          <img [src]="item.day.getIcon()" style="height: 70%;">          <div class="">            <div>              Min: <h5 style="display: inline;">{{item.temperature.minimum.value}}</h5>              {{item.temperature.minimum.unit}}            </div>            <hr>            <div>              Max: <h5 style="display: inline;">{{item.temperature.maximum.value}}</h5>              {{item.temperature.maximum.unit}}            </div>          </div>        </div>      </div>    </div>  </div></div><!-- style="min-width: 100px; flex: auto; height: 150px;" --><!-- style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;" --></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'WeatherComponent'};
 </script>

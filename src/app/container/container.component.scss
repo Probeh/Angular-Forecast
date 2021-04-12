@@ -27,12 +27,13 @@
       max-height: $content-height;
       overflow-y: hidden;
       flex: auto;
-      padding: 15px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
       .content-search {
+        transition: ease-in-out 300ms;
+        max-height: 150px;
+        opacity: 100%;
       }
       .content-center {
         overflow-y: auto;

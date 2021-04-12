@@ -1,6 +1,6 @@
 import { Observable, Subject } from 'rxjs'
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators'
-import { Component, OnInit } from '@angular/core'
+import { Component, Input, OnInit } from '@angular/core'
 import { ISearchEvent } from '@helpers/search-event'
 import { AutoComplete } from '@models/autoComplete-model'
 import { WeatherService } from '@services/weather.service'
@@ -8,6 +8,7 @@ import { MenuItem } from 'primeng/api'
 import { IMenuEvent } from '@helpers/menu-event'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router'
+import { PanelState } from '@constants/panel-state.enum'
 
 @Component({
   selector: 'app-search',
@@ -15,7 +16,7 @@ import { Router } from '@angular/router'
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  public $searchValue: Subject<string>;
+  public $searchQuery: Subject<string>;
   public $suggestions: Observable<AutoComplete[]>;
   public currentOption: MenuItem;
   public locationInput: FormGroup;
@@ -26,14 +27,14 @@ export class SearchComponent implements OnInit {
     this.createForm();
     this.setOptions();
     this.currentOption = this.searchOptions[0];
-    this.$searchValue = new Subject<string>();
-    this.$suggestions = this.$searchValue.pipe(
+    this.$searchQuery = new Subject<string>();
+    this.$suggestions = this.$searchQuery.pipe(
       debounceTime(500),
       distinctUntilChanged(),
       switchMap(text => this.weather.autoComplete(text.toLowerCase())));
   }
   public onSearch = (event: ISearchEvent) =>
-    event.query ? this.$searchValue.next(event.query) : undefined;
+    event.query ? this.$searchQuery.next(event.query) : undefined;
   public onSelect = (value: AutoComplete) =>
     this.router.navigate(['weather'], { queryParams: { key: value.key } });
   public onSubmit = () =>

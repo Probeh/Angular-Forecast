@@ -1,28 +1,28 @@
-import { BehaviorSubject, Observable, Subject, Subscriber } from 'rxjs'
-import { Injectable } from '@angular/core'
-import { ColorTheme } from '@constants/color-theme.enum'
-import { PanelMode } from '@constants/panel-mode.enum'
-import { PanelState } from '@constants/panel-state.enum'
-import { DEFAULT_LOCATION } from '@env/environment'
-import { AppSettings } from '@helpers/app-settings'
-import { GeoPosition } from '@models/geoPosition-model'
+import { BehaviorSubject , Observable, Subject, Subscriber } from 'rxjs'
+import { Injectable                                        } from '@angular/core'
+import { ColorTheme                                        } from '@constants/color-theme.enum'
+import { PanelMode                                         } from '@constants/panel-mode.enum'
+import { PanelState                                        } from '@constants/panel-state.enum'
+import { DEFAULT_LOCATION                                  } from '@env/environment'
+import { AppSettings                                       } from '@helpers/app-settings'
+import { GeoPosition                                       } from '@models/geoPosition-model'
 
 @Injectable()
 export class ApplicationService {
-  public $isLoading: Observable<boolean>;
-  public $isLoadingChange: Subject<boolean>;
-  public $siteTheme: Observable<ColorTheme>;
-  public $siteThemeChange: Subject<ColorTheme>;
-  public geoLatLng: GeoPosition;
-  public isLoading: boolean;
-  public siteTheme: ColorTheme;
-  public sidenavPanel: PanelMode;
-  public sidenavState: PanelState;
+  public $isLoading       : Observable<boolean>   ;
+  public $isLoadingChanged: Subject<boolean>      ;
+  public $siteTheme       : Observable<ColorTheme>;
+  public $siteThemeChanged: Subject<ColorTheme>   ;
+  public geoLatLng        : GeoPosition           ;
+  public isLoading        : boolean               ;
+  public siteTheme        : ColorTheme            ;
+  public sidenavPanel     : PanelMode             ;
+  public sidenavState     : PanelState            ;
   constructor(private args?: AppSettings) {
-    this.sidenavPanel = this.args?.sidenavMode;
+    this.sidenavPanel = this.args?.sidenavMode ;
     this.sidenavState = this.args?.sidenavState;
-    this.$isLoadingChange = new Subject();
-    this.$siteThemeChange = new BehaviorSubject(args?.themeOption);
+    this.$isLoadingChanged = new Subject();
+    this.$siteThemeChanged = new BehaviorSubject(args?.themeOption);
     this.setObservables();
   }
   public getUserLocation = (): Observable<GeoPosition> => new Observable<GeoPosition>(
@@ -45,7 +45,7 @@ export class ApplicationService {
   private setObservables = () => {
     this.$isLoading = new Observable<boolean>(
       subscriber => {
-        this.$isLoadingChange.subscribe({
+        this.$isLoadingChanged.subscribe({
           next: value => {
             if (value != this.isLoading) {
               this.isLoading = value;
@@ -57,7 +57,7 @@ export class ApplicationService {
 
     this.$siteTheme = new Observable<ColorTheme>(
       subscriber => {
-        this.$siteThemeChange.subscribe({
+        this.$siteThemeChanged.subscribe({
           next: value => {
             if (value != this.siteTheme) {
               this.siteTheme = value;

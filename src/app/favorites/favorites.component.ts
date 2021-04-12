@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { DataSets } from '@constants/data-sets.enum'
+import { Location } from '@models/location-model'
+import { WeatherService } from '@services/weather.service'
 
 @Component({
   selector: 'app-favorites',
@@ -6,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favorites.component.scss']
 })
 export class FavoritesComponent implements OnInit {
-  constructor() { }
+  public favorites: Location[] = new Array();
+  constructor(private weather: WeatherService) {
+    this.favorites = this.weather
+      .getContext(null, DataSets.Locations, (x: Location) => x.isFavorite);
+  }
   ngOnInit() { }
 }

@@ -70,6 +70,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#resolveAccordingly">resolveAccordingly</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -100,7 +115,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(application: <a href="../injectables/ApplicationService.html">ApplicationService</a>, weather: <a href="../injectables/WeatherService.html">WeatherService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+<code>constructor(application: <a href="../injectables/ApplicationService.html">ApplicationService</a>, weather: <a href="../injectables/WeatherService.html">WeatherService</a>)</code>
                     </td>
                 </tr>
                         <tr>
@@ -139,18 +154,6 @@
                                                   
                                                         <td>
                                                                         <code><a href="../injectables/WeatherService.html" target="_self" >WeatherService</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                                <tr>
-                                                        <td>router</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -247,33 +250,36 @@
 
 
         <div class="tab-pane fade  tab-source-code" id="c-source">
-            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable                              } from &#x27;rxjs&#x27;
-import { mergeMap                                } from &#x27;rxjs/operators&#x27;
-import { Injectable                              } from &#x27;@angular/core&#x27;
-import { ActivatedRouteSnapshot, Resolve, Router } from &#x27;@angular/router&#x27;
-import { GeoPosition                             } from &#x27;@models/geoPosition-model&#x27;
-import { Location                                } from &#x27;@models/location-model&#x27;
-import { ApplicationService                      } from &#x27;@services/application.service&#x27;
-import { WeatherService                          } from &#x27;@services/weather.service&#x27;
+            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable                                } from &#x27;rxjs&#x27;
+import { mergeMap                                  } from &#x27;rxjs/operators&#x27;
+import { Injectable                                } from &#x27;@angular/core&#x27;
+import { ActivatedRouteSnapshot, ParamMap, Resolve } from &#x27;@angular/router&#x27;
+import { environment                               } from &#x27;@env/environment&#x27;
+import { Location                                  } from &#x27;@models/location-model&#x27;
+import { ApplicationService                        } from &#x27;@services/application.service&#x27;
+import { WeatherService                            } from &#x27;@services/weather.service&#x27;
 
 @Injectable()
 export class LocationResolver implements Resolve&lt;Location&gt; {
-  constructor(private application: ApplicationService, private weather: WeatherService, private router: Router) { }
+  constructor(private application: ApplicationService, private weather: WeatherService) { }
   resolve(route: ActivatedRouteSnapshot): Observable&lt;Location&gt; {
     const params &#x3D; route.queryParamMap;
 
-    if (params.has(&#x27;key&#x27;))
-      return this.weather.getLocation(params.get(&#x27;key&#x27;));
-
-    if (!this.application.geoLatLng) {
-      return this.application.getUserLocation()
-        .pipe(mergeMap((position: GeoPosition) &#x3D;&gt;
-          this.weather.getGeoPosition(position.latitude, position.longitude)));
-    }
-
-    if (params.has(&#x27;lat&#x27;) &amp;&amp; params.has(&#x27;lng&#x27;))
-      return this.weather.getGeoPosition(+params.get(&#x27;lat&#x27;), +params.get(&#x27;lng&#x27;));
+    return !environment.production
+      ? this.weather.getStaticOutput()
+      : (!this.application.geoLatLng)
+        ? this.application
+          .getUserLocation()
+          .pipe(mergeMap(
+            () &#x3D;&gt; this.resolveAccordingly(params)))
+        : this.resolveAccordingly(params);
   }
+
+  private resolveAccordingly &#x3D; (params: ParamMap): Observable&lt;Location&gt; &#x3D;&gt; params.has(&#x27;key&#x27;)
+    ? this.weather.getLocation(params.get(&#x27;key&#x27;))
+    : (params.has(&#x27;lat&#x27;) &amp;&amp; params.has(&#x27;lng&#x27;))
+      ? this.weather.getGeoPosition(+params.get(&#x27;lat&#x27;), +params.get(&#x27;lng&#x27;))
+      : this.weather.getGeoPosition(this.application.geoLatLng?.latitude, this.application.geoLatLng?.longitude);
 }</code></pre>
         </div>
 </div>

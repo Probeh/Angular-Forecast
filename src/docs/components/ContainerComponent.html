@@ -313,7 +313,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/container/container.component.ts:14</a></div>
                             </td>
                         </tr>
 
@@ -341,7 +341,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/container/container.component.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -369,7 +369,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/container/container.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/container/container.component.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -424,7 +424,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/container/container.component.ts:15</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/container/container.component.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -437,12 +437,12 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable                 } from &#x27;rxjs&#x27;
-import { Component         , OnInit } from &#x27;@angular/core&#x27;
-import { NavigationEnd     , Router } from &#x27;@angular/router&#x27;
-import { ColorTheme                 } from &#x27;@constants/color-theme.enum&#x27;
-import { PanelState                 } from &#x27;@constants/panel-state.enum&#x27;
-import { ApplicationService         } from &#x27;@services/application.service&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable } from &#x27;rxjs&#x27;
+import { Component, OnInit } from &#x27;@angular/core&#x27;
+import { NavigationEnd, Router } from &#x27;@angular/router&#x27;
+import { ColorTheme } from &#x27;@constants/color-theme.enum&#x27;
+import { PanelState } from &#x27;@constants/panel-state.enum&#x27;
+import { ApplicationService } from &#x27;@services/application.service&#x27;
 
 @Component({
   selector: &#x27;app-container&#x27;,
@@ -450,10 +450,10 @@ import { ApplicationService         } from &#x27;@services/application.service&#
   styleUrls: [&#x27;./container.component.scss&#x27;]
 })
 export class ContainerComponent implements OnInit {
-  public currentRoute: string                ;
-  public sidenavState: PanelState            ;
-  public $isLoading  : Observable&lt;boolean&gt;   ;
-  public $siteTheme  : Observable&lt;ColorTheme&gt;;
+  public $isLoading: Observable&lt;boolean&gt;;
+  public $siteTheme: Observable&lt;ColorTheme&gt;;
+  public currentRoute: string;
+  public sidenavState: PanelState;
   constructor(private application: ApplicationService, private router: Router) {
     this.$siteTheme &#x3D; this.application.$siteTheme;
     this.$isLoading &#x3D; this.application.$isLoading;
@@ -475,7 +475,7 @@ export class ContainerComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-container&quot; [ngClass]&#x3D;&quot;this.$siteTheme | async&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-container&quot; [ngClass]&#x3D;&quot;(this.$siteTheme | async)&quot;&gt;
   &lt;div class&#x3D;&quot;container-main&quot;&gt;
     &lt;app-header (sidenavChanged)&#x3D;&quot;this.onSidenavToggle()&quot;&gt;&lt;/app-header&gt;
     &lt;div class&#x3D;&quot;container-content container&quot;&gt;
@@ -527,12 +527,13 @@ export class ContainerComponent implements OnInit {
       max-height: $content-height;
       overflow-y: hidden;
       flex: auto;
-      padding: 15px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
       .content-search {
+        transition: ease-in-out 300ms;
+        max-height: 150px;
+        opacity: 100%;
       }
       .content-center {
         overflow-y: auto;
@@ -573,8 +574,8 @@ export class ContainerComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-container" [ngClass]="this.$siteTheme | async">  <div class="container-main">    <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>    <div class="container-content container">      <div class="content-search">        <app-search></app-search>      </div>      <div class="content-center">        <ng-content></ng-content>      </div>    </div>  </div>  <div class="container-sidenav">    <app-sidenav [sidenavState]="this.sidenavState"></app-sidenav>  </div></div><p-toast></p-toast></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'ForecastComponent', 'selector': 'app-forecast'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
+        var COMPONENT_TEMPLATE = '<div><div class="app-container" [ngClass]="(this.$siteTheme | async)">  <div class="container-main">    <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>    <div class="container-content container">      <div class="content-search">        <app-search></app-search>      </div>      <div class="content-center">        <ng-content></ng-content>      </div>    </div>  </div>  <div class="container-sidenav">    <app-sidenav [sidenavState]="this.sidenavState"></app-sidenav>  </div></div><p-toast></p-toast></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ContainerComponent'};
 </script>

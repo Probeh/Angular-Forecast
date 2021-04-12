@@ -1,170 +1,170 @@
 {
-  "Headline": {
-    "EffectiveDate": "2021-04-07T20:00:00+03:00",
-    "EffectiveEpochDate": 1617814800,
-    "Severity": 7,
-    "Text": "Mild Wednesday night",
-    "Category": "heat",
-    "EndDate": "2021-04-08T08:00:00+03:00",
-    "EndEpochDate": 1617858000,
-    "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/extended-weather-forecast/215854?lang=en-us",
-    "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?lang=en-us"
-  },
   "DailyForecasts": [
     {
-      "Date": "2021-04-07T07:00:00+03:00",
-      "EpochDate": 1617768000,
-      "Temperature": {
-        "Minimum": {
-          "Value": 64,
-          "Unit": "F",
-          "UnitType": 18
-        },
-        "Maximum": {
-          "Value": 86,
-          "Unit": "F",
-          "UnitType": 18
-        }
-      },
-      "Day": {
-        "Icon": 1,
-        "IconPhrase": "Sunny",
-        "HasPrecipitation": false
-      },
-      "Night": {
-        "Icon": 35,
-        "IconPhrase": "Partly cloudy",
-        "HasPrecipitation": false
-      },
-      "Sources": [
-        "AccuWeather"
-      ],
-      "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=1&lang=en-us",
-      "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=1&lang=en-us"
-    },
-    {
-      "Date": "2021-04-08T07:00:00+03:00",
-      "EpochDate": 1617854400,
-      "Temperature": {
-        "Minimum": {
-          "Value": 57,
-          "Unit": "F",
-          "UnitType": 18
-        },
-        "Maximum": {
-          "Value": 73,
-          "Unit": "F",
-          "UnitType": 18
-        }
-      },
-      "Day": {
-        "Icon": 3,
-        "IconPhrase": "Partly sunny",
-        "HasPrecipitation": false
-      },
-      "Night": {
-        "Icon": 35,
-        "IconPhrase": "Partly cloudy",
-        "HasPrecipitation": false
-      },
-      "Sources": [
-        "AccuWeather"
-      ],
-      "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=2&lang=en-us",
-      "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=2&lang=en-us"
-    },
-    {
-      "Date": "2021-04-09T07:00:00+03:00",
-      "EpochDate": 1617940800,
-      "Temperature": {
-        "Minimum": {
-          "Value": 56,
-          "Unit": "F",
-          "UnitType": 18
-        },
-        "Maximum": {
-          "Value": 69,
-          "Unit": "F",
-          "UnitType": 18
-        }
-      },
-      "Day": {
-        "Icon": 3,
-        "IconPhrase": "Partly sunny",
-        "HasPrecipitation": false
-      },
-      "Night": {
-        "Icon": 38,
-        "IconPhrase": "Mostly cloudy",
-        "HasPrecipitation": false
-      },
-      "Sources": [
-        "AccuWeather"
-      ],
-      "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=3&lang=en-us",
-      "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=3&lang=en-us"
-    },
-    {
-      "Date": "2021-04-10T07:00:00+03:00",
-      "EpochDate": 1618027200,
-      "Temperature": {
-        "Minimum": {
-          "Value": 55,
-          "Unit": "F",
-          "UnitType": 18
-        },
-        "Maximum": {
-          "Value": 63,
-          "Unit": "F",
-          "UnitType": 18
-        }
-      },
-      "Day": {
-        "Icon": 4,
-        "IconPhrase": "Intermittent clouds",
-        "HasPrecipitation": false
-      },
-      "Night": {
-        "Icon": 36,
-        "IconPhrase": "Intermittent clouds",
-        "HasPrecipitation": false
-      },
-      "Sources": [
-        "AccuWeather"
-      ],
-      "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=4&lang=en-us",
-      "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=4&lang=en-us"
-    },
-    {
       "Date": "2021-04-11T07:00:00+03:00",
-      "EpochDate": 1618113600,
-      "Temperature": {
-        "Minimum": {
-          "Value": 60,
-          "Unit": "F",
-          "UnitType": 18
-        },
-        "Maximum": {
-          "Value": 64,
-          "Unit": "F",
-          "UnitType": 18
-        }
-      },
       "Day": {
+        "HasPrecipitation": false,
         "Icon": 4,
-        "IconPhrase": "Intermittent clouds",
-        "HasPrecipitation": false
+        "IconPhrase": "Intermittent clouds"
       },
+      "EpochDate": 1618113600,
+      "Link": "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=1&lang=en-us",
+      "MobileLink": "http://m.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=1&lang=en-us",
       "Night": {
-        "Icon": 35,
-        "IconPhrase": "Partly cloudy",
-        "HasPrecipitation": false
+        "HasPrecipitation": false,
+        "Icon": 36,
+        "IconPhrase": "Intermittent clouds"
       },
       "Sources": [
         "AccuWeather"
       ],
-      "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=5&lang=en-us",
-      "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=5&lang=en-us"
+      "Temperature": {
+        "Maximum": {
+          "Unit": "F",
+          "UnitType": 18,
+          "Value": 64
+        },
+        "Minimum": {
+          "Unit": "F",
+          "UnitType": 18,
+          "Value": 55
+        }
+      }
+    },
+    {
+      "Date": "2021-04-12T07:00:00+03:00",
+      "Day": {
+        "HasPrecipitation": false,
+        "Icon": 4,
+        "IconPhrase": "Intermittent clouds"
+      },
+      "EpochDate": 1618200000,
+      "Link": "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=2&lang=en-us",
+      "MobileLink": "http://m.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=2&lang=en-us",
+      "Night": {
+        "HasPrecipitation": false,
+        "Icon": 34,
+        "IconPhrase": "Mostly clear"
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "Temperature": {
+        "Maximum": {
+          "Unit": "F",
+          "UnitType": 18,
+          "Value": 65
+        },
+        "Minimum": {
+          "Unit": "F",
+          "UnitType": 18,
+          "Value": 50
+        }
+      }
+    },
+    {
+      "Date": "2021-04-13T07:00:00+03:00",
+      "Day": {
+        "HasPrecipitation": false,
+        "Icon": 2,
+        "IconPhrase": "Mostly sunny"
+      },
+      "EpochDate": 1618286400,
+      "Link": "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=3&lang=en-us",
+      "MobileLink": "http://m.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=3&lang=en-us",
+      "Night": {
+        "HasPrecipitation": false,
+        "Icon": 35,
+        "IconPhrase": "Partly cloudy"
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "Temperature": {
+        "Maximum": {
+          "Unit": "F",
+          "UnitType": 18,
+          "Value": 67
+        },
+        "Minimum": {
+          "Unit": "F",
+          "UnitType": 18,
+          "Value": 54
+        }
+      }
+    },
+    {
+      "Date": "2021-04-14T07:00:00+03:00",
+      "Day": {
+        "HasPrecipitation": false,
+        "Icon": 2,
+        "IconPhrase": "Mostly sunny"
+      },
+      "EpochDate": 1618372800,
+      "Link": "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=4&lang=en-us",
+      "MobileLink": "http://m.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=4&lang=en-us",
+      "Night": {
+        "HasPrecipitation": false,
+        "Icon": 34,
+        "IconPhrase": "Mostly clear"
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "Temperature": {
+        "Maximum": {
+          "Unit": "F",
+          "UnitType": 18,
+          "Value": 72
+        },
+        "Minimum": {
+          "Unit": "F",
+          "UnitType": 18,
+          "Value": 55
+        }
+      }
+    },
+    {
+      "Date": "2021-04-15T07:00:00+03:00",
+      "Day": {
+        "HasPrecipitation": false,
+        "Icon": 1,
+        "IconPhrase": "Sunny"
+      },
+      "EpochDate": 1618459200,
+      "Link": "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=5&lang=en-us",
+      "MobileLink": "http://m.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?day=5&lang=en-us",
+      "Night": {
+        "HasPrecipitation": false,
+        "Icon": 35,
+        "IconPhrase": "Partly cloudy"
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "Temperature": {
+        "Maximum": {
+          "Unit": "F",
+          "UnitType": 18,
+          "Value": 75
+        },
+        "Minimum": {
+          "Unit": "F",
+          "UnitType": 18,
+          "Value": 57
+        }
+      }
     }
-  ]
+  ],
+  "Headline": {
+    "Category": "cold",
+    "EffectiveDate": "2021-04-12T08:00:00+03:00",
+    "EffectiveEpochDate": 1618203600,
+    "EndDate": "2021-04-12T20:00:00+03:00",
+    "EndEpochDate": 1618246800,
+    "Link": "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?lang=en-us",
+    "MobileLink": "http://m.accuweather.com/en/il/holon/215838/extended-weather-forecast/215838?lang=en-us",
+    "Severity": 7,
+    "Text": "Cool Monday"
+  }
 }

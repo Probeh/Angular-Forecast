@@ -1,8 +1,8 @@
 @import "common.scss";
-
 .app-search {
-  padding: 10px 35px;
-  margin-bottom: 15px;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  max-width: 100%;
   .search-header {
     padding: 5px;
     align-items: center;
@@ -45,11 +45,23 @@ label {
 }
 .form-control.ng-invalid:not(.ng-pristine) {
   border: 2px solid red;
-  color: red;
+  color: $color-text;
 }
 .form-control.ng-valid:not(.ng-pristine) {
   border: 2px solid $color-teal;
-  color: $color-teal;
+  color: $color-text;
+}
+.form-control.ng-invalid:not(.ng-pristine):focus {
+  transition: ease-in-out 300ms;
+  background: lighten($color: red, $amount: 40%);
+  border: 2px solid red;
+  color: red;
+}
+.form-control.ng-valid:not(.ng-pristine):focus {
+  transition: ease-in-out 300ms;
+  background: lighten($color: $color-teal, $amount: 40%);
+  border: 2px solid $color-teal;
+  color: #28a745;
 }
 .input-col {
   flex: auto;

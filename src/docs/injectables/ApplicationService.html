@@ -81,7 +81,7 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#$isLoadingChange">$isLoadingChange</a>
+                                <a href="#$isLoadingChanged">$isLoadingChanged</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -89,7 +89,7 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
-                                <a href="#$siteThemeChange">$siteThemeChange</a>
+                                <a href="#$siteThemeChanged">$siteThemeChanged</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -219,12 +219,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="$isLoadingChange"></a>
+                        <a name="$isLoadingChanged"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            $isLoadingChange</b>
-                            <a href="#$isLoadingChange"><span class="icon ion-ios-link"></span></a>
+                            $isLoadingChanged</b>
+                            <a href="#$isLoadingChanged"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -275,12 +275,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="$siteThemeChange"></a>
+                        <a name="$siteThemeChanged"></a>
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
-                            $siteThemeChange</b>
-                            <a href="#$siteThemeChange"><span class="icon ion-ios-link"></span></a>
+                            $siteThemeChanged</b>
+                            <a href="#$siteThemeChanged"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -499,31 +499,31 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BehaviorSubject, Observable, Subject, Subscriber } from &#x27;rxjs&#x27;
-import { Injectable } from &#x27;@angular/core&#x27;
-import { ColorTheme } from &#x27;@constants/color-theme.enum&#x27;
-import { PanelMode } from &#x27;@constants/panel-mode.enum&#x27;
-import { PanelState } from &#x27;@constants/panel-state.enum&#x27;
-import { DEFAULT_LOCATION } from &#x27;@env/environment&#x27;
-import { AppSettings } from &#x27;@helpers/app-settings&#x27;
-import { GeoPosition } from &#x27;@models/geoPosition-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BehaviorSubject , Observable, Subject, Subscriber } from &#x27;rxjs&#x27;
+import { Injectable                                        } from &#x27;@angular/core&#x27;
+import { ColorTheme                                        } from &#x27;@constants/color-theme.enum&#x27;
+import { PanelMode                                         } from &#x27;@constants/panel-mode.enum&#x27;
+import { PanelState                                        } from &#x27;@constants/panel-state.enum&#x27;
+import { DEFAULT_LOCATION                                  } from &#x27;@env/environment&#x27;
+import { AppSettings                                       } from &#x27;@helpers/app-settings&#x27;
+import { GeoPosition                                       } from &#x27;@models/geoPosition-model&#x27;
 
 @Injectable()
 export class ApplicationService {
-  public $isLoading: Observable&lt;boolean&gt;;
-  public $isLoadingChange: Subject&lt;boolean&gt;;
-  public $siteTheme: Observable&lt;ColorTheme&gt;;
-  public $siteThemeChange: Subject&lt;ColorTheme&gt;;
-  public geoLatLng: GeoPosition;
-  public isLoading: boolean;
-  public siteTheme: ColorTheme;
-  public sidenavPanel: PanelMode;
-  public sidenavState: PanelState;
+  public $isLoading       : Observable&lt;boolean&gt;   ;
+  public $isLoadingChanged: Subject&lt;boolean&gt;      ;
+  public $siteTheme       : Observable&lt;ColorTheme&gt;;
+  public $siteThemeChanged: Subject&lt;ColorTheme&gt;   ;
+  public geoLatLng        : GeoPosition           ;
+  public isLoading        : boolean               ;
+  public siteTheme        : ColorTheme            ;
+  public sidenavPanel     : PanelMode             ;
+  public sidenavState     : PanelState            ;
   constructor(private args?: AppSettings) {
-    this.sidenavPanel &#x3D; this.args?.sidenavMode;
+    this.sidenavPanel &#x3D; this.args?.sidenavMode ;
     this.sidenavState &#x3D; this.args?.sidenavState;
-    this.$isLoadingChange &#x3D; new Subject();
-    this.$siteThemeChange &#x3D; new BehaviorSubject(args?.themeOption);
+    this.$isLoadingChanged &#x3D; new Subject();
+    this.$siteThemeChanged &#x3D; new BehaviorSubject(args?.themeOption);
     this.setObservables();
   }
   public getUserLocation &#x3D; (): Observable&lt;GeoPosition&gt; &#x3D;&gt; new Observable&lt;GeoPosition&gt;(
@@ -546,7 +546,7 @@ export class ApplicationService {
   private setObservables &#x3D; () &#x3D;&gt; {
     this.$isLoading &#x3D; new Observable&lt;boolean&gt;(
       subscriber &#x3D;&gt; {
-        this.$isLoadingChange.subscribe({
+        this.$isLoadingChanged.subscribe({
           next: value &#x3D;&gt; {
             if (value !&#x3D; this.isLoading) {
               this.isLoading &#x3D; value;
@@ -558,7 +558,7 @@ export class ApplicationService {
 
     this.$siteTheme &#x3D; new Observable&lt;ColorTheme&gt;(
       subscriber &#x3D;&gt; {
-        this.$siteThemeChange.subscribe({
+        this.$siteThemeChanged.subscribe({
           next: value &#x3D;&gt; {
             if (value !&#x3D; this.siteTheme) {
               this.siteTheme &#x3D; value;

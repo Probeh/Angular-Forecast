@@ -1,16 +1,18 @@
+import { AbstractModel                           } from '@models/abstract-model'
 import { AdministrativeArea, IAdministrativeArea } from '@models/administrativeArea-model'
-import { AbstractModel } from '@models/abstract-model'
-import { Conditions } from '@models/conditions-model'
-import { Country, ICountry } from '@models/country-model'
-import { Forecast } from '@models/forecast-model'
-import { GeoPosition, IGeoPosition } from '@models/geoPosition-model'
-import { ITimeZone, TimeZone } from '@models/timeZone-model'
+import { Conditions        , IConditions         } from '@models/conditions-model'
+import { Country           , ICountry            } from '@models/country-model'
+import { Forecast          , IForecast           } from '@models/forecast-model'
+import { GeoPosition       , IGeoPosition        } from '@models/geoPosition-model'
+import { ITimeZone         , TimeZone            } from '@models/timeZone-model'
 
 export interface ILocation {
   AdministrativeArea?: IAdministrativeArea;
+  Conditions        ?: IConditions        ;
   Country           ?: ICountry           ;
   DataSets          ?: string[]           ;
   EnglishName       ?: string             ;
+  Forecast          ?: IForecast          ;
   GeoPosition       ?: IGeoPosition       ;
   IsAlias           ?: boolean            ;
   Key               ?: string             ;
@@ -39,7 +41,9 @@ export class Location extends AbstractModel {
     super(args);
     this.dataSets = this.dataSets ?? new Array();
     this.administrativeArea = new AdministrativeArea(args?.AdministrativeArea)
+    this.conditions         = new Conditions        (args?.Conditions        );
     this.country            = new Country           (args?.Country           );
+    this.forecast           = new Forecast          (args?.Forecast          );
     this.geoPosition        = new GeoPosition       (args?.GeoPosition       );
     this.region             = new Country           (args?.Region            );
     this.timeZone           = new TimeZone          (args?.TimeZone          );

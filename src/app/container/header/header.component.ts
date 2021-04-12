@@ -7,8 +7,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core'
 })
 export class HeaderComponent implements OnInit {
   @Output() public sidenavChanged: EventEmitter<void> = new EventEmitter();
-  public currentDate: Date = new Date();
+  public toggleSidenav = () => this.sidenavChanged.emit();
   constructor() { }
   ngOnInit() { }
-  public toggleSidenav = () => this.sidenavChanged.emit();
 }

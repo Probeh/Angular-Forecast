@@ -1,23 +1,23 @@
 {
-  "LocalObservationDateTime": "2021-04-07T15:36:00+03:00",
-  "EpochTime": 1617798960,
-  "WeatherText": "Sunny",
-  "WeatherIcon": 1,
+  "EpochTime": 1618167300,
   "HasPrecipitation": false,
+  "IsDayTime": false,
+  "Link": "http://www.accuweather.com/en/il/holon/215838/current-weather/215838?lang=en-us",
+  "LocalObservationDateTime": "2021-04-11T21:55:00+03:00",
+  "MobileLink": "http://m.accuweather.com/en/il/holon/215838/current-weather/215838?lang=en-us",
   "PrecipitationType": null,
-  "IsDayTime": true,
   "Temperature": {
-    "Metric": {
-      "Value": 29.2,
-      "Unit": "C",
-      "UnitType": 17
-    },
     "Imperial": {
-      "Value": 85,
       "Unit": "F",
-      "UnitType": 18
+      "UnitType": 18,
+      "Value": 59
+    },
+    "Metric": {
+      "Unit": "C",
+      "UnitType": 17,
+      "Value": 15.3
     }
   },
-  "MobileLink": "http://m.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us",
-  "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us"
+  "WeatherIcon": 34,
+  "WeatherText": "Mostly clear"
 }

@@ -3,7 +3,7 @@
 .app-header {
   @extend .shadow;
   * {
-    max-height: $navbar-height;
+    max-height: 40px;
     color: white;
   }
   padding: 0px 15px;
@@ -17,9 +17,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .header-image {
-      width: calc(#{$navbar-height} * 0.9);
-    }
   }
   .header-actions {
     display: flex;
@@ -36,7 +33,7 @@
       display: none;
     }
     @media screen and (min-width: 650px) {
-      margin-left: 10px;
+      margin-left: 5px;
     }
   }
   align-items: center;

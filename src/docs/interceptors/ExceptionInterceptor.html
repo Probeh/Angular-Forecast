@@ -185,24 +185,24 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable } from &#x27;rxjs&#x27;
-import { catchError } from &#x27;rxjs/operators&#x27;
-import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from &#x27;@angular/common/http&#x27;
-import { Injectable } from &#x27;@angular/core&#x27;
-import { providers } from &#x27;@env/environment&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from &#x27;@angular/common/http&#x27;
+import { Injectable                                                              } from &#x27;@angular/core&#x27;
+import { Observable                                                              } from &#x27;rxjs&#x27;
+import { catchError                                                              } from &#x27;rxjs/operators&#x27;
+import { providers                                                               } from &#x27;@env/environment&#x27;
 
 export const stored &#x3D; {
   [providers.weather.autocomplete]: &#x27;../../assets/datasets/autocomplete.json&#x27;,
-  [providers.weather.conditions]: &#x27;../../assets/datasets/conditions.json&#x27;,
-  [providers.weather.forecasts]: &#x27;../../assets/datasets/forecasts.json&#x27;,
-  [providers.weather.geoposition]: &#x27;../../assets/datasets/geoposition.json&#x27;,
-  [providers.weather.locations]: &#x27;../../assets/datasets/locations.json&#x27;
+  [providers.weather.conditions  ]: &#x27;../../assets/datasets/conditions.json&#x27;  ,
+  [providers.weather.forecasts   ]: &#x27;../../assets/datasets/forecasts.json&#x27;   ,
+  [providers.weather.geoposition ]: &#x27;../../assets/datasets/geoposition.json&#x27; ,
+  [providers.weather.locations   ]: &#x27;../../assets/datasets/locations.json&#x27;
 }
 export const errors &#x3D; {
-  [400]: &#x27;Request had bad syntax or the parameters supplied were invalid.&#x27;,
-  [401]: &#x27;Unauthorized. API authorization failed.&#x27;,
-  [403]: &#x27;Unauthorized. You do not have permission to access this endpoint.&#x27;,
-  [404]: &#x27;Server has not found a route matching the given URI.&#x27;,
+  [400]: &#x27;Request had bad syntax or the parameters supplied were invalid.&#x27;                           ,
+  [401]: &#x27;Unauthorized. API authorization failed.&#x27;                                                   ,
+  [403]: &#x27;Unauthorized. You do not have permission to access this endpoint.&#x27;                         ,
+  [404]: &#x27;Server has not found a route matching the given URI.&#x27;                                      ,
   [500]: &#x27;Server encountered an unexpected condition which prevented it from fulfilling the request.&#x27;
 }
 @Injectable()

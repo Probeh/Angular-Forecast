@@ -344,8 +344,8 @@ export class AutoComplete extends AbstractModel {
     this.administrativeArea &#x3D; new AdministrativeArea(args?.AdministrativeArea);
     this.country            &#x3D; new AdministrativeArea(args?.Country           );
   }
-  public toString &#x3D; (): string &#x3D;&gt; &#x60;${this.localizedName} (${this.type}), ${this.country.localizedName} (${this.administrativeArea.localizedName})&#x60;;
-  public flagIcon &#x3D; (): string &#x3D;&gt; &#x60;${providers.countryFlags.baseUrl}/${this.country.id}/shiny/32.png&#x60;;
+  public toString &#x3D; (): string &#x3D;&gt; &#x60;${this.localizedName}, ${this.country.localizedName} (${this.administrativeArea.localizedName})&#x60;;
+  public flagIcon &#x3D; (): string &#x3D;&gt; &#x60;${providers.countryFlags.baseUrl}/${this.country.id}/flat/32.png&#x60;;
 }
 
 </code></pre>

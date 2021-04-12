@@ -1,6 +1,6 @@
 export const DEFAULT_LOCATION = { /* Tel-Aviv */
-  latitude: 32.109333,
-  longitude: 34.855499
+  latitude: 32.003,
+  longitude: 34.756
 };
 export const environment = {
   production: false

@@ -437,9 +437,10 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { providers } from &#x27;@env/environment&#x27;;
-import { AbstractModel } from &#x27;@models/abstract-model&#x27;
-import { ITemperature, Temperature } from &#x27;@models/temperature-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { providers                  } from &#x27;@env/environment&#x27;
+import { animationMap               } from &#x27;@helpers/animation-map&#x27;
+import { AbstractModel              } from &#x27;@models/abstract-model&#x27;
+import { ITemperature , Temperature } from &#x27;@models/temperature-model&#x27;
 
 export interface IConditions {
   EpochTime               ?: number      ;
@@ -467,6 +468,10 @@ export class Conditions extends AbstractModel {
     this.temperature &#x3D; new Temperature(args?.Temperature);
   }
   public getIcon &#x3D; () &#x3D;&gt; &#x60;${providers.weather.icons}/${this.weatherIcon}.svg&#x60;;
+  public getAnimation &#x3D; (): string &#x3D;&gt; {
+    const result &#x3D; animationMap[this.weatherText.toLowerCase()] ?? animationMap[&#x60;${this.weatherText.toLowerCase()} ${this.isDayTime ? &#x27;day&#x27; : &#x27;night&#x27;}&#x60;];
+    return &#x60;../../assets/images/anim/${result}.svg&#x60;;
+  }
 }</code></pre>
     </div>
 </div>

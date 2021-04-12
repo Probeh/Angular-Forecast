@@ -1,9 +1,9 @@
-import { Observable                 } from 'rxjs'
-import { Component         , OnInit } from '@angular/core'
-import { NavigationEnd     , Router } from '@angular/router'
-import { ColorTheme                 } from '@constants/color-theme.enum'
-import { PanelState                 } from '@constants/panel-state.enum'
-import { ApplicationService         } from '@services/application.service'
+import { Observable } from 'rxjs'
+import { Component, OnInit } from '@angular/core'
+import { NavigationEnd, Router } from '@angular/router'
+import { ColorTheme } from '@constants/color-theme.enum'
+import { PanelState } from '@constants/panel-state.enum'
+import { ApplicationService } from '@services/application.service'
 
 @Component({
   selector: 'app-container',
@@ -11,10 +11,10 @@ import { ApplicationService         } from '@services/application.service'
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent implements OnInit {
-  public currentRoute: string                ;
-  public sidenavState: PanelState            ;
-  public $isLoading  : Observable<boolean>   ;
-  public $siteTheme  : Observable<ColorTheme>;
+  public $isLoading: Observable<boolean>;
+  public $siteTheme: Observable<ColorTheme>;
+  public currentRoute: string;
+  public sidenavState: PanelState;
   constructor(private application: ApplicationService, private router: Router) {
     this.$siteTheme = this.application.$siteTheme;
     this.$isLoading = this.application.$isLoading;

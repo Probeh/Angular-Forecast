@@ -85,6 +85,10 @@
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
+                                        <a href="#Conditions">Conditions</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
                                         <a href="#Country">Country</a>
                                 </li>
                                 <li>
@@ -94,6 +98,10 @@
                                 <li>
                                             <span class="modifier">Optional</span>
                                         <a href="#EnglishName">EnglishName</a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#Forecast">Forecast</a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
@@ -157,6 +165,40 @@
                                     <tr>
                                         <td class="col-md-4">
                                             <i>Type : </i>        <code><a href="../interfaces/IAdministrativeArea.html" target="_self" >IAdministrativeArea</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="Conditions"></a>
+                                        <span class="name"><b>Conditions</b><a href="#Conditions"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>Conditions:         <code><a href="../interfaces/IConditions.html" target="_self" >IConditions</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/IConditions.html" target="_self" >IConditions</a></code>
 
                                         </td>
                                     </tr>
@@ -259,6 +301,40 @@
                                     <tr>
                                         <td class="col-md-4">
                                             <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="Forecast"></a>
+                                        <span class="name"><b>Forecast</b><a href="#Forecast"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>Forecast:         <code><a href="../interfaces/IForecast.html" target="_self" >IForecast</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/IForecast.html" target="_self" >IForecast</a></code>
 
                                         </td>
                                     </tr>
@@ -551,19 +627,21 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AdministrativeArea, IAdministrativeArea } from &#x27;@models/administrativeArea-model&#x27;
-import { AbstractModel } from &#x27;@models/abstract-model&#x27;
-import { Conditions } from &#x27;@models/conditions-model&#x27;
-import { Country, ICountry } from &#x27;@models/country-model&#x27;
-import { Forecast } from &#x27;@models/forecast-model&#x27;
-import { GeoPosition, IGeoPosition } from &#x27;@models/geoPosition-model&#x27;
-import { ITimeZone, TimeZone } from &#x27;@models/timeZone-model&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AbstractModel                           } from &#x27;@models/abstract-model&#x27;
+import { AdministrativeArea, IAdministrativeArea } from &#x27;@models/administrativeArea-model&#x27;
+import { Conditions        , IConditions         } from &#x27;@models/conditions-model&#x27;
+import { Country           , ICountry            } from &#x27;@models/country-model&#x27;
+import { Forecast          , IForecast           } from &#x27;@models/forecast-model&#x27;
+import { GeoPosition       , IGeoPosition        } from &#x27;@models/geoPosition-model&#x27;
+import { ITimeZone         , TimeZone            } from &#x27;@models/timeZone-model&#x27;
 
 export interface ILocation {
   AdministrativeArea?: IAdministrativeArea;
+  Conditions        ?: IConditions        ;
   Country           ?: ICountry           ;
   DataSets          ?: string[]           ;
   EnglishName       ?: string             ;
+  Forecast          ?: IForecast          ;
   GeoPosition       ?: IGeoPosition       ;
   IsAlias           ?: boolean            ;
   Key               ?: string             ;
@@ -592,7 +670,9 @@ export class Location extends AbstractModel {
     super(args);
     this.dataSets &#x3D; this.dataSets ?? new Array();
     this.administrativeArea &#x3D; new AdministrativeArea(args?.AdministrativeArea)
+    this.conditions         &#x3D; new Conditions        (args?.Conditions        );
     this.country            &#x3D; new Country           (args?.Country           );
+    this.forecast           &#x3D; new Forecast          (args?.Forecast          );
     this.geoPosition        &#x3D; new GeoPosition       (args?.GeoPosition       );
     this.region             &#x3D; new Country           (args?.Region            );
     this.timeZone           &#x3D; new TimeZone          (args?.TimeZone          );

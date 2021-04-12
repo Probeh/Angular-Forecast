@@ -1,4 +1,4 @@
-<div class="app-container" [ngClass]="this.$siteTheme | async">
+<div class="app-container" [ngClass]="(this.$siteTheme | async)">
   <div class="container-main">
     <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>
     <div class="container-content container">

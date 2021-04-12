@@ -1,6 +1,7 @@
-import { providers } from '@env/environment';
-import { AbstractModel } from '@models/abstract-model'
-import { ITemperature, Temperature } from '@models/temperature-model'
+import { providers                  } from '@env/environment'
+import { animationMap               } from '@helpers/animation-map'
+import { AbstractModel              } from '@models/abstract-model'
+import { ITemperature , Temperature } from '@models/temperature-model'
 
 export interface IConditions {
   EpochTime               ?: number      ;
@@ -28,4 +29,8 @@ export class Conditions extends AbstractModel {
     this.temperature = new Temperature(args?.Temperature);
   }
   public getIcon = () => `${providers.weather.icons}/${this.weatherIcon}.svg`;
+  public getAnimation = (): string => {
+    const result = animationMap[this.weatherText.toLowerCase()] ?? animationMap[`${this.weatherText.toLowerCase()} ${this.isDayTime ? 'day' : 'night'}`];
+    return `../../assets/images/anim/${result}.svg`;
+  }
 }

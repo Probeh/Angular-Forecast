@@ -1,4 +1,4 @@
-$navbar-height: 40px;
+$navbar-height: 50px;
 $content-height: calc(100vh - #{$navbar-height});
 $sidenav-width: 200px;
 $color-primary: #007bff;
@@ -33,6 +33,7 @@ input,
 .p-autocomplete,
 .p-inputtext {
   width: 100% !important;
+  transition: ease-in-out 300ms;
   background: transparent;
 }
 input:focus,

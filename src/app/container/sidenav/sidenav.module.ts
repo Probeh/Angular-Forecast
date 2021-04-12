@@ -4,12 +4,13 @@ import { NgModule          } from '@angular/core'
 import { FeatureModule     } from '@container/feature.module'
 import { SettingsComponent } from '@container/sidenav/settings/settings.component'
 import { SidenavComponent  } from '@container/sidenav/sidenav.component'
+import { HttpClientModule } from '@angular/common/http'
 
 const Components = [SidenavComponent, SettingsComponent];
 const Modules = [];
 
 @NgModule({
-  imports: [CommonModule, FeatureModule, TabMenuModule, Modules],
+  imports: [CommonModule, FeatureModule, HttpClientModule, TabMenuModule, Modules],
   declarations: Components,
   exports: [Components, Modules],
   providers: []
