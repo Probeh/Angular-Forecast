@@ -30,7 +30,8 @@ export class Conditions extends AbstractModel {
   }
   public getIcon = () => `${providers.weather.icons}/${this.weatherIcon}.svg`;
   public getAnimation = (): string => {
-    const result = animationMap[this.weatherText.toLowerCase()] ?? animationMap[`${this.weatherText.toLowerCase()} ${this.isDayTime ? 'day' : 'night'}`];
+    const result = animationMap[this.weatherText.toLowerCase()]
+    ?? animationMap[`${this.weatherText.toLowerCase()} ${this.isDayTime ? 'day' : 'night'}`];
     return `../../assets/images/anim/${result}.svg`;
   }
 }

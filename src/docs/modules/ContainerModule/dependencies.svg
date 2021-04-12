@@ -28,13 +28,13 @@
 <title>cluster_ContainerModule_providers</title>
 <polygon fill="none" stroke="black" points="836,-78 836,-130 1577,-130 1577,-78 836,-78"/>
 </g>
-<g id="clust4" class="cluster">
-<title>cluster_ContainerModule_imports</title>
-<polygon fill="none" stroke="black" points="176,-78 176,-130 828,-130 828,-78 176,-78"/>
-</g>
 <g id="clust5" class="cluster">
 <title>cluster_ContainerModule_exports</title>
 <polygon fill="none" stroke="black" points="360,-208 360,-260 1006,-260 1006,-208 360,-208"/>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_ContainerModule_imports</title>
+<polygon fill="none" stroke="black" points="176,-78 176,-130 828,-130 828,-78 176,-78"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_ContainerModule_declarations</title>
