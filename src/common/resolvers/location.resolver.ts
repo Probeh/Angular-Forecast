@@ -13,13 +13,11 @@ export class LocationResolver implements Resolve<Location> {
   resolve(route: ActivatedRouteSnapshot): Observable<Location> {
     const params = route.queryParamMap;
 
-    return !environment.production
-      ? this.weather.getStaticOutput()
-      : (!this.application.geoLatLng)
-        ? this.application
-          .getUserLocation()
-          .pipe(mergeMap(
-            (x) => this.weather.getGeoPosition(x.latitude, x.longitude)))
+    return !environment.production ? this.weather.getStaticOutput()
+      : (!this.application.geoLatLng) ? this.application
+        .getUserLocation()
+        .pipe(mergeMap(
+          (x) => this.weather.getGeoPosition(x.latitude, x.longitude)))
         : this.resolveAccordingly(params);
   }
 
