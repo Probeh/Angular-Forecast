@@ -8,54 +8,6 @@
     "LocalizedName": "Tel Aviv",
     "LocalizedType": "District"
   },
-  "Country": {
-    "EnglishName": "Israel",
-    "ID": "IL",
-    "LocalizedName": "Israel"
-  },
-  "DataSets": [
-    "AirQualityCurrentConditions",
-    "AirQualityForecasts",
-    "Alerts",
-    "ForecastConfidence"
-  ],
-  "EnglishName": "Holon",
-  "GeoPosition": {
-    "Elevation": {
-      "Imperial": {
-        "Unit": "ft",
-        "UnitType": 0,
-        "Value": 75
-      },
-      "Metric": {
-        "Unit": "m",
-        "UnitType": 5,
-        "Value": 23
-      }
-    },
-    "Latitude": 32.003,
-    "Longitude": 34.756
-  },
-  "IsAlias": false,
-  "Key": "215838",
-  "LocalizedName": "Holon",
-  "PrimaryPostalCode": "",
-  "Rank": 45,
-  "Region": {
-    "EnglishName": "Middle East",
-    "ID": "MEA",
-    "LocalizedName": "Middle East"
-  },
-  "SupplementalAdminAreas": [],
-  "TimeZone": {
-    "Code": "IDT",
-    "GmtOffset": 3,
-    "IsDaylightSaving": true,
-    "Name": "Asia/Jerusalem",
-    "NextOffsetChange": "2021-10-30T23:00:00Z"
-  },
-  "Type": "City",
-  "Version": 1,
   "Conditions": {
     "EpochTime": 1618167300,
     "HasPrecipitation": false,
@@ -79,6 +31,18 @@
     "WeatherIcon": 34,
     "WeatherText": "Mostly clear"
   },
+  "Country": {
+    "EnglishName": "Israel",
+    "ID": "IL",
+    "LocalizedName": "Israel"
+  },
+  "DataSets": [
+    "AirQualityCurrentConditions",
+    "AirQualityForecasts",
+    "Alerts",
+    "ForecastConfidence"
+  ],
+  "EnglishName": "Holon",
   "Forecast": {
     "DailyForecasts": [
       {
@@ -248,5 +212,41 @@
       "Severity": 7,
       "Text": "Cool Monday"
     }
-  }
+  },
+  "GeoPosition": {
+    "Elevation": {
+      "Imperial": {
+        "Unit": "ft",
+        "UnitType": 0,
+        "Value": 75
+      },
+      "Metric": {
+        "Unit": "m",
+        "UnitType": 5,
+        "Value": 23
+      }
+    },
+    "Latitude": 32.003,
+    "Longitude": 34.756
+  },
+  "IsAlias": false,
+  "Key": "215838",
+  "LocalizedName": "Holon",
+  "PrimaryPostalCode": "",
+  "Rank": 45,
+  "Region": {
+    "EnglishName": "Middle East",
+    "ID": "MEA",
+    "LocalizedName": "Middle East"
+  },
+  "SupplementalAdminAreas": [],
+  "TimeZone": {
+    "Code": "IDT",
+    "GmtOffset": 3,
+    "IsDaylightSaving": true,
+    "Name": "Asia/Jerusalem",
+    "NextOffsetChange": "2021-10-30T23:00:00Z"
+  },
+  "Type": "City",
+  "Version": 1
 }

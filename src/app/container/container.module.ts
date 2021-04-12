@@ -16,25 +16,25 @@ import { ApplicationService                       } from '@services/application.
 import { CacheService          , RequestCache     } from '@services/cache.service'
 import { WeatherService                           } from '@services/weather.service'
 
-const Components = [ContainerComponent];
-const Modules = [SidenavModule, HeaderModule, SearchModule, FeatureModule];
+const Components = [ContainerComponent                                           ];
+const Modules    = [SidenavModule     , HeaderModule, SearchModule, FeatureModule];
 
 @NgModule({
-  declarations: Components,
-  exports: [Components, Modules],
+  declarations:  Components,
+  exports     : [Components, Modules],
   imports: [
-    CommonModule,
+    CommonModule          ,
     ContainerRoutingModule,
-    HttpClientModule,
+    HttpClientModule      ,
     Modules
   ],
   providers: [
     { provide: RequestCache, useClass: CacheService },
     { provide: HTTP_INTERCEPTORS, useClass: ExceptionInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor  , multi: true },
-    MessageService,
+    MessageService    ,
     ApplicationService,
-    WeatherService,
+    WeatherService    ,
     LocationResolver
   ],
 })

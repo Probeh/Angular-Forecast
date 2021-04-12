@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core'
-import { DataSets } from '@constants/data-sets.enum'
-import { Location } from '@models/location-model'
-import { WeatherService } from '@services/weather.service'
+import { Component     , OnInit } from '@angular/core'
+import { DataSets               } from '@constants/data-sets.enum'
+import { Location               } from '@models/location-model'
+import { WeatherService         } from '@services/weather.service'
 
 @Component({
   selector: 'app-favorites',

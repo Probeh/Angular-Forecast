@@ -437,12 +437,12 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable } from &#x27;rxjs&#x27;
-import { Component, OnInit } from &#x27;@angular/core&#x27;
-import { NavigationEnd, Router } from &#x27;@angular/router&#x27;
-import { ColorTheme } from &#x27;@constants/color-theme.enum&#x27;
-import { PanelState } from &#x27;@constants/panel-state.enum&#x27;
-import { ApplicationService } from &#x27;@services/application.service&#x27;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Observable                 } from &#x27;rxjs&#x27;
+import { Component         , OnInit } from &#x27;@angular/core&#x27;
+import { NavigationEnd     , Router } from &#x27;@angular/router&#x27;
+import { ColorTheme                 } from &#x27;@constants/color-theme.enum&#x27;
+import { PanelState                 } from &#x27;@constants/panel-state.enum&#x27;
+import { ApplicationService         } from &#x27;@services/application.service&#x27;
 
 @Component({
   selector: &#x27;app-container&#x27;,
@@ -450,13 +450,13 @@ import { ApplicationService } from &#x27;@services/application.service&#x27;
   styleUrls: [&#x27;./container.component.scss&#x27;]
 })
 export class ContainerComponent implements OnInit {
-  public $isLoading: Observable&lt;boolean&gt;;
-  public $siteTheme: Observable&lt;ColorTheme&gt;;
-  public currentRoute: string;
-  public sidenavState: PanelState;
+  public $isLoading  : Observable&lt;boolean&gt;   ;
+  public $siteTheme  : Observable&lt;ColorTheme&gt;;
+  public currentRoute: string                ;
+  public sidenavState: PanelState            ;
   constructor(private application: ApplicationService, private router: Router) {
-    this.$siteTheme &#x3D; this.application.$siteTheme;
-    this.$isLoading &#x3D; this.application.$isLoading;
+    this.$siteTheme   &#x3D; this.application.$siteTheme  ;
+    this.$isLoading   &#x3D; this.application.$isLoading  ;
     this.sidenavState &#x3D; this.application.sidenavState;
     this.router.events.subscribe({
       next: event &#x3D;&gt; this.currentRoute &#x3D; !(event instanceof NavigationEnd)
@@ -509,8 +509,8 @@ export class ContainerComponent implements OnInit {
   height: 100vh;
   justify-content: space-between;
   margin: 0;
-  overflow-y: hidden;
   overflow-x: hidden;
+  overflow-y: hidden;
   padding: 0;
   width: 100vw;
 
@@ -522,16 +522,16 @@ export class ContainerComponent implements OnInit {
     max-height: 100vh;
     justify-content: space-between;
     .container-content {
-      max-height: $content-height;
-      overflow-y: hidden;
-      flex: auto;
       display: flex;
       flex-direction: column;
+      flex: auto;
       justify-content: space-between;
+      max-height: $content-height;
+      overflow-y: hidden;
       .content-center {
-        overflow-y: auto;
-        overflow-x: hidden;
         flex: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
       }
     }
     .container-sidenav {

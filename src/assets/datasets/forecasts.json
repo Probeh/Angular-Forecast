@@ -157,14 +157,14 @@
     }
   ],
   "Headline": {
-    "Category": "cold",
-    "EffectiveDate": "2021-04-12T08:00:00+03:00",
+    "Category"          : "cold",
+    "EffectiveDate"     : "2021-04-12T08:00:00+03:00",
     "EffectiveEpochDate": 1618203600,
-    "EndDate": "2021-04-12T20:00:00+03:00",
-    "EndEpochDate": 1618246800,
-    "Link": "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?lang=en-us",
-    "MobileLink": "http://m.accuweather.com/en/il/holon/215838/extended-weather-forecast/215838?lang=en-us",
-    "Severity": 7,
-    "Text": "Cool Monday"
+    "EndDate"           : "2021-04-12T20:00:00+03:00",
+    "EndEpochDate"      : 1618246800,
+    "Link"              : "http://www.accuweather.com/en/il/holon/215838/daily-weather-forecast/215838?lang=en-us",
+    "MobileLink"        : "http://m.accuweather.com/en/il/holon/215838/extended-weather-forecast/215838?lang=en-us",
+    "Severity"          : 7,
+    "Text"              : "Cool Monday"
   }
 }

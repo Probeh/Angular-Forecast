@@ -18,9 +18,9 @@ import { PanelState } from '@constants/panel-state.enum'
 export class SearchComponent implements OnInit {
   public $searchQuery: Subject<string>;
   public $suggestions: Observable<AutoComplete[]>;
-  public currentOption: MenuItem;
-  public locationInput: FormGroup;
-  public searchOptions: MenuItem[];
+  public currentOption: MenuItem   ;
+  public locationInput: FormGroup  ;
+  public searchOptions: MenuItem [];
   public searchPattern: RegExp = /[a-zA-Z ]/;
   constructor(private weather: WeatherService, private router: Router) { }
   ngOnInit() {

@@ -9,9 +9,9 @@ const Components = [SearchComponent];
 const Modules = [];
 
 @NgModule({
-  imports: [CommonModule, ReactiveFormsModule, FeatureModule, SearchRoutingModule, Modules],
-  declarations: Components,
-  exports: [Components, Modules],
+  imports     : [CommonModule, ReactiveFormsModule, FeatureModule, SearchRoutingModule, Modules],
+  declarations:  Components  ,
+  exports     : [Components  , Modules],
   providers: []
 })
 export class SearchModule { }

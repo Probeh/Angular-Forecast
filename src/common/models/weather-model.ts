@@ -1,6 +1,6 @@
-import { AbstractModel } from '@models/abstract-model'
-import { Day, IDay } from '@models/day-model'
-import { ITemperature, Temperature } from '@models/temperature-model'
+import { AbstractModel              } from '@models/abstract-model'
+import { Day          , IDay        } from '@models/day-model'
+import { ITemperature , Temperature } from '@models/temperature-model'
 
 export interface IWeather {
   Date       ?: Date        ;

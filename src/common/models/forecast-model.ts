@@ -1,6 +1,6 @@
-import { AbstractModel } from '@models/abstract-model'
-import { Headline, IHeadline } from '@models/headline-model'
-import { IWeather, Weather } from '@models/weather-model'
+import { AbstractModel            } from '@models/abstract-model'
+import { Headline     , IHeadline } from '@models/headline-model'
+import { IWeather     , Weather   } from '@models/weather-model'
 
 export interface IForecast {
   DailyForecasts?: IWeather [];

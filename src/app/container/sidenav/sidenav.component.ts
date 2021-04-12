@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient                        } from '@angular/common/http'
 import { Component         , Input, OnInit } from '@angular/core'
 import { PanelState                        } from '@constants/panel-state.enum'
 import { ApplicationService                } from '@services/application.service'
