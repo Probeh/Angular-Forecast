@@ -2,9 +2,7 @@
   <div class="container-main">
     <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>
     <div class="container-content container">
-      <div class="content-search">
-        <app-search></app-search>
-      </div>
+      <app-search></app-search>
       <div class="content-center">
         <ng-content></ng-content>
       </div>

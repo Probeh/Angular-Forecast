@@ -479,9 +479,7 @@ export class ContainerComponent implements OnInit {
   &lt;div class&#x3D;&quot;container-main&quot;&gt;
     &lt;app-header (sidenavChanged)&#x3D;&quot;this.onSidenavToggle()&quot;&gt;&lt;/app-header&gt;
     &lt;div class&#x3D;&quot;container-content container&quot;&gt;
-      &lt;div class&#x3D;&quot;content-search&quot;&gt;
-        &lt;app-search&gt;&lt;/app-search&gt;
-      &lt;/div&gt;
+      &lt;app-search&gt;&lt;/app-search&gt;
       &lt;div class&#x3D;&quot;content-center&quot;&gt;
         &lt;ng-content&gt;&lt;/ng-content&gt;
       &lt;/div&gt;
@@ -530,11 +528,6 @@ export class ContainerComponent implements OnInit {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      .content-search {
-        transition: ease-in-out 300ms;
-        max-height: 150px;
-        opacity: 100%;
-      }
       .content-center {
         overflow-y: auto;
         overflow-x: hidden;
@@ -574,7 +567,7 @@ export class ContainerComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-container" [ngClass]="(this.$siteTheme | async)">  <div class="container-main">    <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>    <div class="container-content container">      <div class="content-search">        <app-search></app-search>      </div>      <div class="content-center">        <ng-content></ng-content>      </div>    </div>  </div>  <div class="container-sidenav">    <app-sidenav [sidenavState]="this.sidenavState"></app-sidenav>  </div></div><p-toast></p-toast></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="app-container" [ngClass]="(this.$siteTheme | async)">  <div class="container-main">    <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>    <div class="container-content container">      <app-search></app-search>      <div class="content-center">        <ng-content></ng-content>      </div>    </div>  </div>  <div class="container-sidenav">    <app-sidenav [sidenavState]="this.sidenavState"></app-sidenav>  </div></div><p-toast></p-toast></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ContainerComponent'};
