@@ -563,8 +563,8 @@ export class WeatherService {
     .pipe(map(result &#x3D;&gt; result.map(item &#x3D;&gt; new AutoComplete(item))));
 
   public getConditions &#x3D; (locationKey: string): Observable&lt;Conditions&gt; &#x3D;&gt; this.http
-    .get&lt;IConditions&gt;(&#x60;${providers.weather.conditions}/${locationKey}&#x60;)
-    .pipe(map(result &#x3D;&gt; this.setContext(DataSets.Conditions, new Conditions(result))));
+    .get&lt;IConditions[]&gt;(&#x60;${providers.weather.conditions}/${locationKey}&#x60;)
+    .pipe(map(result &#x3D;&gt; this.setContext(DataSets.Conditions, new Conditions(result[0]))));
 
   public getForecast &#x3D; (locationKey: string): Observable&lt;Forecast&gt; &#x3D;&gt; this.http
     .get&lt;IForecast&gt;(&#x60;${providers.weather.forecasts}/${locationKey}&#x60;)

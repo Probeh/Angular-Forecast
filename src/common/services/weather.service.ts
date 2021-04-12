@@ -27,8 +27,8 @@ export class WeatherService {
     .pipe(map(result => result.map(item => new AutoComplete(item))));
 
   public getConditions = (locationKey: string): Observable<Conditions> => this.http
-    .get<IConditions>(`${providers.weather.conditions}/${locationKey}`)
-    .pipe(map(result => this.setContext(DataSets.Conditions, new Conditions(result))));
+    .get<IConditions[]>(`${providers.weather.conditions}/${locationKey}`)
+    .pipe(map(result => this.setContext(DataSets.Conditions, new Conditions(result[0]))));
 
   public getForecast = (locationKey: string): Observable<Forecast> => this.http
     .get<IForecast>(`${providers.weather.forecasts}/${locationKey}`)

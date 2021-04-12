@@ -1,23 +1,25 @@
-{
-  "EpochTime": 1618167300,
-  "HasPrecipitation": false,
-  "IsDayTime": false,
-  "Link": "http://www.accuweather.com/en/il/holon/215838/current-weather/215838?lang=en-us",
-  "LocalObservationDateTime": "2021-04-11T21:55:00+03:00",
-  "MobileLink": "http://m.accuweather.com/en/il/holon/215838/current-weather/215838?lang=en-us",
-  "PrecipitationType": null,
-  "Temperature": {
-    "Imperial": {
-      "Unit": "F",
-      "UnitType": 18,
-      "Value": 59
+[
+  {
+    "EpochTime": 1618167300,
+    "HasPrecipitation": false,
+    "IsDayTime": false,
+    "Link": "http://www.accuweather.com/en/il/holon/215838/current-weather/215838?lang=en-us",
+    "LocalObservationDateTime": "2021-04-11T21:55:00+03:00",
+    "MobileLink": "http://m.accuweather.com/en/il/holon/215838/current-weather/215838?lang=en-us",
+    "PrecipitationType": null,
+    "Temperature": {
+      "Imperial": {
+        "Unit": "F",
+        "UnitType": 18,
+        "Value": 59
+      },
+      "Metric": {
+        "Unit": "C",
+        "UnitType": 17,
+        "Value": 15.3
+      }
     },
-    "Metric": {
-      "Unit": "C",
-      "UnitType": 17,
-      "Value": 15.3
-    }
-  },
-  "WeatherIcon": 34,
-  "WeatherText": "Mostly clear"
-}
+    "WeatherIcon": 34,
+    "WeatherText": "Mostly clear"
+  }
+]
