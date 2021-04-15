@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Herolo-Forecast</title>
+        <title>Angular-Forecast</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Herolo-Forecast</a>
+            <a href="../" class="navbar-brand">Angular-Forecast</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -392,7 +392,7 @@ export class FavoritesComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="row m-0 p-4">  <div class="shadow col-md-12 col-lg-12 col-xl m-1"    style="background: linear-gradient(to bottom, #3b8afd, #1A88FF, #69a5fe); height: 125px; min-width: 125px; border-radius: 10px;"    *ngFor="let item of this.favorites">    <p style="margin: 0px;">{{item.localizedName}}</p>    <div style="height: 100px; display: flex; align-items: center; justify-content: space-around;">      <img [src]="item.conditions.getIcon()" style="height: 70%;">      <div class="">        <h5>{{item.conditions.weatherText}}</h5>        <hr>        <h5 style="display: inline;">{{item.conditions.temperature.metric.value}}</h5>        {{item.conditions.temperature.metric.unit}}      </div>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'FavoritesComponent'};
 </script>

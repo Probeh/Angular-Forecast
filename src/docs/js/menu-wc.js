@@ -16,7 +16,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
         <nav>
             <ul class="list">
                 <li class="title">
-                    <a href="index.html" data-type="index-link">Herolo-Forecast</a>
+                    <a href="index.html" data-type="index-link">Angular-Forecast</a>
                 </li>
 
                 <li class="divider"></li>
@@ -182,13 +182,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/SidenavModule.html" data-type="entity-link">SidenavModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-SidenavModule-f8d8fa120d7b6952db11126f3d4c32da"' : 'data-target="#xs-components-links-module-SidenavModule-f8d8fa120d7b6952db11126f3d4c32da"' }>
+                                            'data-target="#components-links-module-SidenavModule-af113fd68904eff92e4771e9865fb93a"' : 'data-target="#xs-components-links-module-SidenavModule-af113fd68904eff92e4771e9865fb93a"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SidenavModule-f8d8fa120d7b6952db11126f3d4c32da"' :
-                                            'id="xs-components-links-module-SidenavModule-f8d8fa120d7b6952db11126f3d4c32da"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-SidenavModule-af113fd68904eff92e4771e9865fb93a"' :
+                                            'id="xs-components-links-module-SidenavModule-af113fd68904eff92e4771e9865fb93a"' }>
                                             <li class="link">
                                                 <a href="components/ContainerComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">ContainerComponent</a>
@@ -235,9 +235,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="components/SearchComponent.html" data-type="entity-link">SearchComponent</a>
-                            </li>
-                            <li class="link">
-                                <a href="components/SettingsComponent.html" data-type="entity-link">SettingsComponent</a>
                             </li>
                             <li class="link">
                                 <a href="components/SidenavComponent.html" data-type="entity-link">SidenavComponent</a>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Herolo-Forecast</title>
+        <title>Angular-Forecast</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Herolo-Forecast</a>
+            <a href="../" class="navbar-brand">Angular-Forecast</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -849,7 +849,7 @@ label {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="app-search">  <div class="search-header">    <div class="header-title">      <i class="fa fa-search"></i>Weather    </div>    <div class="search-options">      <p-tabMenu [model]="this.searchOptions" [activeItem]="this.currentOption"></p-tabMenu>    </div>  </div>  <div class="search-form" [ngSwitch]="this.currentOption.label">    <div class="form-autocomplete" *ngSwitchCase="\'Location\'">      <label>Location</label>      <p-autoComplete [suggestions]="this.$suggestions | async" [emptyMessage]="\'No results\'"        (onSelect)="this.onSelect($event)" (completeMethod)="this.onSearch($event)" [pKeyFilter]="this.searchPattern"        [minLength]=3 [placeholder]="\'Search Location\'" [autoHighlight]="true" [field]="\'localizedName\'"        [completeOnFocus]="true">        <ng-template let-result pTemplate="item">          <div style="display: flex; align-items: center;">            <img src="{{result.flagIcon()}}" style="margin-right: 15px; border-radius: 50%;">            {{result.toString()}}          </div>        </ng-template>      </p-autoComplete>    </div>    <form [formGroup]="this.locationInput" (ngSubmit)="this.onSubmit($event)" class="form-coordinates"      *ngSwitchCase="\'Coordinates\'">      <div class="input-col">        <label for="lat">Latitude</label>        <input formControlName="lat" type="number" placeholder="Lat" class="form-control" autocomplete="off" />        <ng-container [ngTemplateOutlet]="invalidInput" [ngTemplateOutletContext]="{ control: \'lat\' }">        </ng-container>      </div>      <div class="input-col">        <label for="lng">Longitude</label>        <input formControlName="lng" type="number" placeholder="Lng" class="form-control" autocomplete="off" />        <ng-container [ngTemplateOutlet]="invalidInput" [ngTemplateOutletContext]="{ control: \'lng\' }">        </ng-container>      </div>      <div class="input-col text-center" style="max-width: 50px;">        <button type="submit" pRipple class="btn text-white bg-primary"          [disabled]="this.locationInput.invalid" style="height: 35px; border-radius: 50%; margin-top: 21px;"          [ngStyle]="{\'opacity\': this.locationInput.invalid ? \'50%\' : \'100%\'}">          <i class="fa fa-compass"></i></button>      </div>    </form>  </div></div><ng-template #invalidInput let-control>  <small class="p-error"></small></ng-template></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SearchComponent'};
 </script>

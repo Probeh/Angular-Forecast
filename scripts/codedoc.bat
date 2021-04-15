@@ -1,1 +1,1 @@
-compodoc -p tsconfig.json -d src/docs -n Herolo-Forecast src --hideGenerator --theme readthedocs
+compodoc -p tsconfig.json -d src/docs -n Angular-Forecast src --hideGenerator --theme readthedocs

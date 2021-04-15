@@ -1,10 +1,10 @@
-# Herolo Forecast Application
+# Angular Forecast Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
 
-#### [Run Live Preview](https://herolo-forecast.web.app) - herolo-forecast.web.app
+#### [Run Live Preview](https://Angular-Forecast.web.app) - Angular-Forecast.web.app
 
-#### [Display CodeDoc](https://herolo-forecast.web.app/docs/overview.html) - herolo-forecast.web.app/docs
+#### [Display CodeDoc](https://Angular-Forecast.web.app/docs/overview.html) - Angular-Forecast.web.app/docs
 
 ## Development server
 

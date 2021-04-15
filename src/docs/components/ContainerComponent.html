@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Herolo-Forecast</title>
+        <title>Angular-Forecast</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">Herolo-Forecast</a>
+            <a href="../" class="navbar-brand">Angular-Forecast</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -568,7 +568,7 @@ export class ContainerComponent implements OnInit {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><div class="app-container" [ngClass]="(this.$siteTheme | async)">  <div class="container-main">    <app-header (sidenavChanged)="this.onSidenavToggle()"></app-header>    <div class="container-content container">      <app-search></app-search>      <div class="content-center">        <ng-content></ng-content>      </div>    </div>  </div>  <div class="container-sidenav">    <app-sidenav [sidenavState]="this.sidenavState"></app-sidenav>  </div></div><p-toast></p-toast></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SettingsComponent', 'selector': 'app-settings'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ContainerComponent', 'selector': 'app-container'},{'name': 'FavoritesComponent', 'selector': 'app-favorites'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SidenavComponent', 'selector': 'app-sidenav'},{'name': 'WeatherComponent', 'selector': 'app-weather'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'ContainerComponent'};
 </script>
