@@ -7,7 +7,7 @@
 }
 .app-sidenav.show {
   transition: ease-in-out 300ms;
-  width: 350px;
+  width: $sidenav-width;
 }
 .app-sidenav.hide {
   width: 0px;
